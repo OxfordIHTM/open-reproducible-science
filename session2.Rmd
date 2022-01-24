@@ -52,6 +52,12 @@ style_mono_light(
 
 # Outline
 
+1. What is git? What is GitHub?
+
+2. Why git? Why GitHub?
+
+3. 
+
 
 ---
 
