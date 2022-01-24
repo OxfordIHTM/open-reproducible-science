@@ -60,6 +60,7 @@ style_mono_light(
 
 4. How to do Reproducible Research?
 
+5. Why R?
 ---
 
 background-color: #FFFFFF
@@ -75,8 +76,12 @@ background-color: #FFFFFF
 .pull-right[
 * movement to make scientific research and dissemination accessible to anyone
 
-* aims for greater transparency in research and remove barriers for sharing outputs, resources, methods or tools at any stage of the research process
+* aims for greater transparency in research and removes barriers for sharing outputs, resources, methods or tools at any stage of the research process
 ]
+
+???
+
+Open Science is a movement to make scientific research and dissemination accessible to anyone. As such, it aims for greater transparency in research and removes barriers for sharing outputs, resources, methods or tools at any stage of the research process.
 
 ---
 
@@ -105,6 +110,10 @@ background-color: #FFFFFF
 * Each of these steps should be clearly reported by providing clear and open documentation, and thus making the study transparent and reproducible.
 ]
 
+???
+
+Reproducible research is directly linked to the scientific method. Each step in the scientific method should be clearly reported through clear and open documentation. This makes the research transparent and reproducible. From ths perspective, we see reproducibility as an inherent quality of good research.
+
 ---
 
 background-color: #FFFFFF
@@ -126,6 +135,11 @@ employ the methods that are presented in the research paper ([Gentleman and Lang
 .footnote[from https://www.displayr.com/what-is-reproducible-research]
 ]
 
+???
+
+Reproducible research is underpinned by the open availability of the data and the code used in the study/research which, in theory, will allow others to reproduce the various steps and methods implemented in the study and its results.
+
+Whilst the use of the term `code` often refers to computer code and is commonly related to computational sciences, the concept of `code` can also be expanded to include detailed rules, protocols, process documentation, and other scientific process used in other sciences e.g., social sciences, economics, anthropology
 ---
 
 background-color: #FFFFFF
@@ -136,6 +150,15 @@ background-size: 55%
 
 .footnote[This image was created by [Scriberia](https://www.scriberia.com/) for [The Turing Way](https://the-turing-way.netlify.app/welcome) community and is used under a CC-BY licence.]
 
+???
+
+Reproducibility is often conflated with other similar concepts of `replicability`, `robustness`, and `generalisability`. Here, we disambiguate these concepts to delineate what they specifically pertain to.
+
+In `reproducible` research, given the same data and the same analysis, the same results are produced.
+In `replicable` research, given different data and the same analysis, the same results are produced.
+In `robust` research, given the same data and different analysis, the same results are produced.
+In `generalisable` research, given different data and different analysis, the same results are produced. 
+
 ---
 
 background-color: #FFFFFF
@@ -145,6 +168,10 @@ background-size: 65%
 # Why Reproducible Research?
 
 .footnote[Baker, M. 1,500 scientists lift the lid on reproducibility. Nature 533, 452–454 (2016). https://doi.org/10.1038/533452a]
+
+???
+
+Most researchers believe that the majority of research that has not been published are not reproducible. More than 50% of researchers report that they have experienced not being able to reproduce other researchers' results. More interestingly, more than 40% of researchers report that they have experienced not being able to reproduce their own research's results.
 
 ---
 
