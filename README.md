@@ -45,22 +45,22 @@ PDF version of slides can be downloaded at
 R scripts for slides available at
 <https://github.com/OxfordIHTM/open-reproducible-science/session1.Rmd>
 
-</br>
+<br/>
 
 ## Session 2: Git and GitHub for use with R: tools for versioning and sharing research
 
-</br>
+<br/>
 
 ## Session 3: Data extraction, transformation, and loading in R
 
-</br>
+<br/>
 
 ## Session 4: Reproducible scientific workflows in R
 
-</br>
+<br/>
 
 ## Session 5: Making your R-based research project portable
 
-</br>
+<br/>
 
 ## Session 6: Automating your R-based research project
