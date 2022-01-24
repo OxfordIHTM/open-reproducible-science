@@ -32,11 +32,15 @@ and Reproducible Research will be discussed to provide the learners with
 foundational understanding and appreciation of these concepts and their
 applications.
 
-Further Reading Rick, Jessica & Alston, Jesse. (2020). A beginner’s
-guide to conducting reproducible research in ecology, evolution, and
-conservation. 10.32942/osf.io/h5r6n.
+### Further Reading
 
-Teaching Material Slides can be viewed at
+Rick, Jessica & Alston, Jesse. (2020). A beginner’s guide to conducting
+reproducible research in ecology, evolution, and conservation.
+10.32942/osf.io/h5r6n.
+
+### Teaching Material
+
+Slides can be viewed at
 <https://oxfordihtm.github.io/open-reproducible-science/session1.html>
 
 PDF version of slides can be downloaded at
