@@ -252,5 +252,5 @@ Slides can be viewed at https://OxfordIHTM.github.io/open-reproducible-science/s
 
 PDF version of slides can be downloaded at https://OxfordIHTM.github.io/open-reproducible-science/pdf/session1-open-reproducible-science.pdf
 
-R scripts for slides available at https://github.com/OxfordIHTM/open-reproducible-science
+R scripts for slides available [here](https://github.com/OxfordIHTM/open-reproducible-science/blob/a0a2d152e62a06a9cab6995f219018e3c0aafc91/session1.Rmd)
 
