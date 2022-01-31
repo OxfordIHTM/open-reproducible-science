@@ -46,10 +46,8 @@ Slides can be viewed at
 PDF version of slides can be downloaded at
 <https://oxfordihtm.github.io/open-reproducible-science/pdf/session1-open-reproducible-science.pdf>
 
-R scripts for slides available at
-<https://github.com/OxfordIHTM/open-reproducible-science/session1.Rmd>
-
-<br/>
+R scripts for slides available
+[here](https://github.com/OxfordIHTM/open-reproducible-science/blob/a0a2d152e62a06a9cab6995f219018e3c0aafc91/session1.Rmd)
 
 ## Session 2: Git and GitHub for use with R: tools for versioning and sharing research
 
@@ -82,10 +80,8 @@ Slides can be viewed at
 PDF version of slides can be downloaded at
 <https://oxfordihtm.github.io/open-reproducible-science/pdf/session2-git-and-github-with-r.pdf>
 
-R scripts for slides available at
-<https://github.com/OxfordIHTM/open-reproducible-science/session2.Rmd>
-
-<br/>
+R scripts for slides available
+[here](https://github.com/OxfordIHTM/open-reproducible-science/blob/a0a2d152e62a06a9cab6995f219018e3c0aafc91/session2.Rmd)
 
 <!---
 
@@ -157,13 +153,9 @@ PDF version of slides can be downloaded at https://oxfordihtm.github.io/open-rep
 R scripts for slides available at https://github.com/OxfordIHTM/open-reproducible-science/session6.Rmd
 --->
 
-<br/>
-
 ## Series Lecturer
 
 [Ernest Guevarra](https://ernest.guevarra.io)
-
-<br/>
 
 ## License
 
