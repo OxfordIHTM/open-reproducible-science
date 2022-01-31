@@ -40,9 +40,15 @@ R scripts for slides available at https://github.com/OxfordIHTM/open-reproducibl
 
 ## Session 2: Git and GitHub for use with R: tools for versioning and sharing research
 
+In this session, an overview of git and GitHub will be discussed along with their integration with R using RStudio. This wil then be followed by a practical session to guide learners on setting up git and GitHub onto their personal machines culminating in the learners accessing their first assignment in GitHub Classroom.
+
 ### Further Reading
 
 Happy Git and GitHub for the useR - https://happygitwithr.com/
+
+Perez-Riverol, Y., Gatto, L., Wang, R., Sachsenberg, T., Uszkoreit, J., Leprevost, F., Fufezan, C., Ternent, T., Eglen, S. J., Katz, D. S., Pollard, T. J., Konovalov, A., Flight, R. M., Blin, K., & Vizcaíno, J. A. (2016). Ten Simple Rules for Taking Advantage of Git and GitHub. PLoS computational biology, 12(7), e1004947. https://doi.org/10.1371/journal.pcbi.1004947
+
+Blischak JD, Davenport ER, Wilson G (2016) A Quick Introduction to Version Control with Git and GitHub. PLOS Computational Biology 12(1): e1004668. https://doi.org/10.1371/journal.pcbi.1004668
 
 ### Teaching Material
 
@@ -53,6 +59,8 @@ PDF version of slides can be downloaded at https://oxfordihtm.github.io/open-rep
 R scripts for slides available at https://github.com/OxfordIHTM/open-reproducible-science/session2.Rmd
 
 <br/>
+
+<!---
 
 ## Session 3: Data extraction, transformation, and loading in R
 
@@ -120,11 +128,11 @@ Slides can be viewed at https://oxfordihtm.github.io/open-reproducible-science/s
 PDF version of slides can be downloaded at https://oxfordihtm.github.io/open-reproducible-science/pdf/session4-automating-workflows.pdf
 
 R scripts for slides available at https://github.com/OxfordIHTM/open-reproducible-science/session6.Rmd
-
+--->
 
 <br/>
 
-## Series Presenter
+## Series Lecturer
 
 [Ernest Guevarra](https://ernest.guevarra.io)
 
