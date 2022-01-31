@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="" xml:lang="">
   <head>
-    <title>Git and GitHub for use with R</title>
+    <title>git and GitHub for use with R</title>
     <meta charset="utf-8" />
     <meta name="author" content="Ernest Guevarra" />
     <meta name="date" content="2022-01-31" />
@@ -12,7 +12,7 @@
     <textarea id="source">
 class: center, middle, inverse, title-slide
 
-# Git and GitHub for use with R
+# git and GitHub for use with R
 ## Tools for versioning and sharing research
 ### Ernest Guevarra
 ### 2022-01-31
@@ -26,13 +26,13 @@ class: center, middle, inverse, title-slide
 
 # Outline
 
-1. What is Git? Why use Git?
+1. What is git? Why use git?
 
 2. What is GitHub? Why use GitHub?
 
-3. Git and GitHub
+3. git and GitHub
 
-3. Git integration with RStudio
+3. git integration with RStudio
 
 4. Practial session
 
@@ -54,9 +54,15 @@ class: center, middle, inverse, title-slide
 [.center[![](images/Git-Logo-2Color.png)]](https://git-scm.com)
 ]
 
+???
+
+Git is a version control system. Its original purpose was to help groups of developers work collaboratively on big software projects. Git manages the evolution of a set of files – called a repository – in a sane, highly structured way. Think of it as the “Track Changes” features from Microsoft Word on steroids.
+
+Git has been re-purposed by the data science community. In addition to using it for source code, it has been used to manage the motley collection of files that make up typical data analytical projects - data, figures, reports, and, source code.
+
 ---
 
-# Why use Git?
+# Why use git?
 
 .pull-left[
 .center[![](images/phdcomics-filenames.gif)]
@@ -72,9 +78,13 @@ class: center, middle, inverse, title-slide
 * Exploration of differences between versions
 ]
 
+???
+
+Version control is the only reasonable way to keep track of changes in code, manuscripts, presentations, and data analysis projects. We are all used to or familiar with making numbered filenames for a project. But exploring the differences is difficult, to say the least. git in its very essence a powerful version control system. When used properly, the documentation of each small change across all your files is facilitated and made easier through git. And this documentation makes exploration of differences in versions easier and intelligible.
+
 ---
 
-# Why use Git?
+# Why use git?
 
 .pull-left[
 .center[![](images/why_repro_research1.gif)]
@@ -87,12 +97,16 @@ class: center, middle, inverse, title-slide
 
 * **Collaborating** with others on each other's research project allows us to build on each other's past work, using them for a different context/problem, or re-purposing them to come up with a new approach/solution
 
-* Communication and collaboration on various aspects of the scientific process is faciliated by using Git 
+* Communication and collaboration on various aspects of the scientific process is faciliated by using git 
 ]
+
+???
+
+Merging collaborators’ changes made easy. Have you ever had to deal with a collaborator sending you modifications distributed across many files, or had to deal with two people having made changes to the same file at the same time? Painful. git merge is the answer.
 
 ---
 
-# What is GitHub?
+# What is GitHub and Why use GitHub?
 
 .pull-left[
 [.center[![](images/Octocat.png)]](https://github.com)
@@ -104,9 +118,9 @@ class: center, middle, inverse, title-slide
 .center[![](images/GitHub_Logo.png)]
 ---&gt;
 
-* Service provider of hosting for software development and version control using Git
+* Service provider of hosting for software development and version control using git
 
-* Offers distributed version control and source code management functionality of Git, plus its own features such as bug tracking, feature request, task management, continuous integration and wikis for every project
+* Offers distributed version control and source code management functionality of git, plus its own features such as bug tracking, feature request, task management, continuous integration and wikis for every project
 
 * Like *facebook* but for programmers
 
@@ -115,11 +129,21 @@ class: center, middle, inverse, title-slide
 * Lowers the barriers to collaboration
 ]
 
+???
+
+Github is like facebook for programmers. Everyone’s on there. You can look at what they’re working on and easily peruse their code and make suggestions or changes.
+
+It’s really open source. “Open source” is not so open if you can’t easily study it. With github, all of the code is easily inspected, as is its entire history.
+
+Github lowers the barriers to collaboration. It’s easy to offer suggested changes to others’ code through github. I was able to fix a mistake in the phobos library for the D programming language, because it’s hosted on github. I fixed some problems in some very useful code developed by someone I don’t know, because it’s hosted on github.
+
+You don’t have to set up a git server. It’s surprisingly easy to get things set up.
+
 ---
 
 background-color: #FFFFFF
 
-# Git and GitHub
+# git and GitHub
 
 .center[![](images/git_and_github01b.png)]
 
@@ -129,13 +153,13 @@ background-color: #FFFFFF
 background-image: url(images/pcbi.1004947.g001.jpg)
 background-size: 50%
 
-# Git and GitHub
+# git and GitHub
 
 .footnote[Taken from Perez-Riverol, Y., Gatto, L., Wang, R., Sachsenberg, T., Uszkoreit, J., Leprevost, F., Fufezan, C., Ternent, T., Eglen, S. J., Katz, D. S., Pollard, T. J., Konovalov, A., Flight, R. M., Blin, K., &amp; Vizcaíno, J. A. (2016). Ten Simple Rules for Taking Advantage of Git and GitHub. PLoS computational biology, 12(7), e1004947. https://doi.org/10.1371/journal.pcbi.1004947]
 
 ---
 
-# Git integration with RStudio
+# git integration with RStudio
 
 .pull-left[
 * [RStudio](https://www.rstudio.com/products/rstudio/) is a popular integrated development environment (IDE) for [R](https://cran.r-project.org)
@@ -167,7 +191,7 @@ class: inverse, center, middle
 
 * [Install git](https://happygitwithr.com/install-git.html)
 
-* [Introduce yourself to Git](https://happygitwithr.com/hello-git.html)
+* [Introduce yourself to git](https://happygitwithr.com/hello-git.html)
 
 * [Personal access token for HTTPS](https://happygitwithr.com/https-pat.html)
 
