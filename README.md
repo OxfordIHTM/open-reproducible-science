@@ -53,9 +53,26 @@ R scripts for slides available at
 
 ## Session 2: Git and GitHub for use with R: tools for versioning and sharing research
 
+In this session, an overview of git and GitHub will be discussed along
+with their integration with R using RStudio. This wil then be followed
+by a practical session to guide learners on setting up git and GitHub
+onto their personal machines culminating in the learners accessing their
+first assignment in GitHub Classroom.
+
 ### Further Reading
 
 Happy Git and GitHub for the useR - <https://happygitwithr.com/>
+
+Perez-Riverol, Y., Gatto, L., Wang, R., Sachsenberg, T., Uszkoreit, J.,
+Leprevost, F., Fufezan, C., Ternent, T., Eglen, S. J., Katz, D. S.,
+Pollard, T. J., Konovalov, A., Flight, R. M., Blin, K., & Vizcaíno, J.
+A. (2016). Ten Simple Rules for Taking Advantage of Git and GitHub. PLoS
+computational biology, 12(7), e1004947.
+<https://doi.org/10.1371/journal.pcbi.1004947>
+
+Blischak JD, Davenport ER, Wilson G (2016) A Quick Introduction to
+Version Control with Git and GitHub. PLOS Computational Biology 12(1):
+e1004668. <https://doi.org/10.1371/journal.pcbi.1004668>
 
 ### Teaching Material
 
@@ -70,22 +87,22 @@ R scripts for slides available at
 
 <br/>
 
+<!---
+
 ## Session 3: Data extraction, transformation, and loading in R
 
 ### Further Reading
 
-Practical R for Epidemiologists - <https://practical-r.org>
+Practical R for Epidemiologists - https://practical-r.org
 
 ### Teaching Material
 
-Slides can be viewed at
-<https://oxfordihtm.github.io/open-reproducible-science/session3.html>
+Slides can be viewed at https://oxfordihtm.github.io/open-reproducible-science/session3.html
 
-PDF version of slides can be downloaded at
-<https://oxfordihtm.github.io/open-reproducible-science/pdf/session3-working-with-data.pdf>
+PDF version of slides can be downloaded at https://oxfordihtm.github.io/open-reproducible-science/pdf/session3-working-with-data.pdf
 
-R scripts for slides available at
-<https://github.com/OxfordIHTM/open-reproducible-science/session3.Rmd>
+R scripts for slides available at https://github.com/OxfordIHTM/open-reproducible-science/session3.Rmd
+
 
 <br/>
 
@@ -93,22 +110,18 @@ R scripts for slides available at
 
 ### Further Reading
 
-Dynamic Function-Oriented Make-Like Declarative Workflows -
-<https://docs.ropensci.org/targets/>
+Dynamic Function-Oriented Make-Like Declarative Workflows - https://docs.ropensci.org/targets/
 
-The targets R Package User Manual -
-<https://books.ropensci.org/targets/>
+The targets R Package User Manual - https://books.ropensci.org/targets/
 
 ### Teaching Material
 
-Slides can be viewed at
-<https://oxfordihtm.github.io/open-reproducible-science/session4.html>
+Slides can be viewed at https://oxfordihtm.github.io/open-reproducible-science/session4.html
 
-PDF version of slides can be downloaded at
-<https://oxfordihtm.github.io/open-reproducible-science/pdf/session4-reproducible-scientific-workflows.pdf>
+PDF version of slides can be downloaded at https://oxfordihtm.github.io/open-reproducible-science/pdf/session4-reproducible-scientific-workflows.pdf
 
-R scripts for slides available at
-<https://github.com/OxfordIHTM/open-reproducible-science/session4.Rmd>
+R scripts for slides available at https://github.com/OxfordIHTM/open-reproducible-science/session4.Rmd
+
 
 <br/>
 
@@ -116,19 +129,16 @@ R scripts for slides available at
 
 ### Further Reading
 
-Introduction to renv -
-<https://rstudio.github.io/renv/articles/renv.html>
+Introduction to renv - https://rstudio.github.io/renv/articles/renv.html
 
 ### Teaching Material
 
-Slides can be viewed at
-<https://oxfordihtm.github.io/open-reproducible-science/session5.html>
+Slides can be viewed at https://oxfordihtm.github.io/open-reproducible-science/session5.html
 
-PDF version of slides can be downloaded at
-<https://oxfordihtm.github.io/open-reproducible-science/pdf/session4-portable-r-projects.pdf>
+PDF version of slides can be downloaded at https://oxfordihtm.github.io/open-reproducible-science/pdf/session4-portable-r-projects.pdf
 
-R scripts for slides available at
-<https://github.com/OxfordIHTM/open-reproducible-science/session5.Rmd>
+R scripts for slides available at https://github.com/OxfordIHTM/open-reproducible-science/session5.Rmd
+
 
 <br/>
 
@@ -136,23 +146,20 @@ R scripts for slides available at
 
 ### Further Reading
 
-Understanding GitHub Actions -
-<https://docs.github.com/en/actions/learn-github-actions/understanding-github-actions>
+Understanding GitHub Actions - https://docs.github.com/en/actions/learn-github-actions/understanding-github-actions
 
 ### Teaching Material
 
-Slides can be viewed at
-<https://oxfordihtm.github.io/open-reproducible-science/session6html>
+Slides can be viewed at https://oxfordihtm.github.io/open-reproducible-science/session6html
 
-PDF version of slides can be downloaded at
-<https://oxfordihtm.github.io/open-reproducible-science/pdf/session4-automating-workflows.pdf>
+PDF version of slides can be downloaded at https://oxfordihtm.github.io/open-reproducible-science/pdf/session4-automating-workflows.pdf
 
-R scripts for slides available at
-<https://github.com/OxfordIHTM/open-reproducible-science/session6.Rmd>
+R scripts for slides available at https://github.com/OxfordIHTM/open-reproducible-science/session6.Rmd
+--->
 
 <br/>
 
-## Series Presenter
+## Series Lecturer
 
 [Ernest Guevarra](https://ernest.guevarra.io)
 
