@@ -1,7 +1,7 @@
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
 
-# Oxford International Health and Tropic Medicine Lecture Series on Open Science and Reproducible Research in R
+# Open Science and Reproducible Research in R: *An Oxford International Health and Tropical Medicine Lecture Series*
 
 <!-- badges: start -->
 <!-- badges: end -->
