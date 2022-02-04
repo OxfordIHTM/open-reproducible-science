@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+  <head>
+    <title>Data extraction, transformation, and loading in R</title>
+    <meta charset="utf-8" />
+    <meta name="author" content="Ernest Guevarra" />
+    <meta name="date" content="2022-02-07" />
+    <script src="session3_files/header-attrs/header-attrs.js"></script>
+    <link rel="stylesheet" href="xaringan-themer.css" type="text/css" />
+  </head>
+  <body>
+    <textarea id="source">
+class: center, middle, inverse, title-slide
+
+# Data extraction, transformation, and loading in R
+### Ernest Guevarra
+### 2022-02-07
+
+---
+
+
+
+
+
+
+# Outline
+
+* The current state of (global health) data
+
+* An opinionated perspective on working with data in R
+
+* Practical session
+
+---
+
+class: inverse, center, middle
+
+# The current state of (global health) data in tweets and quotes
+
+---
+
+class: center, middle
+
+&lt;!---
+# I will let the data speak for itself when it cleans itself.
+---&gt;
+
+&lt;img src="session3_files/figure-html/tweet1-1.png" width="100%" /&gt;
+
+[@AllisonReichel](https://twitter.com/AllisonReichel)
+[tweet](https://twitter.com/AllisonReichel/status/1350107719236247558)
+
+---
+
+class: center, middle
+
+&lt;!----
+# Never check data when you are hungry, thirsty, or tired.
+---&gt;
+
+&lt;img src="session3_files/figure-html/tweet2-1.png" width="100%" /&gt;
+
+[@GhazalGulati](https://twitter.com/GhazalGulati), via
+[@AmeliaMN](https://twitter.com/AmeliaMN/)
+[tweet](https://twitter.com/AmeliaMN/status/1357861551575871494)
+
+---
+
+class: center, middle
+
+&lt;!---
+# Big Data: (n): the belief that a big enough pile of horseshit will, with probability one, somewhere contain a pony.
+---&gt;
+
+&lt;img src="session3_files/figure-html/tweet3-1.png" width="100%" /&gt;
+
+[@mlipsitch](https://twitter.com/mlipsitch), via [@callin_bull](https://twitter.com/callin_bull) [tweet](https://twitter.com/callin_bull/status/831663695813963776)
+
+---
+
+class: center, middle
+
+&lt;!---
+# Working with data is not about rules to follow but about decisions to make
+---&gt;
+
+&lt;img src="session3_files/figure-html/tweet4-1.png" width="100%" /&gt;
+
+[@naupakaz](https://twitter.com/naupakaz), via [@kwbroman](https://twitter.com/kwbroman) [tweet](https://twitter.com/kwbroman/status/686562071853547520)
+
+---
+
+class: inverse, center, middle
+
+# Classroom data are like teddy bears; real data are like a grizzly with salmon blood dripping out its mouth.
+
+
+
+[@JennyBryan](https://twitter.com/jennybryan), via [@sgrifter](https://twitter.com/sgrifter) [tweet](https://twitter.com/sgrifter/status/631150829165113344)
+
+---
+
+class: inverse, center, middle
+
+# and I’m still pretty sure some of the data is missing, but it could still be here, in this ONE HUNDRED SHEET excel file
+
+
+
+[@RallidaeRule](https://mobile.twitter.com/RallidaeRule) [tweet](https://mobile.twitter.com/rallidaerule/status/572922098617741312)
+
+---
+
+class: inverse, center, middle
+
+# Let's start the "titanic data" movement. Data too big to fail.
+
+
+
+[@neilfws](https://twitter.com/neilfws) with assist from [@aaronquinlan](https://twitter.com/aaronquinlan), [tweet](https://twitter.com/neilfws/status/588533319135985665)
+
+---
+
+class: center, middle
+
+&lt;!---
+# Data cleaning code cannot be clean. It's a sort of sin eater.
+---&gt;
+
+&lt;img src="session3_files/figure-html/tweet8-1.png" width="100%" /&gt;
+
+[@StatFact](https://twitter.com/StatFact) [tweet](https://twitter.com/StatFact/status/492753200190341120)
+
+---
+
+class: center, middle
+
+&lt;!---
+# Last week I told a collaborator to stick the files on a USB drive and walk the 100m across the road rather than figure out inter-institute file sharing.
+---&gt;
+
+&lt;img src="session3_files/figure-html/tweet9-1.png" width="100%" /&gt;
+
+[@PeteHaitch](https://twitter.com/PeteHaitch) [tweet](https://twitter.com/PeteHaitch/status/1095948744510517250)
+
+---
+
+class: center, middle
+
+&lt;!---
+# R is a datasmith's heaven-on-earth; I like Python, long term relationship with Excel, quite like Power Query, DAX's a keeper, but I love R.
+---&gt;
+
+&lt;img src="session3_files/figure-html/tweet10-1.png" width="100%" /&gt;
+
+[@tggleeson](https://twitter.com/tggleeson)
+[tweet](https://twitter.com/tggleeson/status/591013073542062081)
+
+class: inverse, center, middle
+
+# Questions?
+
+---
+
+# Practical session
+
+
+---
+
+class: inverse, center, middle
+
+# Thank you!
+
+Slides can be viewed at https://OxfordIHTM.github.io/open-reproducible-science/session3.html
+
+PDF version of slides can be downloaded at https://OxfordIHTM.github.io/open-reproducible-science/pdf/session3-working-with-data-in-r.pdf
+
+R scripts for slides available [here](https://github.com/OxfordIHTM/open-reproducible-science/blob/82bfbf7cb5b71fcb4df9baf57f735482da78b498/session3.Rmd)
+
+    </textarea>
+<style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
+<script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
+<script>var slideshow = remark.create({
+"slideNumberFormat": "%current%",
+"highlightStyle": "github",
+"highlightLines": true,
+"ratio": "16:9",
+"countIncrementalSlides": true
+});
+if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
+  window.dispatchEvent(new Event('resize'));
+});
+(function(d) {
+  var s = d.createElement("style"), r = d.querySelector(".remark-slide-scaler");
+  if (!r) return;
+  s.type = "text/css"; s.innerHTML = "@page {size: " + r.style.width + " " + r.style.height +"; }";
+  d.head.appendChild(s);
+})(document);
+
+(function(d) {
+  var el = d.getElementsByClassName("remark-slides-area");
+  if (!el) return;
+  var slide, slides = slideshow.getSlides(), els = el[0].children;
+  for (var i = 1; i < slides.length; i++) {
+    slide = slides[i];
+    if (slide.properties.continued === "true" || slide.properties.count === "false") {
+      els[i - 1].className += ' has-continuation';
+    }
+  }
+  var s = d.createElement("style");
+  s.type = "text/css"; s.innerHTML = "@media print { .has-continuation { display: none; } }";
+  d.head.appendChild(s);
+})(document);
+// delete the temporary CSS (for displaying all slides initially) when the user
+// starts to view slides
+(function() {
+  var deleted = false;
+  slideshow.on('beforeShowSlide', function(slide) {
+    if (deleted) return;
+    var sheets = document.styleSheets, node;
+    for (var i = 0; i < sheets.length; i++) {
+      node = sheets[i].ownerNode;
+      if (node.dataset["target"] !== "print-only") continue;
+      node.parentNode.removeChild(node);
+    }
+    deleted = true;
+  });
+})();
+(function() {
+  "use strict"
+  // Replace <script> tags in slides area to make them executable
+  var scripts = document.querySelectorAll(
+    '.remark-slides-area .remark-slide-container script'
+  );
+  if (!scripts.length) return;
+  for (var i = 0; i < scripts.length; i++) {
+    var s = document.createElement('script');
+    var code = document.createTextNode(scripts[i].textContent);
+    s.appendChild(code);
+    var scriptAttrs = scripts[i].attributes;
+    for (var j = 0; j < scriptAttrs.length; j++) {
+      s.setAttribute(scriptAttrs[j].name, scriptAttrs[j].value);
+    }
+    scripts[i].parentElement.replaceChild(s, scripts[i]);
+  }
+})();
+(function() {
+  var links = document.getElementsByTagName('a');
+  for (var i = 0; i < links.length; i++) {
+    if (/^(https?:)?\/\//.test(links[i].getAttribute('href'))) {
+      links[i].target = '_blank';
+    }
+  }
+})();
+// adds .remark-code-has-line-highlighted class to <pre> parent elements
+// of code chunks containing highlighted lines with class .remark-code-line-highlighted
+(function(d) {
+  const hlines = d.querySelectorAll('.remark-code-line-highlighted');
+  const preParents = [];
+  const findPreParent = function(line, p = 0) {
+    if (p > 1) return null; // traverse up no further than grandparent
+    const el = line.parentElement;
+    return el.tagName === "PRE" ? el : findPreParent(el, ++p);
+  };
+
+  for (let line of hlines) {
+    let pre = findPreParent(line);
+    if (pre && !preParents.includes(pre)) preParents.push(pre);
+  }
+  preParents.forEach(p => p.classList.add("remark-code-has-line-highlighted"));
+})(document);</script>
+
+<script>
+slideshow._releaseMath = function(el) {
+  var i, text, code, codes = el.getElementsByTagName('code');
+  for (i = 0; i < codes.length;) {
+    code = codes[i];
+    if (code.parentNode.tagName !== 'PRE' && code.childElementCount === 0) {
+      text = code.textContent;
+      if (/^\\\((.|\s)+\\\)$/.test(text) || /^\\\[(.|\s)+\\\]$/.test(text) ||
+          /^\$\$(.|\s)+\$\$$/.test(text) ||
+          /^\\begin\{([^}]+)\}(.|\s)+\\end\{[^}]+\}$/.test(text)) {
+        code.outerHTML = code.innerHTML;  // remove <code></code>
+        continue;
+      }
+    }
+    i++;
+  }
+};
+slideshow._releaseMath(document);
+</script>
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+(function () {
+  var script = document.createElement('script');
+  script.type = 'text/javascript';
+  script.src  = 'https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML';
+  if (location.protocol !== 'file:' && /^https?:/.test(script.src))
+    script.src  = script.src.replace(/^https?:/, '');
+  document.getElementsByTagName('head')[0].appendChild(script);
+})();
+</script>
+  </body>
+</html>
