@@ -83,25 +83,32 @@ PDF version of slides can be downloaded at
 R scripts for slides available
 [here](https://github.com/OxfordIHTM/open-reproducible-science/blob/a0a2d152e62a06a9cab6995f219018e3c0aafc91/session2.Rmd)
 
-<!---
-
 ## Session 3: Data extraction, transformation, and loading in R
+
+In this session, a discussion on the current state of *“data”* in
+general and how this translates to *global health data* specifically.
+This discussion will then be linked to how the use of R can facilitate
+and support researchers in dealing with *data* in an open and
+reproducible way. The final part of the session will be focused on a
+data exercise using R based on Exercise 2 found in the [**Practical R
+for Epidemiologists**](https://practical-r.org/exercise2.html) book.
 
 ### Further Reading
 
-Practical R for Epidemiologists - https://practical-r.org
+Practical R for Epidemiologists - <https://practical-r.org>
 
 ### Teaching Material
 
-Slides can be viewed at https://oxfordihtm.github.io/open-reproducible-science/session3.html
+Slides can be viewed at
+<https://oxfordihtm.github.io/open-reproducible-science/session3.html>
 
-PDF version of slides can be downloaded at https://oxfordihtm.github.io/open-reproducible-science/pdf/session3-working-with-data.pdf
+PDF version of slides can be downloaded at
+<https://oxfordihtm.github.io/open-reproducible-science/pdf/session3-working-with-data-in-r.pdf>
 
-R scripts for slides available at https://github.com/OxfordIHTM/open-reproducible-science/session3.Rmd
+R scripts for slides available
+[here](https://github.com/OxfordIHTM/open-reproducible-science/blob/82bfbf7cb5b71fcb4df9baf57f735482da78b498/session3.Rmd)
 
-
-<br/>
-
+<!---
 ## Session 4: Reproducible scientific workflows in R
 
 ### Further Reading
