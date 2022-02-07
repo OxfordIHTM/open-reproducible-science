@@ -289,7 +289,9 @@ class: inverse, center, middle
 
 * We will all go through Exercise #1 in the [Practical R for Epidemiologists](https://practical-r.org/exercise1.html) book
 
-* This is also one of your next assignment for this lecture series
+* This is also one of your next assignments for this lecture series. This can be accessed via our GitHub Classroom through this link - https://classroom.github.com/a/xQNlWMp-
+
+* This link has also been emailed to you.
 
 ---
 
