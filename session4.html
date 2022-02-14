@@ -1,20 +1,21 @@
 <!DOCTYPE html>
 <html lang="" xml:lang="">
   <head>
-    <title>Data extraction, transformation, and loading in R</title>
+    <title>Reproducible scientific workflows in R</title>
     <meta charset="utf-8" />
     <meta name="author" content="Ernest Guevarra" />
-    <meta name="date" content="2022-02-07" />
-    <script src="session3_files/header-attrs/header-attrs.js"></script>
+    <meta name="date" content="2022-02-14" />
+    <script src="session4_files/header-attrs/header-attrs.js"></script>
     <link rel="stylesheet" href="xaringan-themer.css" type="text/css" />
   </head>
   <body>
     <textarea id="source">
 class: center, middle, inverse, title-slide
 
-# Data extraction, transformation, and loading in R
+# Reproducible scientific workflows in R
+## Introduction to the {targets} package
 ### Ernest Guevarra
-### 2022-02-07
+### 2022-02-14
 
 ---
 
@@ -25,7 +26,9 @@ class: center, middle, inverse, title-slide
 
 # Outline
 
-* Concepts and considerations about data
+* Concepts on scientific workflows
+
+* The `{targets}` package
 
 * Practical session
 
@@ -33,157 +36,181 @@ class: center, middle, inverse, title-slide
 
 class: inverse, center, middle
 
-# Concepts and considerations about data in tweets and quotes
+# Concepts on scientific workflows
 
 ---
 
 class: inverse, center, middle
 
-# Consideration #1:
-
-# Data cleaning/processing/checking is an important, but very challenging, step when working with data
+# Concept #1: Reproducibility, reproducibility, reproducibility!
 
 ---
 
 class: center, middle
 
-&lt;!---
-# Data cleaning code cannot be clean. It's a sort of sin eater.
----&gt;
+&lt;img src="session4_files/figure-html/tweet1-1.png" width="100%" /&gt;
 
-&lt;img src="session3_files/figure-html/tweet8-1.png" width="100%" /&gt;
-
-[@StatFact](https://twitter.com/StatFact) [tweet](https://twitter.com/StatFact/status/492753200190341120)
-
----
-
-class: center, middle
-
-&lt;!---
-# I will let the data speak for itself when it cleans itself.
----&gt;
-
-&lt;img src="session3_files/figure-html/tweet1-1.png" width="100%" /&gt;
-
-[@AllisonReichel](https://twitter.com/AllisonReichel)
-[tweet](https://twitter.com/AllisonReichel/status/1350107719236247558)
+[Keith Baggerly](http://odin.mdacc.tmc.edu/~kabaggerly/), via [@kwbroman](https://twitter.com/kwbrowman) [tweet](https://twitter.com/kwbroman/status/667735926915731457)
 
 ---
 
 class: inverse, center, middle
 
-# and I’m still pretty sure some of the data is missing, but it could still be here, in this ONE HUNDRED SHEET excel file
-
-
-
-[@RallidaeRule](https://mobile.twitter.com/RallidaeRule) [tweet](https://mobile.twitter.com/rallidaerule/status/572922098617741312)
+# Concept #2: Organisation
 
 ---
 
-class: center, middle
+class:: center, middle
 
-&lt;!----
-# Never check data when you are hungry, thirsty, or tired.
----&gt;
+# File organization and naming are powerful weapons against chaos.
 
-&lt;img src="session3_files/figure-html/tweet2-1.png" width="100%" /&gt;
+[@JennyBryan](https://twitter.com/jennybryan)
 
-[@GhazalGulati](https://twitter.com/GhazalGulati), via
-[@AmeliaMN](https://twitter.com/AmeliaMN/)
-[tweet](https://twitter.com/AmeliaMN/status/1357861551575871494)
+---
+
+background-color: #FFFFFF
+background-image: url(images/file_organisation.png)
+background-size: 90%
 
 ---
 
 class: inverse, center, middle
 
-# Classroom data are like teddy bears; real data are like a grizzly with salmon blood dripping out its mouth.
-
-
-
-[@JennyBryan](https://twitter.com/jennybryan), via [@sgrifter](https://twitter.com/sgrifter) [tweet](https://twitter.com/sgrifter/status/631150829165113344)
+# Concept #3: DRY - Don't repeat yourself
 
 ---
 
-class: center, middle
+class:: center, middle
 
-&lt;!---
-# Working with data is not about rules to follow but about decisions to make
----&gt;
+# Don't repeat yourself. It's not only repetitive, it's redundant, and people have heard it before.
 
-&lt;img src="session3_files/figure-html/tweet4-1.png" width="100%" /&gt;
-
-[@naupakaz](https://twitter.com/naupakaz), via [@kwbroman](https://twitter.com/kwbroman) [tweet](https://twitter.com/kwbroman/status/686562071853547520)
+Lemony Snicket
 
 ---
 
-class: inverse, center, middle
-
-# Consideration #2
-
-# Big data is what everyone is talking about
-
----
-
-class: center, middle
-
-&lt;!---
-# Big Data: (n): the belief that a big enough pile of horseshit will, with probability one, somewhere contain a pony.
----&gt;
-
-&lt;img src="session3_files/figure-html/tweet3-1.png" width="100%" /&gt;
-
-[@mlipsitch](https://twitter.com/mlipsitch), via [@callin_bull](https://twitter.com/callin_bull) [tweet](https://twitter.com/callin_bull/status/831663695813963776)
-
----
-
-class: inverse, center, middle
-
-# Let's start the "titanic data" movement. Data too big to fail.
+background-color: #FFFFFF
 
 
+```r
+# Overlay maps of Niger and Nigeria to clean-up the map 
+par(new=TRUE)
+plot(nigeria, axes = FALSE, xlim = mapXLimits, ylim = mapYLimits, border = "white", col = "white")
 
-[@neilfws](https://twitter.com/neilfws) with assist from [@aaronquinlan](https://twitter.com/aaronquinlan), [tweet](https://twitter.com/neilfws/status/588533319135985665)
+par(new = TRUE)
+plot(boundaries, axes = FALSE, xlim = mapXLimits, ylim=mapYLimits, lwd = 0.5, border = "black")
 
----
+par(new = TRUE)
+plot(n1, axes = FALSE, xlim = mapXLimits, ylim=mapYLimits, lwd = 0.25, col = "blue")
 
-class: inverse, center, middle
+par(new = TRUE)
+plot(n4, axes = FALSE, xlim = mapXLimits, ylim=mapYLimits, lwd = 0.25, col = "blue")
 
-# Consideration #3
+par(new = TRUE)
+plot(n5, axes = FALSE, xlim = mapXLimits, ylim=mapYLimits, lwd = 0.25, col = "blue")
 
-# Data sharing requires a well-thought out process that everyone can follow
+par(new = TRUE)
+plot(n6, axes = FALSE, xlim = mapXLimits, ylim=mapYLimits, lwd = 0.25, col = "blue")
+
+par(new = TRUE)
+plot(n6.27, axes = FALSE, xlim = mapXLimits, ylim=mapYLimits, lwd = 0.25, col = "blue")
+
+par(new = TRUE)
+plot(n7, axes = FALSE, xlim = mapXLimits, ylim=mapYLimits, lwd = 0.25, col = "blue")
+
+par(new = TRUE)
+plot(n14, axes = FALSE, xlim = mapXLimits, ylim=mapYLimits, lwd = 0.25, col = "blue")
+```
 
 ---
 
-class: center, middle
+# Sisyphean loop
 
-&lt;!---
-# Last week I told a collaborator to stick the files on a USB drive and walk the 100m across the road rather than figure out inter-institute file sharing.
----&gt;
+.pull-left[
+&lt;img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/58/Nekyia_Staatliche_Antikensammlungen_1494_n2.jpg/582px-Nekyia_Staatliche_Antikensammlungen_1494_n2.jpg" width="450px" style="vertical-align:middle" /&gt; 
+]
 
-&lt;img src="session3_files/figure-html/tweet9-1.png" width="100%" /&gt;
-
-[@PeteHaitch](https://twitter.com/PeteHaitch) [tweet](https://twitter.com/PeteHaitch/status/1095948744510517250)
+.pull-right[
+1. Launch the code.
+2. Wait while it runs.
+3. Discover an issue.
+4. Restart from scratch.
+]
 
 ---
 
 class: inverse, center, middle
 
-# Consideration #4
-
-# Working with data in R is great!
+# Concept #3: Frequency reduces difficulty
 
 ---
 
 class: center, middle
 
-&lt;!---
-# R is a datasmith's heaven-on-earth; I like Python, long term relationship with Excel, quite like Power Query, DAX's a keeper, but I love R.
----&gt;
+&lt;img src="session4_files/figure-html/tweet2-1.png" width="100%" /&gt;
 
-&lt;img src="session3_files/figure-html/tweet10-1.png" width="100%" /&gt;
+[@martinfowler](https://twitter.com/martinfowler), via [@JennyBryan](https://twitter.com/JennyBryan) [tweet](https://twitter.com/JennyBryan/status/1087795259872927744)
 
-[@tggleeson](https://twitter.com/tggleeson)
-[tweet](https://twitter.com/tggleeson/status/591013073542062081)
+---
+
+# The `{targets}` package
+
+.pull-left[
+&lt;img src="https://github.com/ropensci/targets/raw/main/man/figures/logo.png" width="400px" style="vertical-align:middle" /&gt;
+]
+
+.pull-right[
+* a pipeline toolkit for Statistics and data science in R
+* maintain a reproducible workflow without repeating yourself
+* learns how your workflow fits together
+* skips costly runtime for tasks that are already up-to-date
+* runs only the necessary computation
+* supports implicit parallel computing
+* abstracts files as R objects
+* shows tangible evidence that the results match the underlying code and data
+]
+
+---
+
+# `{targets}` file organisation
+
+.pull-left[
+.center[![](images/targets_file_organisation.png)]
+]
+
+.pull-right[
+* this is a typical file structure with user-defined components of any project-oriented workflow
+* the `_targets.R` file, however, is special and specific to a `{targets}` workflow - it is the target script file
+* the target script file should be in the project's root directory
+]
+
+---
+
+# `{targets}` script file
+
+.pull-left[
+.center[![](images/target_script.png)]
+]
+
+.pull-right[
+* Load the packages required (1)
+* Load custom functions (1)
+* Define individual targets - intermediate step of the workflow (2)
+* End with a list of targets objects
+]
+
+---
+
+background-color: #FFFFFF
+background-image: url(images/workflow.png)
+background-size: 60%
+
+# `{targets}` workflow
+
+---
+
+class: inverse, center, middle
+
+# Questions?
 
 ---
 
@@ -195,11 +222,7 @@ class: inverse, center, middle
 
 # Practical session
 
-* We will all go through Exercise #1 in the [Practical R for Epidemiologists](https://practical-r.org/exercise1.html) book
-
-* This is also one of your next assignments for this lecture series. This can be accessed via our GitHub Classroom through this link - https://classroom.github.com/a/xQNlWMp-
-
-* This link has also been emailed to you.
+* We will all continue to go through Exercise #1 in the [Practical R for Epidemiologists](https://practical-r.org/exercise1.html) book
 
 ---
 
@@ -213,12 +236,11 @@ class: inverse, center, middle
 
 # Thank you!
 
-Slides can be viewed at https://OxfordIHTM.github.io/open-reproducible-science/session3.html
+Slides can be viewed at https://OxfordIHTM.github.io/open-reproducible-science/session4.html
 
-PDF version of slides can be downloaded at https://OxfordIHTM.github.io/open-reproducible-science/pdf/session3-working-with-data-in-r.pdf
+PDF version of slides can be downloaded at https://OxfordIHTM.github.io/open-reproducible-science/pdf/session4-reproducible-scientific-workflows.pdf
 
-R scripts for slides available [here](https://github.com/OxfordIHTM/open-reproducible-science/blob/main/session3.Rmd)
-
+R scripts for slides available [here](https://github.com/OxfordIHTM/open-reproducible-science/blob/main/session4.Rmd)
     </textarea>
 <style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
 <script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
