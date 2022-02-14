@@ -47,7 +47,7 @@ PDF version of slides can be downloaded at
 <https://oxfordihtm.github.io/open-reproducible-science/pdf/session1-open-reproducible-science.pdf>
 
 R scripts for slides available
-[here](https://github.com/OxfordIHTM/open-reproducible-science/blob/a0a2d152e62a06a9cab6995f219018e3c0aafc91/session1.Rmd)
+[here](https://github.com/OxfordIHTM/open-reproducible-science/blob/main/session1.Rmd)
 
 ## Session 2: Git and GitHub for use with R: tools for versioning and sharing research
 
@@ -81,7 +81,7 @@ PDF version of slides can be downloaded at
 <https://oxfordihtm.github.io/open-reproducible-science/pdf/session2-git-and-github-with-r.pdf>
 
 R scripts for slides available
-[here](https://github.com/OxfordIHTM/open-reproducible-science/blob/a0a2d152e62a06a9cab6995f219018e3c0aafc91/session2.Rmd)
+[here](https://github.com/OxfordIHTM/open-reproducible-science/blob/main/session2.Rmd)
 
 ## Session 3: Data extraction, transformation, and loading in R
 
@@ -90,7 +90,7 @@ general and how this translates to *global health data* specifically.
 This discussion will then be linked to how the use of R can facilitate
 and support researchers in dealing with *data* in an open and
 reproducible way. The final part of the session will be focused on a
-data exercise using R based on Exercise 2 found in the [**Practical R
+data exercise using R based on Exercise 1 found in the [**Practical R
 for Epidemiologists**](https://practical-r.org/exercise2.html) book.
 
 ### Further Reading
@@ -106,26 +106,37 @@ PDF version of slides can be downloaded at
 <https://oxfordihtm.github.io/open-reproducible-science/pdf/session3-working-with-data-in-r.pdf>
 
 R scripts for slides available
-[here](https://github.com/OxfordIHTM/open-reproducible-science/blob/82bfbf7cb5b71fcb4df9baf57f735482da78b498/session3.Rmd)
+[here](https://github.com/OxfordIHTM/open-reproducible-science/blob/main/session3.Rmd)
 
-<!---
 ## Session 4: Reproducible scientific workflows in R
+
+In this session, a discussion of best practices on reproducible
+scientific workflows and an introduction to using the `{targets}` to
+implemenet these workflows. The final part of the session will continue
+on the data exercise using R based on Exercise 1 found in the
+[**Practical R for
+Epidemiologists**](https://practical-r.org/exercise2.html) book.
 
 ### Further Reading
 
-Dynamic Function-Oriented Make-Like Declarative Workflows - https://docs.ropensci.org/targets/
+Dynamic Function-Oriented Make-Like Declarative Workflows -
+<https://docs.ropensci.org/targets/>
 
-The targets R Package User Manual - https://books.ropensci.org/targets/
+The targets R Package User Manual -
+<https://books.ropensci.org/targets/>
 
 ### Teaching Material
 
-Slides can be viewed at https://oxfordihtm.github.io/open-reproducible-science/session4.html
+Slides can be viewed at
+<https://oxfordihtm.github.io/open-reproducible-science/session4.html>
 
-PDF version of slides can be downloaded at https://oxfordihtm.github.io/open-reproducible-science/pdf/session4-reproducible-scientific-workflows.pdf
+PDF version of slides can be downloaded at
+<https://oxfordihtm.github.io/open-reproducible-science/pdf/session4-reproducible-scientific-workflows.pdf>
 
-R scripts for slides available at https://github.com/OxfordIHTM/open-reproducible-science/session4.Rmd
+R scripts for slides available at
+<https://github.com/OxfordIHTM/open-reproducible-science/blob/main/session4.Rmd>
 
-
+<!---
 <br/>
 
 ## Session 5: Making your R-based research project portable

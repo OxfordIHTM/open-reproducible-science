@@ -309,5 +309,5 @@ Slides can be viewed at https://OxfordIHTM.github.io/open-reproducible-science/s
 
 PDF version of slides can be downloaded at https://OxfordIHTM.github.io/open-reproducible-science/pdf/session3-working-with-data-in-r.pdf
 
-R scripts for slides available [here](https://github.com/OxfordIHTM/open-reproducible-science/blob/82bfbf7cb5b71fcb4df9baf57f735482da78b498/session3.Rmd)
+R scripts for slides available [here](https://github.com/OxfordIHTM/open-reproducible-science/blob/main/session3.Rmd)
 
