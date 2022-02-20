@@ -136,24 +136,32 @@ PDF version of slides can be downloaded at
 R scripts for slides available at
 <https://github.com/OxfordIHTM/open-reproducible-science/blob/main/session4.Rmd>
 
-<!---
-<br/>
-
 ## Session 5: Making your R-based research project portable
+
+In this session, a discussion of R code portability, the factors that
+impact how the R code/script we develop can be used and run successfully
+by someone else, and the currently available solutions to ensuring
+portability. The final part of the session will continue on the data
+exercise using R based on Exercise 1 found in the [**Practical R for
+Epidemiologists**](https://practical-r.org/exercise2.html) book.
 
 ### Further Reading
 
-Introduction to renv - https://rstudio.github.io/renv/articles/renv.html
+Introduction to renv -
+<https://rstudio.github.io/renv/articles/renv.html>
 
 ### Teaching Material
 
-Slides can be viewed at https://oxfordihtm.github.io/open-reproducible-science/session5.html
+Slides can be viewed at
+<https://oxfordihtm.github.io/open-reproducible-science/session5.html>
 
-PDF version of slides can be downloaded at https://oxfordihtm.github.io/open-reproducible-science/pdf/session4-portable-r-projects.pdf
+PDF version of slides can be downloaded at
+<https://oxfordihtm.github.io/open-reproducible-science/pdf/session5-portable-r-projects.pdf>
 
-R scripts for slides available at https://github.com/OxfordIHTM/open-reproducible-science/session5.Rmd
+R scripts for slides available at
+<https://github.com/OxfordIHTM/open-reproducible-science/blob/main/session5.Rmd>
 
-
+<!---
 <br/>
 
 ## Session 6: Automating your R-based research project
