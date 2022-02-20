@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+  <head>
+    <title>Making your R-based research project portable</title>
+    <meta charset="utf-8" />
+    <meta name="author" content="Ernest Guevarra" />
+    <meta name="date" content="2022-02-21" />
+    <script src="session5_files/header-attrs/header-attrs.js"></script>
+    <link rel="stylesheet" href="xaringan-themer.css" type="text/css" />
+  </head>
+  <body>
+    <textarea id="source">
+class: center, middle, inverse, title-slide
+
+# Making your R-based research project portable
+### Ernest Guevarra
+### 2022-02-21
+
+---
+
+
+
+
+
+
+# Outline
+
+* All about environments
+
+* System dependencies management
+
+* Project-local R dependencies management
+
+---
+
+background-color: #FFFFFF
+
+# All about environments
+
+.pull-left[
+.center[![](images/pyramid_repro_research.png)]
+]
+
+.pull-right[
+## **Portability** of an R workflow will depend on **reproducibility of its related environments**
+]
+
+---
+
+class: inverse, middle, center
+
+# No one cares what operating system you run as long as it stays up.
+
+## Bruce Perens
+
+#### created the defintion of Open Source and wrote the first manifesto of Open Source
+
+---
+
+# Different systems, different requirements
+
+&lt;!---
+![](https://upload.wikimedia.org/wikipedia/commons/a/ab/Apple-logo.png)
+![](https://upload.wikimedia.org/wikipedia/commons/8/87/Windows_logo_-_2021.svg)
+![](https://upload.wikimedia.org/wikipedia/commons/3/35/Tux.svg)
+---&gt;
+
+.pull-left[
+
+&lt;img src="images/Windows_logo_-_2021.svg" width="33%" /&gt;&lt;img src="images/Apple_logo_black.svg" width="33%" /&gt;&lt;img src="images/Tux.svg" width="33%" /&gt;
+]
+
+.pull-right[
+* each operating system (and each of its versions) may/will require specific dependencies in order to install R
+
+* each operating system (and each of its versions) may/will require specific dependencies in order to install some R packages 
+]
+
+---
+
+# System dependencies management
+
+.pull-left[
+.center[![](images/why_repro_research1.gif)]
+]
+
+.pull-right[
+* solutions/approaches will depend on your use case but the most universal step is **documentation**
+
+* **Supervisor-supervisee** or **small research team** settings - establish compatibility guidelines between members and document system requirements for each project;
+
+* **Medium to largish research team** settings
+    - use turn-key solutions that standardise R setup using cloud-based or software-as-a-service (SaaS) solutions (e.g., RStudio Cloud); or,
+    - setup machines used to be consistent with team's R workflow system requirements through containerisation (e.g., [Docker](https://www.docker.com/))
+]
+    
+---
+
+# Using containers via Docker
+
+
+.center[![](images/docker.png)]
+
+
+* **Containers** are standardised units of packaged software that have everything the software needs to run including libraries, system tools, code, and runtime.
+
+* **Containers** can be deployed either onto remote machines or onto a local machine using [Docker](https://www.docker.com)
+
+* [Rocker](https://www.rocker-project.org/) is a community-organised and community-maintained hub of Docker containers that are pre-built and specified with different variants and configurations of R for various operating systems and for various types of R workflows e.g., base, RStudio, spatial analysis, machine learning, etc.
+
+* Containers support portability because we are able to "carry" with us almost any operating system + R configuration that we might need in our R workflows
+
+---
+
+# Project-local R dependencies management
+
+.pull-left[
+.center[![](images/pcbi.1004947.g001.jpg)]
+]
+
+.pull-right[
+* The more people collaborate on code and R workflows, the higher the chances that R package dependencies will increase
+
+* The more complex the type of R analysis workflow that is being implemented, the higher the chances that R package dependencies will increase
+
+* Management of R dependencies will be critical in ensuring portability
+
+* The `{renv}` package facilitates this R dependencies management
+]
+
+---
+
+# The `{renv}` package
+
+.pull-left[
+.center[![](https://rstudio.github.io/renv/logo.svg)]
+]
+
+.pull-right[
+* Initialise a new project-local environment with a private R library;
+
+* Work in the project as normal, installing and removing new R packages as they are needed in the project;
+
+* Save the state of the project library to the lockfile;
+
+* Continue working on your project, installing and updating R packages as needed; and,
+
+* Again save the state of your project library if your attempts to update R packages were successful, or restore to a previous state as encoded in the lockfile if you encounter problems updating a package.
+]
+
+---
+
+class: inverse, middle, center
+
+# Questions?
+
+---
+
+class: inverse, center, middle
+
+# Thank you!
+
+Slides can be viewed at https://OxfordIHTM.github.io/open-reproducible-science/session5.html
+
+PDF version of slides can be downloaded at https://OxfordIHTM.github.io/open-reproducible-science/pdf/session5-portable-r-projects.pdf
+
+R scripts for slides available [here](https://github.com/OxfordIHTM/open-reproducible-science/blob/main/session5.Rmd)
+
+    </textarea>
+<style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
+<script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
+<script>var slideshow = remark.create({
+"slideNumberFormat": "%current%",
+"highlightStyle": "github",
+"highlightLines": true,
+"ratio": "16:9",
+"countIncrementalSlides": true
+});
+if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
+  window.dispatchEvent(new Event('resize'));
+});
+(function(d) {
+  var s = d.createElement("style"), r = d.querySelector(".remark-slide-scaler");
+  if (!r) return;
+  s.type = "text/css"; s.innerHTML = "@page {size: " + r.style.width + " " + r.style.height +"; }";
+  d.head.appendChild(s);
+})(document);
+
+(function(d) {
+  var el = d.getElementsByClassName("remark-slides-area");
+  if (!el) return;
+  var slide, slides = slideshow.getSlides(), els = el[0].children;
+  for (var i = 1; i < slides.length; i++) {
+    slide = slides[i];
+    if (slide.properties.continued === "true" || slide.properties.count === "false") {
+      els[i - 1].className += ' has-continuation';
+    }
+  }
+  var s = d.createElement("style");
+  s.type = "text/css"; s.innerHTML = "@media print { .has-continuation { display: none; } }";
+  d.head.appendChild(s);
+})(document);
+// delete the temporary CSS (for displaying all slides initially) when the user
+// starts to view slides
+(function() {
+  var deleted = false;
+  slideshow.on('beforeShowSlide', function(slide) {
+    if (deleted) return;
+    var sheets = document.styleSheets, node;
+    for (var i = 0; i < sheets.length; i++) {
+      node = sheets[i].ownerNode;
+      if (node.dataset["target"] !== "print-only") continue;
+      node.parentNode.removeChild(node);
+    }
+    deleted = true;
+  });
+})();
+(function() {
+  "use strict"
+  // Replace <script> tags in slides area to make them executable
+  var scripts = document.querySelectorAll(
+    '.remark-slides-area .remark-slide-container script'
+  );
+  if (!scripts.length) return;
+  for (var i = 0; i < scripts.length; i++) {
+    var s = document.createElement('script');
+    var code = document.createTextNode(scripts[i].textContent);
+    s.appendChild(code);
+    var scriptAttrs = scripts[i].attributes;
+    for (var j = 0; j < scriptAttrs.length; j++) {
+      s.setAttribute(scriptAttrs[j].name, scriptAttrs[j].value);
+    }
+    scripts[i].parentElement.replaceChild(s, scripts[i]);
+  }
+})();
+(function() {
+  var links = document.getElementsByTagName('a');
+  for (var i = 0; i < links.length; i++) {
+    if (/^(https?:)?\/\//.test(links[i].getAttribute('href'))) {
+      links[i].target = '_blank';
+    }
+  }
+})();
+// adds .remark-code-has-line-highlighted class to <pre> parent elements
+// of code chunks containing highlighted lines with class .remark-code-line-highlighted
+(function(d) {
+  const hlines = d.querySelectorAll('.remark-code-line-highlighted');
+  const preParents = [];
+  const findPreParent = function(line, p = 0) {
+    if (p > 1) return null; // traverse up no further than grandparent
+    const el = line.parentElement;
+    return el.tagName === "PRE" ? el : findPreParent(el, ++p);
+  };
+
+  for (let line of hlines) {
+    let pre = findPreParent(line);
+    if (pre && !preParents.includes(pre)) preParents.push(pre);
+  }
+  preParents.forEach(p => p.classList.add("remark-code-has-line-highlighted"));
+})(document);</script>
+
+<script>
+slideshow._releaseMath = function(el) {
+  var i, text, code, codes = el.getElementsByTagName('code');
+  for (i = 0; i < codes.length;) {
+    code = codes[i];
+    if (code.parentNode.tagName !== 'PRE' && code.childElementCount === 0) {
+      text = code.textContent;
+      if (/^\\\((.|\s)+\\\)$/.test(text) || /^\\\[(.|\s)+\\\]$/.test(text) ||
+          /^\$\$(.|\s)+\$\$$/.test(text) ||
+          /^\\begin\{([^}]+)\}(.|\s)+\\end\{[^}]+\}$/.test(text)) {
+        code.outerHTML = code.innerHTML;  // remove <code></code>
+        continue;
+      }
+    }
+    i++;
+  }
+};
+slideshow._releaseMath(document);
+</script>
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+(function () {
+  var script = document.createElement('script');
+  script.type = 'text/javascript';
+  script.src  = 'https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML';
+  if (location.protocol !== 'file:' && /^https?:/.test(script.src))
+    script.src  = script.src.replace(/^https?:/, '');
+  document.getElementsByTagName('head')[0].appendChild(script);
+})();
+</script>
+  </body>
+</html>
