@@ -177,7 +177,7 @@ Understanding GitHub Actions -
 ### Teaching Material
 
 Slides can be viewed at
-<https://oxfordihtm.github.io/open-reproducible-science/session6html>
+<https://oxfordihtm.github.io/open-reproducible-science/session6.html>
 
 PDF version of slides can be downloaded at
 <https://oxfordihtm.github.io/open-reproducible-science/pdf/session6-automating-r-projects.pdf>
