@@ -25,6 +25,8 @@ learning, practical examples and exercises will be discussed and walked
 through using the R language for statistical computing as a way to
 practically demonstrate these concepts.
 
+ 
+
 ## Session 1: Open Science and Reproducible Research in R: An Overview
 
 In this session, an overview of the what, why, and how of Open Science
@@ -48,6 +50,8 @@ PDF version of slides can be downloaded at
 
 R scripts for slides available
 [here](https://github.com/OxfordIHTM/open-reproducible-science/blob/main/session1.Rmd)
+
+ 
 
 ## Session 2: Git and GitHub for use with R: tools for versioning and sharing research
 
@@ -83,6 +87,8 @@ PDF version of slides can be downloaded at
 R scripts for slides available
 [here](https://github.com/OxfordIHTM/open-reproducible-science/blob/main/session2.Rmd)
 
+ 
+
 ## Session 3: Data extraction, transformation, and loading in R
 
 In this session, a discussion on the current state of *“data”* in
@@ -107,6 +113,8 @@ PDF version of slides can be downloaded at
 
 R scripts for slides available
 [here](https://github.com/OxfordIHTM/open-reproducible-science/blob/main/session3.Rmd)
+
+ 
 
 ## Session 4: Reproducible scientific workflows in R
 
@@ -136,6 +144,8 @@ PDF version of slides can be downloaded at
 R scripts for slides available at
 <https://github.com/OxfordIHTM/open-reproducible-science/blob/main/session4.Rmd>
 
+ 
+
 ## Session 5: Making your R-based research project portable
 
 In this session, a discussion of R code portability, the factors that
@@ -161,6 +171,8 @@ PDF version of slides can be downloaded at
 R scripts for slides available at
 <https://github.com/OxfordIHTM/open-reproducible-science/blob/main/session5.Rmd>
 
+ 
+
 ## Session 6: Automating your R-based research project
 
 In this session, a discussion of automation, its application on R
@@ -185,11 +197,33 @@ PDF version of slides can be downloaded at
 R scripts for slides available at
 <https://github.com/OxfordIHTM/open-reproducible-science/blob/main/session6.Rmd>
 
+ 
+
 ## Series Lecturer
 
 [Ernest Guevarra](https://ernest.guevarra.io)
+
+ 
 
 ## License
 
 This work is licensed under a [GNU General Public License 3
 (GPL-3)](https://github.com/OxfordIHTM/open-reproducible-science/blob/main/LICENSE.md).
+
+ 
+
+## Community guidelines
+
+Feedback, bug reports and feature requests are welcome; file issues
+[here](https://github.com/OxfordIHTM/open-reproducible-science/issues)
+or seek support
+[here](https://github.com/OxfordIHTM/open-reproducible-science/discussions).
+If you would like to contribute to the package, please see our
+[contributing
+guidelines](https://github.com/OxfordIHTM/open-reproducible-science/CONTRIBUTING.html).
+
+Please note that the [Open Reproducible
+Science](https://oxfordihtml.github.io/open-reproducible-science)
+project is released with a [Contributor Code of
+Conduct](https://contributor-covenant.org/version/2/0/CODE_OF_CONDUCT.html).
+By contributing to this project, you agree to abide by its terms.
