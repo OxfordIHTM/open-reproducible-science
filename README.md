@@ -220,10 +220,10 @@ or seek support
 [here](https://github.com/OxfordIHTM/open-reproducible-science/discussions).
 If you would like to contribute to the package, please see our
 [contributing
-guidelines](https://github.com/OxfordIHTM/open-reproducible-science/CONTRIBUTING.html).
+guidelines](https://github.com/OxfordIHTM/open-reproducible-science/blob/main/CONTRIBUTING.md).
 
 Please note that the [Open Reproducible
 Science](https://oxfordihtml.github.io/open-reproducible-science)
 project is released with a [Contributor Code of
-Conduct](https://contributor-covenant.org/version/2/0/CODE_OF_CONDUCT.html).
+Conduct](https://github.com/OxfordIHTM/open-reproducible-science/blob/main/CODE_OF_CONDUCT.md).
 By contributing to this project, you agree to abide by its terms.
