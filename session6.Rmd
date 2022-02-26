@@ -110,6 +110,117 @@ background-size: contain
 
 ---
 
+# Example GitHub Actions automation
+
+.pull-left[
+.center[![](images/automation_workflow.png)]
+]
+
+.pull-right[
+* Example automation built-in to the latest assignment on creating targets workflow
+
+* Can be found at `.github/workflows/check-assignment.yml`
+]
+
+---
+
+# Setting the `trigger` for the automation
+
+```YAML
+name: check assignment
+
+on:
+  push:
+    branches: [main, master]
+  pull_request:
+    branches: [main, master]
+  workflow_dispatch:
+    branches:
+      - '*'
+```
+
+---
+
+# Defining `jobs` to be implemented in the workflow
+
+```YAML
+jobs:
+  check-assignment:
+    runs-on: ubuntu-latest
+    container: rocker/geospatial:4.1.2
+    steps:
+      - uses: actions/checkout@v2
+```
+      
+---
+
+# Specifying `steps` in the workflow
+
+### Workflow step 1: reproduce the system environment
+
+```YAML
+      - name: Install system dependencies
+        run: |
+          apt-get update && apt-get install -y --no-install-recommends \
+          git-crypt libxt6 libglpk-dev
+```
+
+### Workflow step 2: Reproduce the R project-local environment
+
+```YAML
+      - name: Install packages from renv.lock (with cache)
+        uses: r-lib/actions/setup-renv@master
+        with:
+          cache-version: 2
+```
+
+---
+   
+# Specifying `steps` in the workflow
+
+### Workflow step 3: Perform tests/checks
+
+```YAML
+      - name: Check that targets workflow has been enabled
+        run: |
+          testthat::test_that("Target script file exists",
+            testthat::expect_true(
+              list.files(pattern = "_targets.R") == "_targets.R"
+            )
+          )
+        shell: Rscript {0}
+      
+      - name: Check that renv has been enabled/initialised
+        run: |
+          testthat::test_that("renv has been enabled", {
+            testthat::expect_true(
+              list.files(pattern = "renv.lock") == "renv.lock",
+            )
+            testthat::expect_true(
+              list.files(pattern = ".Rprofile", all.files = TRUE) == ".Rprofile"
+            )
+            testthat::expect_true(
+              any(list.dirs(recursive = FALSE) == "./renv")
+            )          
+          })
+        shell: Rscript {0}
+```
+
+---
+
+# Specifying `steps` in the workflow
+
+### Workflow step 4: Run the targets workflow
+
+```YAML        
+      - name: Check that targets workflow runs without errors
+        run: |
+          targets::tar_make()
+        shell: Rscript {0}
+```
+
+---
+
 class: inverse, middle, center
 
 # Questions?

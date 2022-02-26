@@ -64,9 +64,9 @@ background-color: #FFFFFF
 
 * to recreate results deleted by *fat fingers*
 
-* to rerun the pipelines with updated software
+* to rerun the workflow/pipeline with updated software
 
-* to run the same pipeline on a new dataset
+* to run the same workflow/pipeline on a new dataset
 
 ---
 
@@ -81,6 +81,117 @@ background-size: contain
 * Composed of a job or a number of jobs. The job/s are then composed of steps that control the order in which actions are run in order to complete a job/s. This workflow is scheduled or triggered by a specific event and runs on what is called a runner - a server that has the GitHub Actions runner application installed - that is either hosted by GitHub, or self-hosted on your own machines.
 
 * This whole workflow including the event trigger and the runner on which the workflow will run in are specified and detailed using a workflow `.yml` file that is saved inside a directory named `.github` within your GitHub repository in which you want to use GitHub Actions on.
+
+---
+
+# Example GitHub Actions automation
+
+.pull-left[
+.center[![](images/automation_workflow.png)]
+]
+
+.pull-right[
+* Example automation built-in to the latest assignment on creating targets workflow
+
+* Can be found at `.github/workflows/check-assignment.yml`
+]
+
+---
+
+# Setting the `trigger` for the automation
+
+```YAML
+name: check assignment
+
+on:
+  push:
+    branches: [main, master]
+  pull_request:
+    branches: [main, master]
+  workflow_dispatch:
+    branches:
+      - '*'
+```
+
+---
+
+# Defining `jobs` to be implemented in the workflow
+
+```YAML
+jobs:
+  check-assignment:
+    runs-on: ubuntu-latest
+    container: rocker/geospatial:4.1.2
+    steps:
+      - uses: actions/checkout@v2
+```
+      
+---
+
+# Specifying `steps` in the workflow
+
+### Workflow step 1: reproduce the system environment
+
+```YAML
+      - name: Install system dependencies
+        run: |
+          apt-get update &amp;&amp; apt-get install -y --no-install-recommends \
+          git-crypt libxt6 libglpk-dev
+```
+
+### Workflow step 2: Reproduce the R project-local environment
+
+```YAML
+      - name: Install packages from renv.lock (with cache)
+        uses: r-lib/actions/setup-renv@master
+        with:
+          cache-version: 2
+```
+
+---
+   
+# Specifying `steps` in the workflow
+
+### Workflow step 3: Perform tests/checks
+
+```YAML
+      - name: Check that targets workflow has been enabled
+        run: |
+          testthat::test_that("Target script file exists",
+            testthat::expect_true(
+              list.files(pattern = "_targets.R") == "_targets.R"
+            )
+          )
+        shell: Rscript {0}
+      
+      - name: Check that renv has been enabled/initialised
+        run: |
+          testthat::test_that("renv has been enabled", {
+            testthat::expect_true(
+              list.files(pattern = "renv.lock") == "renv.lock",
+            )
+            testthat::expect_true(
+              list.files(pattern = ".Rprofile", all.files = TRUE) == ".Rprofile"
+            )
+            testthat::expect_true(
+              any(list.dirs(recursive = FALSE) == "./renv")
+            )          
+          })
+        shell: Rscript {0}
+```
+
+---
+
+# Specifying `steps` in the workflow
+
+### Workflow step 4: Run the targets workflow
+
+```YAML        
+      - name: Check that targets workflow runs without errors
+        run: |
+          targets::tar_make()
+        shell: Rscript {0}
+```
 
 ---
 
@@ -99,9 +210,6 @@ Slides can be viewed at https://OxfordIHTM.github.io/open-reproducible-science/s
 PDF version of slides can be downloaded at https://OxfordIHTM.github.io/open-reproducible-science/pdf/session6-automating-r-projects.pdf
 
 R scripts for slides available [here](https://github.com/OxfordIHTM/open-reproducible-science/blob/main/session6.Rmd)
-
-
-
     </textarea>
 <style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
 <script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
