@@ -1,9 +1,9 @@
 ---
 title: "Making your R-based research project portable"
-subtitle: ""  
+subtitle: "Introduction to the {renv} package"  
 author: 
   - "Ernest Guevarra"
-date: '2022-02-21'
+date: '2023-02-21'
 output:
   xaringan::moon_reader:
     css: xaringan-themer.css
@@ -191,9 +191,9 @@ class: inverse, center, middle
 
 # Thank you!
 
-Slides can be viewed at https://OxfordIHTM.github.io/open-reproducible-science/session5.html
+Slides can be viewed at https://oxford-ihtm.io/open-reproducible-science/session10.html
 
-PDF version of slides can be downloaded at https://OxfordIHTM.github.io/open-reproducible-science/pdf/session5-portable-r-projects.pdf
+PDF version of slides can be downloaded at https://oxford-ihtm.io/open-reproducible-science/pdf/session10-portable-r-projects.pdf
 
-R scripts for slides available [here](https://github.com/OxfordIHTM/open-reproducible-science/blob/main/session5.Rmd)
+R scripts for slides available [here](https://github.com/OxfordIHTM/open-reproducible-science/blob/main/session10.Rmd)
 

@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html lang="" xml:lang="">
   <head>
-    <title>Getting the right tools for the job</title>
+    <title>git and GitHub for use with R</title>
     <meta charset="utf-8" />
     <meta name="author" content="Ernest Guevarra" />
-    <meta name="date" content="2023-01-12" />
-    <script src="session1_files/header-attrs/header-attrs.js"></script>
+    <meta name="date" content="2023-01-26" />
+    <script src="session7_files/header-attrs/header-attrs.js"></script>
     <link rel="stylesheet" href="xaringan-themer.css" type="text/css" />
   </head>
   <body>
@@ -13,16 +13,16 @@
 class: center, middle, inverse, title-slide
 
 .title[
-# Getting the right tools for the job
+# git and GitHub for use with R
 ]
 .subtitle[
-## R, RStudio, Git, and GitHub
+## Tools for versioning and sharing research
 ]
 .author[
 ### Ernest Guevarra
 ]
 .date[
-### 2023-01-12
+### 2023-01-26
 ]
 
 ---
@@ -34,85 +34,15 @@ class: center, middle, inverse, title-slide
 
 # Outline
 
-1. What is R?
+1. What is git? Why use git?
 
-2. Why use R?
+2. What is GitHub? Why use GitHub?
 
-3. What is RStudio?
+3. git and GitHub
 
-4. Why use RStudio?
+3. git integration with RStudio
 
-5. What is Git and GitHub?
-
-6. Why use Git and GitHub?
-
-
----
-
-# What is R?
-
-.pull-left[
-* `R` is a simple but powerful *programming language*
-
-* `R` is a system for *data manipulation*, *calculation*, and *graphics*. It provides:
-
-    * Facilitates for data handling and storage;
-    
-    * A large collection of tools for data analysis; and,
-    
-    * Graphical facilities for data analysis and display.
-
-* `R` is not strictly a statistics system but a system that provides many classical and modern statistical procedures as part of a broader data analysis tool.
-]
-
-.pull-right[
-.center[![](https://upload.wikimedia.org/wikipedia/commons/thumb/1/1b/R_logo.svg/724px-R_logo.svg.png)]
-]
-
----
-
-# Why use R?
-
-.pull-left[
-.center[![](https://user2021.r-project.org/img/artwork/user-logo-color.png)]
-]
-
-
-.pull-right[
-* It is an ***open source system*** and is available for ***free***. Even though free, R is ***more powerful than most commercial packages***.
-
-* Considerably ***more flexible than statistical packages*** that relies on menus, buttons, and boxes.
-
-* Every stage of your data management and analysis can be recorded and edited and re-run at a later date.
-
-* huge user and developer community.
-
-* has a robust set of user- and community-developed packages that support statistical methods and techniques.
-]
-
----
-
-# What is RStudio?
-
-.pull-left[
-* An ***integrated development environment (IDE)*** for R. RStudio is not R. RStudio is a tool for interfacing with R.
-
-* Includes a ***console***, ***syntax-highlighting editor*** that supports direct code execution, as well as ***tools for plotting, history, debugging and workspace management***.
-]
-
-.pull-right[
-.center[![](https://upload.wikimedia.org/wikipedia/commons/thumb/d/d0/RStudio_logo_flat.svg/1920px-RStudio_logo_flat.svg.png?20190314020554)]
-]
-
----
-
-# Why use RStudio?
-
-* RStudio is designed to make it easier to work with R
-
-* RStudio facilitates creation of project-orientated workflows
-
-* RStudio makes it convenient to view and interact with the objects in your environment
+4. Practial session
 
 ---
 
@@ -129,7 +59,7 @@ class: center, middle, inverse, title-slide
 ]
 
 .pull-right[
-[.center[![](https://git-scm.com/images/logos/downloads/Git-Logo-2Color.png)]](https://git-scm.com)
+[.center[![](images/Git-Logo-2Color.png)]](https://git-scm.com)
 ]
 
 ???
@@ -187,10 +117,15 @@ Merging collaborators’ changes made easy. Have you ever had to deal with a col
 # What is GitHub and Why use GitHub?
 
 .pull-left[
-[.center[![](https://avatars.githubusercontent.com/u/583231?v=4)]](https://github.com)
+[.center[![](images/Octocat.png)]](https://github.com)
 ]
 
 .pull-right[
+
+&lt;!---
+.center[![](images/GitHub_Logo.png)]
+---&gt;
+
 * Service provider of hosting for software development and version control using git
 
 * Offers distributed version control and source code management functionality of git, plus its own features such as bug tracking, feature request, task management, continuous integration and wikis for every project
@@ -215,6 +150,14 @@ You don’t have to set up a git server. It’s surprisingly easy to get things 
 ---
 
 background-color: #FFFFFF
+
+# git and GitHub
+
+.center[![](images/git_and_github01b.png)]
+
+---
+
+background-color: #FFFFFF
 background-image: url(images/pcbi.1004947.g001.jpg)
 background-size: 50%
 
@@ -224,9 +167,43 @@ background-size: 50%
 
 ---
 
+# git integration with RStudio
+
+.pull-left[
+* [RStudio](https://www.rstudio.com/products/rstudio/) is a popular integrated development environment (IDE) for [R](https://cran.r-project.org)
+
+* [RStudio](https://www.rstudio.com/products/rstudio/) has built-in facilities for [git](https://git-scm.com/) and [GitHub](https://github.com)
+
+* Within [RStudio](https://www.rstudio.com/products/rstudio/), one can create an [RStudio](https://www.rstudio.com/products/rstudio/) project (a directory with some special files to describe specific [RStudio](https://www.rstudio.com/products/rstudio/) options) which becomes your git repository
+
+* One can easily turn a current git repository into an [RStudio](https://www.rstudio.com/products/rstudio/) project.
+]
+
+.pull-left[
+.center[![](images/RStudio-Logo.png)]
+]
+
+---
+
 class: inverse, center, middle
 
 # Questions?
+
+---
+
+# Practical session
+
+* [Register a GitHub account](https://happygitwithr.com/github-acct.html)
+
+* [Install or upgrade R and RStudio](https://happygitwithr.com/install-r-rstudio.html)
+
+* [Install git](https://happygitwithr.com/install-git.html)
+
+* [Introduce yourself to git](https://happygitwithr.com/hello-git.html)
+
+* [Personal access token for HTTPS](https://happygitwithr.com/https-pat.html)
+
+* Connect RStudio to git and GitHub - see assignment in GitHub Classroom
 
 ---
 
@@ -234,11 +211,11 @@ class: inverse, center, middle
 
 # Thank you!
 
-Slides can be viewed at https://oxford-ihtm.io/open-reproducible-science/session1.html
+Slides can be viewed at https://oxford-ihtm.io/open-reproducible-science/session7.html
 
-PDF version of slides can be downloaded at https://oxford-ihtm.io/open-reproducible-science/pdf/session1-getting-the-right-tools.pdf
+PDF version of slides can be downloaded at https://oxford-ihtm.io/open-reproducible-science/pdf/session7-git-and-github-with-r.pdf
 
-R scripts for slides available [here](https://github.com/OxfordIHTM/open-reproducible-science/blob/main/session1.Rmd)
+R scripts for slides available [here](https://github.com/OxfordIHTM/open-reproducible-science/blob/main/session7.Rmd)
     </textarea>
 <style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
 <script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
