@@ -255,10 +255,10 @@ reproducible research in ecology, evolution, and conservation.
 #### Teaching Material
 
 Slides can be viewed at
-<https://oxfordihtm.github.io/open-reproducible-science/session6.html>
+<https://oxford-ihtm.io/open-reproducible-science/session6.html>
 
 PDF version of slides can be downloaded at
-<https://oxfordihtm.github.io/open-reproducible-science/pdf/session6-open-reproducible-science.pdf>
+<https://oxford-ihtm.io/open-reproducible-science/pdf/session6-open-reproducible-science.pdf>
 
 R scripts for slides available
 [here](https://github.com/OxfordIHTM/open-reproducible-science/blob/main/session6.Rmd)
@@ -291,44 +291,17 @@ e1004668. <https://doi.org/10.1371/journal.pcbi.1004668>
 #### Teaching Material
 
 Slides can be viewed at
-<https://oxfordihtm.github.io/open-reproducible-science/session7.html>
+<https://oxford-ihtm.io/open-reproducible-science/session7.html>
 
 PDF version of slides can be downloaded at
-<https://oxfordihtm.github.io/open-reproducible-science/pdf/session7-git-and-github-with-r.pdf>
+<https://oxford-ihtm.io/open-reproducible-science/pdf/session7-git-and-github-with-r.pdf>
 
 R scripts for slides available
 [here](https://github.com/OxfordIHTM/open-reproducible-science/blob/main/session7.Rmd)
 
  
 
-### Session 8: Data extraction, transformation, and loading in R
-
-In this session, a discussion on the current state of *“data”* in
-general and how this translates to *global health data* specifically.
-This discussion will then be linked to how the use of R can facilitate
-and support researchers in dealing with *data* in an open and
-reproducible way. The final part of the session will be focused on a
-data exercise using R based on Exercise 1 found in the [**Practical R
-for Epidemiologists**](https://practical-r.org/exercise2.html) book.
-
-#### Further Reading
-
-Practical R for Epidemiologists - <https://practical-r.org>
-
-#### Teaching Material
-
-Slides can be viewed at
-<https://oxfordihtm.github.io/open-reproducible-science/session8.html>
-
-PDF version of slides can be downloaded at
-<https://oxfordihtm.github.io/open-reproducible-science/pdf/session8-working-with-data-in-r.pdf>
-
-R scripts for slides available
-[here](https://github.com/OxfordIHTM/open-reproducible-science/blob/main/session8.Rmd)
-
- 
-
-### Session 9: Reproducible scientific workflows in R
+### Session 8: Reproducible scientific workflows in R - Part 1: Introduction to the {targets} package
 
 In this session, a discussion of best practices on reproducible
 scientific workflows and an introduction to using the `{targets}` to
@@ -336,6 +309,33 @@ implemenet these workflows. The final part of the session will continue
 on the data exercise using R based on Exercise 1 found in the
 [**Practical R for
 Epidemiologists**](https://practical-r.org/exercise2.html) book.
+
+#### Further Reading
+
+Dynamic Function-Oriented Make-Like Declarative Workflows -
+<https://docs.ropensci.org/targets/>
+
+The targets R Package User Manual -
+<https://books.ropensci.org/targets/>
+
+#### Teaching Material
+
+Slides can be viewed at
+<https://oxford-ihtm.io/open-reproducible-science/session8.html>
+
+PDF version of slides can be downloaded at
+<https://oxford-ihtm.io/open-reproducible-science/pdf/session8-reproducible-scientific-workflows.pdf>
+
+R scripts for slides available
+[here](https://github.com/OxfordIHTM/open-reproducible-science/blob/main/session8.Rmd)
+
+ 
+
+### Session 9: Reproducible scientific workflows in R - Part 2: Creating targets-based scientific workflows
+
+In this session, the students will create their own targets-based
+workflows based on a data exercise taken from the the Practical R for
+Epidemiologists Links to an external site.book.
 
 #### Further Reading
 
@@ -374,10 +374,10 @@ Introduction to renv -
 #### Teaching Material
 
 Slides can be viewed at
-<https://oxfordihtm.github.io/open-reproducible-science/session10.html>
+<https://oxford-ihtm.io/open-reproducible-science/session10.html>
 
 PDF version of slides can be downloaded at
-<https://oxfordihtm.github.io/open-reproducible-science/pdf/session10-portable-r-projects.pdf>
+<https://oxford-ihtm.io/open-reproducible-science/pdf/session10-portable-r-projects.pdf>
 
 R scripts for slides available at
 <https://github.com/OxfordIHTM/open-reproducible-science/blob/main/session10.Rmd>
@@ -400,10 +400,10 @@ Understanding GitHub Actions -
 #### Teaching Material
 
 Slides can be viewed at
-<https://oxfordihtm.github.io/open-reproducible-science/session11.html>
+<https://oxford-ihtm.io/open-reproducible-science/session11.html>
 
 PDF version of slides can be downloaded at
-<https://oxfordihtm.github.io/open-reproducible-science/pdf/session11-automating-r-projects.pdf>
+<https://oxford-ihtm.io/open-reproducible-science/pdf/session11-automating-r-projects.pdf>
 
 R scripts for slides available at
 <https://github.com/OxfordIHTM/open-reproducible-science/blob/main/session11.Rmd>
@@ -435,14 +435,13 @@ All slide decks in this repository are licensed under a [CC BY
 
 Feedback, bug reports and feature requests are welcome; file issues
 [here](https://github.com/OxfordIHTM/open-reproducible-science/issues)
-or seek support
-[here](https://github.com/OxfordIHTM/open-reproducible-science/discussions).
+or seek support [here](https://github.com/orgs/OxfordIHTM/discussions).
 If you would like to contribute to the package, please see our
 [contributing
 guidelines](https://github.com/OxfordIHTM/open-reproducible-science/blob/main/CONTRIBUTING.md).
 
 Please note that the [Open Reproducible
-Science](https://oxfordihtml.github.io/open-reproducible-science)
-project is released with a [Contributor Code of
+Science](https://oxford-ihtm.io/open-reproducible-science) project is
+released with a [Contributor Code of
 Conduct](https://github.com/OxfordIHTM/open-reproducible-science/blob/main/CODE_OF_CONDUCT.md).
 By contributing to this project, you agree to abide by its terms.

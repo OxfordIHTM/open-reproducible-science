@@ -271,8 +271,8 @@ class: inverse, center, middle
 
 # Thank you!
 
-Slides can be viewed at https://OxfordIHTM.github.io/open-reproducible-science/session4.html
+Slides can be viewed at https://oxford-ihtm.io/open-reproducible-science/session9.html
 
-PDF version of slides can be downloaded at https://OxfordIHTM.github.io/open-reproducible-science/pdf/session4-reproducible-scientific-workflows.pdf
+PDF version of slides can be downloaded at https://oxford-ihtm.io/open-reproducible-science/pdf/session9-reproducible-scientific-workflows.pdf
 
-R scripts for slides available [here](https://github.com/OxfordIHTM/open-reproducible-science/blob/main/session4.Rmd)
+R scripts for slides available [here](https://github.com/OxfordIHTM/open-reproducible-science/blob/main/session9.Rmd)
