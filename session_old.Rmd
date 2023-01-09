@@ -1,0 +1,313 @@
+---
+title: "Data extraction, transformation, and loading in R"
+subtitle: ""  
+author: 
+  - "Ernest Guevarra"
+date: '2022-02-07'
+output:
+  xaringan::moon_reader:
+    css: xaringan-themer.css
+    nature:
+      slideNumberFormat: "%current%"
+      highlightStyle: github
+      highlightLines: true
+      ratio: 16:9
+      countIncrementalSlides: true
+---
+
+```{r setup, include=FALSE}
+options(htmltools.dir.version = FALSE)
+knitr::opts_chunk$set(
+  fig.width=9, fig.height=3.5, fig.retina=3,
+  out.width = "100%",
+  cache = FALSE,
+  echo = TRUE,
+  message = FALSE, 
+  warning = FALSE,
+  hiline = TRUE
+)
+
+if (!require(remotes)) install.packages("remotes")
+if (!require(fontawesome)) remotes::install_github("rstudio/fontawesome")
+if (!require(tweetrmd)) remotes::install_github("gadenbuie/tweetrmd")
+if (!require(webshot2)) remotes::install_github("rstudio/webshot2")
+```
+
+```{r xaringan-themer, include=FALSE, warning=FALSE}
+library(xaringanthemer)
+style_mono_light(
+  base_color = "#002147",
+  title_slide_background_image = "",
+  title_slide_background_size = "cover",
+  header_font_google = google_font("Fira Sans"),
+  text_font_google   = google_font("Fira Sans Condensed"),
+  text_font_size = "1.2em",
+  link_color = "#214700",
+  header_h1_font_size = "50px",
+  header_h2_font_size = "40px",
+  header_h3_font_size = "30px",
+  code_font_google   = google_font("Fira Mono"),
+  text_slide_number_font_size = "0.5em",
+  footnote_font_size = "0.5em"
+)
+```
+
+# Outline
+
+* Concepts and considerations about data
+
+* Practical session
+
+---
+
+class: inverse, center, middle
+
+# Concepts and considerations about data in tweets and quotes
+
+---
+
+class: inverse, center, middle
+
+# Consideration #1:
+
+# Data cleaning/processing/checking is an important, but very challenging, step when working with data
+
+---
+
+class: center, middle
+
+<!---
+# Data cleaning code cannot be clean. It's a sort of sin eater.
+--->
+
+```{r tweet8, echo = FALSE, eval = TRUE}
+tweet_screenshot(
+  tweet_url("StatFact", "492753200190341120"),
+  hide_media = TRUE,
+  theme = "dark"
+)
+```
+
+[@StatFact](https://twitter.com/StatFact) [tweet](https://twitter.com/StatFact/status/492753200190341120)
+
+---
+
+class: center, middle
+
+<!---
+# I will let the data speak for itself when it cleans itself.
+--->
+
+```{r tweet1, echo = FALSE}
+tweet_screenshot(
+  tweet_url("AllisonReichel", "1350107719236247558"),
+  #plain = TRUE,
+  hide_media = TRUE,
+  theme = "dark"
+)
+```
+
+[@AllisonReichel](https://twitter.com/AllisonReichel)
+[tweet](https://twitter.com/AllisonReichel/status/1350107719236247558)
+
+---
+
+class: inverse, center, middle
+
+# and I’m still pretty sure some of the data is missing, but it could still be here, in this ONE HUNDRED SHEET excel file
+
+```{r tweet6, echo = FALSE, eval = FALSE}
+tweet_screenshot(
+  tweet_url("RallidaeRule", "572922098617741312"),
+  hide_media = TRUE,
+  theme = "dark"
+)
+```
+
+[@RallidaeRule](https://mobile.twitter.com/RallidaeRule) [tweet](https://mobile.twitter.com/rallidaerule/status/572922098617741312)
+
+---
+
+class: center, middle
+
+<!----
+# Never check data when you are hungry, thirsty, or tired.
+--->
+
+```{r tweet2, echo = FALSE}
+tweet_screenshot(
+  tweet_url("AmeliaMN", "1357861551575871494"),
+  #plain = TRUE,
+  hide_media = TRUE,
+  theme = "dark"
+)
+```
+
+[@GhazalGulati](https://twitter.com/GhazalGulati), via
+[@AmeliaMN](https://twitter.com/AmeliaMN/)
+[tweet](https://twitter.com/AmeliaMN/status/1357861551575871494)
+
+---
+
+class: inverse, center, middle
+
+# Classroom data are like teddy bears; real data are like a grizzly with salmon blood dripping out its mouth.
+
+```{r tweet5, echo = FALSE, eval = FALSE}
+tweet_screenshot(
+  tweet_url("sgrifter", "631150829165113344"),
+  hide_media = TRUE,
+  theme = "dark"
+)
+```
+
+[@JennyBryan](https://twitter.com/jennybryan), via [@sgrifter](https://twitter.com/sgrifter) [tweet](https://twitter.com/sgrifter/status/631150829165113344)
+
+---
+
+class: center, middle
+
+<!---
+# Working with data is not about rules to follow but about decisions to make
+--->
+
+```{r tweet4, echo = FALSE}
+tweet_screenshot(
+  tweet_url("kwbroman", "686562071853547520"),
+  hide_media = TRUE,
+  theme = "dark"
+)
+```
+
+[@naupakaz](https://twitter.com/naupakaz), via [@kwbroman](https://twitter.com/kwbroman) [tweet](https://twitter.com/kwbroman/status/686562071853547520)
+
+---
+
+class: inverse, center, middle
+
+# Consideration #2
+
+# Big data is what everyone is talking about
+
+---
+
+class: center, middle
+
+<!---
+# Big Data: (n): the belief that a big enough pile of horseshit will, with probability one, somewhere contain a pony.
+--->
+
+```{r tweet3, echo = FALSE}
+tweet_screenshot(
+  tweet_url("callin_bull", "831663695813963776"),
+  hide_media = TRUE,
+  theme = "dark"
+)
+```
+
+[@mlipsitch](https://twitter.com/mlipsitch), via [@callin_bull](https://twitter.com/callin_bull) [tweet](https://twitter.com/callin_bull/status/831663695813963776)
+
+---
+
+class: inverse, center, middle
+
+# Let's start the "titanic data" movement. Data too big to fail.
+
+```{r tweet7, echo = FALSE, eval = FALSE}
+tweet_screenshot(
+  tweet_url("neilfws", "588533319135985665"),
+  hide_media = TRUE,
+  theme = "dark"
+)
+```
+
+[@neilfws](https://twitter.com/neilfws) with assist from [@aaronquinlan](https://twitter.com/aaronquinlan), [tweet](https://twitter.com/neilfws/status/588533319135985665)
+
+---
+
+class: inverse, center, middle
+
+# Consideration #3
+
+# Data sharing requires a well-thought out process that everyone can follow
+
+---
+
+class: center, middle
+
+<!---
+# Last week I told a collaborator to stick the files on a USB drive and walk the 100m across the road rather than figure out inter-institute file sharing.
+--->
+
+```{r tweet9, echo = FALSE, eval = TRUE}
+tweet_screenshot(
+  tweet_url("PeteHaitch", "1095948744510517250"),
+  hide_media = TRUE,
+  hide_thread = TRUE,
+  theme = "dark"
+)
+```
+
+[@PeteHaitch](https://twitter.com/PeteHaitch) [tweet](https://twitter.com/PeteHaitch/status/1095948744510517250)
+
+---
+
+class: inverse, center, middle
+
+# Consideration #4
+
+# Working with data in R is great!
+
+---
+
+class: center, middle
+
+<!---
+# R is a datasmith's heaven-on-earth; I like Python, long term relationship with Excel, quite like Power Query, DAX's a keeper, but I love R.
+--->
+
+```{r tweet10, echo = FALSE, eval = TRUE}
+tweet_screenshot(
+  tweet_url("tggleeson", "591013073542062081"),
+  hide_media = TRUE,
+  theme = "dark"
+)
+```
+
+[@tggleeson](https://twitter.com/tggleeson)
+[tweet](https://twitter.com/tggleeson/status/591013073542062081)
+
+---
+
+class: inverse, center, middle
+
+# Practical session
+
+---
+
+# Practical session
+
+* We will all go through Exercise #1 in the [Practical R for Epidemiologists](https://practical-r.org/exercise1.html) book
+
+* This is also one of your next assignments for this lecture series. This can be accessed via our GitHub Classroom through this link - https://classroom.github.com/a/xQNlWMp-
+
+* This link has also been emailed to you.
+
+---
+
+class: inverse, center, middle
+
+# Questions?
+
+---
+
+class: inverse, center, middle
+
+# Thank you!
+
+Slides can be viewed at https://OxfordIHTM.github.io/open-reproducible-science/session3.html
+
+PDF version of slides can be downloaded at https://OxfordIHTM.github.io/open-reproducible-science/pdf/session3-working-with-data-in-r.pdf
+
+R scripts for slides available [here](https://github.com/OxfordIHTM/open-reproducible-science/blob/main/session3.Rmd)
+

@@ -1,20 +1,31 @@
 <!DOCTYPE html>
 <html lang="" xml:lang="">
   <head>
-    <title>Data extraction, transformation, and loading in R</title>
+    <title>Extending R using packages, creating and manipulating objects</title>
     <meta charset="utf-8" />
     <meta name="author" content="Ernest Guevarra" />
-    <meta name="date" content="2022-02-07" />
+    <meta name="date" content="2023-01-17" />
     <script src="session3_files/header-attrs/header-attrs.js"></script>
+    <script src="session3_files/kePrint/kePrint.js"></script>
+    <link href="session3_files/lightable/lightable.css" rel="stylesheet" />
     <link rel="stylesheet" href="xaringan-themer.css" type="text/css" />
   </head>
   <body>
     <textarea id="source">
 class: center, middle, inverse, title-slide
 
-# Data extraction, transformation, and loading in R
+.title[
+# Extending R using packages, creating and manipulating objects
+]
+.subtitle[
+## Learning the basics of R - Part 2
+]
+.author[
 ### Ernest Guevarra
-### 2022-02-07
+]
+.date[
+### 2023-01-17
+]
 
 ---
 
@@ -25,181 +36,762 @@ class: center, middle, inverse, title-slide
 
 # Outline
 
-* Concepts and considerations about data
+1. Base functions in R
 
-* Practical session
+    * What is a function?    
+    * Basic function syntax
+    
+2. Extending R using packages
 
----
-
-class: inverse, center, middle
-
-# Concepts and considerations about data in tweets and quotes
-
----
-
-class: inverse, center, middle
-
-# Consideration #1:
-
-# Data cleaning/processing/checking is an important, but very challenging, step when working with data
+    * What are packages?    
+    * How to install packages
+    * Loading packages to the environment
+    
+3. Accessing and reading data into R
 
 ---
 
-class: center, middle
+# What is a function?
 
-&lt;!---
-# Data cleaning code cannot be clean. It's a sort of sin eater.
----&gt;
+* A set of statements organized together to perform a specific task. 
 
-&lt;img src="session3_files/figure-html/tweet8-1.png" width="100%" /&gt;
+* R has a large number of in-built functions.
 
-[@StatFact](https://twitter.com/StatFact) [tweet](https://twitter.com/StatFact/status/492753200190341120)
+* In R, a function is an object so the R interpreter is able to pass control to the function, along with arguments that may be necessary for the function to accomplish the actions.
 
----
-
-class: center, middle
-
-&lt;!---
-# I will let the data speak for itself when it cleans itself.
----&gt;
-
-&lt;img src="session3_files/figure-html/tweet1-1.png" width="100%" /&gt;
-
-[@AllisonReichel](https://twitter.com/AllisonReichel)
-[tweet](https://twitter.com/AllisonReichel/status/1350107719236247558)
+* The function in turn performs its task and returns control to the interpreter as well as any result which may be stored in other objects.
 
 ---
 
-class: inverse, center, middle
+# Functions in R
 
-# and I’m still pretty sure some of the data is missing, but it could still be here, in this ONE HUNDRED SHEET excel file
+## Base functions
 
+* Term we use for builtin functions in R.
 
+* These functions cover a wide range of purposes, use cases, and applications one of which is for statistical analysis (probably the most common builtin functions in R)
 
-[@RallidaeRule](https://mobile.twitter.com/RallidaeRule) [tweet](https://mobile.twitter.com/rallidaerule/status/572922098617741312)
+* Everyting we do in R is almost always mediated/made possible by using functions
 
----
+## Basic function syntax
 
-class: center, middle
-
-&lt;!----
-# Never check data when you are hungry, thirsty, or tired.
----&gt;
-
-&lt;img src="session3_files/figure-html/tweet2-1.png" width="100%" /&gt;
-
-[@GhazalGulati](https://twitter.com/GhazalGulati), via
-[@AmeliaMN](https://twitter.com/AmeliaMN/)
-[tweet](https://twitter.com/AmeliaMN/status/1357861551575871494)
+```r
+function_name(argument1, argument2, ...)
+```
 
 ---
 
-class: inverse, center, middle
+# Using functions - accessing R builtin dataset
 
-# Classroom data are like teddy bears; real data are like a grizzly with salmon blood dripping out its mouth.
+.pull-left[
+* First let us use some sample/toy data. R has builtin datasets for teaching/testing purposes. We will continue on the BMI theme from yesterday by accessing the `women` builtin dataset in R. This dataset is of average height (inches) and weight (lbs) of women age 30-39 years old.
 
-
-
-[@JennyBryan](https://twitter.com/jennybryan), via [@sgrifter](https://twitter.com/sgrifter) [tweet](https://twitter.com/sgrifter/status/631150829165113344)
-
----
-
-class: center, middle
-
-&lt;!---
-# Working with data is not about rules to follow but about decisions to make
----&gt;
-
-&lt;img src="session3_files/figure-html/tweet4-1.png" width="100%" /&gt;
-
-[@naupakaz](https://twitter.com/naupakaz), via [@kwbroman](https://twitter.com/kwbroman) [tweet](https://twitter.com/kwbroman/status/686562071853547520)
-
----
-
-class: inverse, center, middle
-
-# Consideration #2
-
-# Big data is what everyone is talking about
-
----
-
-class: center, middle
-
-&lt;!---
-# Big Data: (n): the belief that a big enough pile of horseshit will, with probability one, somewhere contain a pony.
----&gt;
-
-&lt;img src="session3_files/figure-html/tweet3-1.png" width="100%" /&gt;
-
-[@mlipsitch](https://twitter.com/mlipsitch), via [@callin_bull](https://twitter.com/callin_bull) [tweet](https://twitter.com/callin_bull/status/831663695813963776)
-
----
-
-class: inverse, center, middle
-
-# Let's start the "titanic data" movement. Data too big to fail.
+* We access this data using the `data()` function as follows:
 
 
+```r
+data("women")
+```
+]
 
-[@neilfws](https://twitter.com/neilfws) with assist from [@aaronquinlan](https://twitter.com/aaronquinlan), [tweet](https://twitter.com/neilfws/status/588533319135985665)
+.pull-right[
+
+```r
+women
+```
+
+```
+##    height weight
+## 1      58    115
+## 2      59    117
+## 3      60    120
+## 4      61    123
+## 5      62    126
+## 6      63    129
+## 7      64    132
+## 8      65    135
+## 9      66    139
+## 10     67    142
+## 11     68    146
+## 12     69    150
+## 13     70    154
+## 14     71    159
+## 15     72    164
+```
+]
 
 ---
 
-class: inverse, center, middle
+# Using functions - exploring data structure
 
-# Consideration #3
+* Being able to understand the **data structure** of a dataset helps us make good decisions on how to work with data or how to analyse data.
 
-# Data sharing requires a well-thought out process that everyone can follow
+* There are several R functions that gives us the characteristics and structure of a dataset such as:
 
----
-
-class: center, middle
-
-&lt;!---
-# Last week I told a collaborator to stick the files on a USB drive and walk the 100m across the road rather than figure out inter-institute file sharing.
----&gt;
-
-&lt;img src="session3_files/figure-html/tweet9-1.png" width="100%" /&gt;
-
-[@PeteHaitch](https://twitter.com/PeteHaitch) [tweet](https://twitter.com/PeteHaitch/status/1095948744510517250)
+    * The shape of the data    
+    * The number of records in the data    
+    * The variables of the data    
+    * The number of variables in the data    
+    * The values of variables in the data
 
 ---
 
-class: inverse, center, middle
+# Using functions - describing the shape of the data
 
-# Consideration #4
+* We use the `class()` function to know the **class** attribute of an R object.
 
-# Working with data in R is great!
+* Knowing the **class** of an R object give us information on what kind of object it is and how we can work with it in R
 
----
+## Task:
 
-class: center, middle
+* Using the `women` dataset that we just loaded, apply the `class()` function:
 
-&lt;!---
-# R is a datasmith's heaven-on-earth; I like Python, long term relationship with Excel, quite like Power Query, DAX's a keeper, but I love R.
----&gt;
+--
 
-&lt;img src="session3_files/figure-html/tweet10-1.png" width="100%" /&gt;
 
-[@tggleeson](https://twitter.com/tggleeson)
-[tweet](https://twitter.com/tggleeson/status/591013073542062081)
+```r
+## Get class of women dataset
+class(women)
+```
 
----
-
-class: inverse, center, middle
-
-# Practical session
+```
+## [1] "data.frame"
+```
 
 ---
 
-# Practical session
+# Using functions - number of records in the data
 
-* We will all go through Exercise #1 in the [Practical R for Epidemiologists](https://practical-r.org/exercise1.html) book
+* We often need to know how many records are in the dataset that we are working on.
 
-* This is also one of your next assignments for this lecture series. This can be accessed via our GitHub Classroom through this link - https://classroom.github.com/a/xQNlWMp-
+* This is useful for various statistical analysis that we perform on data.
 
-* This link has also been emailed to you.
+* The function `nrow()` gives us the number of rows of a `data.frame` R object
+
+## Task:
+
+* Using the `women` dataset, apply the `nrow()` function to get the number of rows:
+
+--
+
+
+```r
+## Get number of rows of women dataset
+nrow(women)
+```
+
+```
+## [1] 15
+```
+
+---
+
+# Using functions - number of records in the data
+
+## Bonus question:
+
+* How many columns does the `women` dataset have?
+
+--
+
+
+```r
+ncol(women)
+```
+
+```
+## [1] 2
+```
+
+---
+
+# Using functions - variable names of a dataset
+
+* We often need to know the variables of the dataset that we are working on.
+
+* This is useful for various statistical analysis that we perform on data.
+
+* The function `names()` gives us the variable names of a `data.frame` R object
+
+## Task:
+
+* Using the `women` dataset, apply the `names()` function to get the variable names:
+
+--
+
+
+```r
+## Get variable names of women dataset
+names(women)
+```
+
+```
+## [1] "height" "weight"
+```
+
+---
+
+# Using functions - variable names of a dataset
+
+## Bonus questions:
+
+* Can you describe the shape and structure of the output of `names(women)`?
+
+--
+
+
+```r
+## Get class of variable names of women dataset
+class(names(women))
+```
+
+```
+## [1] "character"
+```
+
+--
+
+* Can you get how *LONG* (how many variable names) the output of `names(women)` is?
+
+--
+
+
+```r
+## Get length of the variable names of women dataset
+length(names(women))
+```
+
+```
+## [1] 2
+```
+
+---
+
+# Using functions - describing the structure of a dataset
+
+* Another approach to get a full description of the structure of a dataset object in R is by using the `str` function
+
+
+```r
+str(women)
+```
+
+```
+## 'data.frame':	15 obs. of  2 variables:
+##  $ height: num  58 59 60 61 62 63 64 65 66 67 ...
+##  $ weight: num  115 117 120 123 126 129 132 135 139 142 ...
+```
+
+--
+
+* The output of using `str()` function is comprehensive.
+
+    * It gives us the class of the object    
+    * It gives us the number of records/observations    
+    * It gives us the number of variables    
+    * It gives us the names of the variables    
+    * It gives us the class of each of the variables
+    * It gives us a glimpse of the values of each of the variables
+    
+---
+
+# Using functions - accessing the variables of a dataset
+
+* When working with `data.frame` objects, we often need to use/access only a specific variable in that `data.frame` object
+
+* Knowing how to access a specific variable in a `data.frame` object is one of the most important skill im R
+
+* There are several ways to access a specific variable in a `data.frame` object
+
+---
+
+# Using functions - accessing the variables of a dataset
+
+## Using the `$` operator
+
+* Access the **`height`** variable using the **`$`** operator
+
+
+```r
+women$height
+```
+
+```
+##  [1] 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72
+```
+
+--
+
+* Now try to access the **`weight`** variable using the **`$`** operator
+
+--
+
+
+```r
+women$weight
+```
+
+```
+##  [1] 115 117 120 123 126 129 132 135 139 142 146 150 154 159 164
+```
+
+---
+
+# Using functions - accessing the variables of a dataset
+
+## Using the indexing method - `[ ]`
+
+* Access the **`height`** variable using **`[ ]`**
+
+
+```r
+women[ , "height"]
+```
+
+```
+##  [1] 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72
+```
+
+```r
+women[ , 1]
+```
+
+```
+##  [1] 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72
+```
+
+```r
+women[[1]]
+```
+
+```
+##  [1] 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72
+```
+
+---
+
+# Using functions - accessing the variables of a dataset
+
+## Using the indexing method - `[ ]`
+
+* Now try to access the **`weight`** variable using **`[ ]`**
+
+--
+
+
+```r
+women[ , "weight"]
+```
+
+```
+##  [1] 115 117 120 123 126 129 132 135 139 142 146 150 154 159 164
+```
+
+```r
+women[ , 2]
+```
+
+```
+##  [1] 115 117 120 123 126 129 132 135 139 142 146 150 154 159 164
+```
+
+```r
+women[[2]]
+```
+
+```
+##  [1] 115 117 120 123 126 129 132 135 139 142 146 150 154 159 164
+```
+
+---
+
+# Using functions - accessing other values of a dataset
+
+## Bonus question:
+
+* Access the **`height`** value for the **third** row/record of the dataset
+
+--
+
+
+```r
+women[3, "height"]
+```
+
+```
+## [1] 60
+```
+
+--
+
+
+```r
+women[ , "height"][3]
+```
+
+```
+## [1] 60
+```
+
+---
+
+# Using functions - accessing other values of a dataset
+
+## Bonus question:
+
+* Access the **`height`** value for the **third** row/record of the dataset
+
+
+```r
+women[3, ]["height"]
+```
+
+```
+##   height
+## 3     60
+```
+
+--
+
+
+```r
+women[3, ][["height"]]
+```
+
+```
+## [1] 60
+```
+
+--
+
+
+```r
+women$height[3]
+```
+
+```
+## [1] 60
+```
+
+---
+
+# Using functions - some basic statistical functions
+
+&lt;table class="table table-striped" style="width: auto !important; margin-left: auto; margin-right: auto;"&gt;
+ &lt;thead&gt;
+  &lt;tr&gt;
+   &lt;th style="text-align:left;"&gt; Function &lt;/th&gt;
+   &lt;th style="text-align:left;"&gt; Description &lt;/th&gt;
+  &lt;/tr&gt;
+ &lt;/thead&gt;
+&lt;tbody&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; mean() &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; Get the mean value of a set of numbers &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; median() &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; Get the median value of a set of numbers &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; var() &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; Get the estimated variance of the population from which you sampled &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; sd() &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; Get the standard deviation of the population from which you sampled &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; scale() &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; Get the z-scores for a set of numbers &lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+
+---
+
+# Using functions - application of some basic statistical functions
+
+## 1. Get the mean height in the `women` dataset
+
+## 2. Get the median weight in the `women` dataset
+
+--
+
+
+```r
+mean(women$height)
+```
+
+```
+## [1] 65
+```
+
+
+```r
+median(women$weight)
+```
+
+```
+## [1] 135
+```
+
+---
+
+# Extending R using packages
+
+* There are times that we need functions that are not builtin to R but are available through external **R packages**
+
+* **R packages** are collections of functions and data sets developed by the community. 
+
+* **R packages** increase the power of R by improving existing base R functionalities, or by adding new ones.
+
+* For this project, majority of the statistical tools/functions we need are already builtin to R.
+
+* However, most of the tools we need for data access and loading, data manipulation, data processing, creating reports, reproducibility, and automation will rquire us to extend R using these additional **R packages**
+
+---
+
+# Extending R using packages
+
+* We usually have our data in different files and these files can be in different file formats.
+
+* Depending on the file format of your data, different functions are used to read these files into R.
+
+* Base (builtin) functions in R have a limited types of data that it can read.
+
+* We often need to install additional **R packages** to read other types of data e.g., `.XLSX`, `.dta`, `.sav`, etc.
+
+---
+
+# Extending R using packages
+
+* Using base functions in R to read a `text` type of data file such as `CSV`
+
+.pull-left[
+
+```r
+read.table(
+  file = "data/women.csv", 
+  header = TRUE, sep = ","
+)
+```
+]
+
+.pull-right[
+
+```
+##    height weight
+## 1      58    115
+## 2      59    117
+## 3      60    120
+## 4      61    123
+## 5      62    126
+## 6      63    129
+## 7      64    132
+## 8      65    135
+## 9      66    139
+## 10     67    142
+## 11     68    146
+## 12     69    150
+## 13     70    154
+## 14     71    159
+## 15     72    164
+```
+]
+
+---
+
+# Extending R using packages
+
+* Using base functions in R to read a `text` type of data file such as `CSV`
+
+.pull-left[
+
+```r
+read.csv(file = "data/women.csv")
+```
+]
+
+.pull-right[
+
+```
+##    height weight
+## 1      58    115
+## 2      59    117
+## 3      60    120
+## 4      61    123
+## 5      62    126
+## 6      63    129
+## 7      64    132
+## 8      65    135
+## 9      66    139
+## 10     67    142
+## 11     68    146
+## 12     69    150
+## 13     70    154
+## 14     71    159
+## 15     72    164
+```
+]
+
+---
+
+# Extending R using packages
+
+* We should assign this data to an object. Let us call this object `women_csv`
+
+.pull-left[
+
+```r
+women_csv &lt;- read.csv("data/women.csv")
+```
+]
+
+.pull-right[
+
+```
+##    height weight
+## 1      58    115
+## 2      59    117
+## 3      60    120
+## 4      61    123
+## 5      62    126
+## 6      63    129
+## 7      64    132
+## 8      65    135
+## 9      66    139
+## 10     67    142
+## 11     68    146
+## 12     69    150
+## 13     70    154
+## 14     71    159
+## 15     72    164
+```
+]
+
+---
+
+# Extending R using packages
+
+* Using the R package **`openxlsx`** to read `.XLSX` type of data file
+
+* We first need to install the `openxlsx` package
+
+
+```r
+install.packages("openxlsx")
+```
+
+--
+
+* We then need to load the package into the current working environment. We use the `library()` function for this:
+
+
+```r
+library("openxlsx")
+```
+
+---
+
+# Extending R using packages
+
+* Using the R package **`openxlsx`** to read `.XLSX` type of data file
+
+* We are now ready to use the function `read.xlsx()` from the `openxlsx` package to read the `women.xlsx` file:
+
+.pull-left[
+
+```r
+read.xlsx(
+  xlsxFile = "data/women.xlsx",
+  sheet = 1
+)
+```
+]
+
+.pull-right[
+
+```
+##    height weight
+## 1      58    115
+## 2      59    117
+## 3      60    120
+## 4      61    123
+## 5      62    126
+## 6      63    129
+## 7      64    132
+## 8      65    135
+## 9      66    139
+## 10     67    142
+## 11     68    146
+## 12     69    150
+## 13     70    154
+## 14     71    159
+## 15     72    164
+```
+]
+
+---
+
+# Extending R using packages
+
+* We should assign this data to an object. Let us call this object `women_xlsx`
+
+.pull-left[
+
+```r
+women_xlsx &lt;- read.xlsx(
+  xlsxFile = "data/women.xlsx",
+  sheet = 1
+)
+```
+]
+
+.pull-right[
+
+```r
+women_xlsx
+```
+
+```
+##    height weight
+## 1      58    115
+## 2      59    117
+## 3      60    120
+## 4      61    123
+## 5      62    126
+## 6      63    129
+## 7      64    132
+## 8      65    135
+## 9      66    139
+## 10     67    142
+## 11     68    146
+## 12     69    150
+## 13     70    154
+## 14     71    159
+## 15     72    164
+```
+]
+
+---
+
+# Coding challenge
+
+### Given what you have learned so far, I would like you to write an R script (add this to your script in `bmi.R`) that would: 
+
+* Calculate the BMI of each of the 15 records in the `women` dataset. For this, remember that the units of the weight in the `women` dataset is in lbs and the units of the height is in inches. So you need to do conversions. You can use the following:
+    
+    1 inch = 0.0254 metres    
+    1 lb   = 0.453592 kgs
+    
+Compared to our exercise earlier, we are now working on 15 records. Think very well how you would apply the calculations!
+
+* Determine which record has the highest BMI and which record has the lowest BMI using R code
+
+* Determine how many records have a BMI higher than 23.
+
+* Calculate the mean and median BMI of the 15 records
 
 ---
 
@@ -213,11 +805,13 @@ class: inverse, center, middle
 
 # Thank you!
 
-Slides can be viewed at https://OxfordIHTM.github.io/open-reproducible-science/session3.html
+Slides can be viewed at https://oxford-ihtm.io/open-reproducible-science/session3.html
 
-PDF version of slides can be downloaded at https://OxfordIHTM.github.io/open-reproducible-science/pdf/session3-working-with-data-in-r.pdf
+PDF version of slides can be downloaded at https://oxford-ihtm.io/open-reproducible-science/pdf/session3-r-basics-part2.pdf
 
 R scripts for slides available [here](https://github.com/OxfordIHTM/open-reproducible-science/blob/main/session3.Rmd)
+
+
 
     </textarea>
 <style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
@@ -268,6 +862,19 @@ if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
     deleted = true;
   });
 })();
+// add `data-at-shortcutkeys` attribute to <body> to resolve conflicts with JAWS
+// screen reader (see PR #262)
+(function(d) {
+  let res = {};
+  d.querySelectorAll('.remark-help-content table tr').forEach(tr => {
+    const t = tr.querySelector('td:nth-child(2)').innerText;
+    tr.querySelectorAll('td:first-child .key').forEach(key => {
+      const k = key.innerText;
+      if (/^[a-z]$/.test(k)) res[k] = t;  // must be a single letter (key)
+    });
+  });
+  d.body.setAttribute('data-at-shortcutkeys', JSON.stringify(res));
+})(document);
 (function() {
   "use strict"
   // Replace <script> tags in slides area to make them executable

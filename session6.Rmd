@@ -1,9 +1,9 @@
 ---
-title: "Automating your R-based research project"
-subtitle: "Introduction to GitHub Actions"  
+title: "Open Science, Reproducible Research, and R"
+subtitle: "An Overview"  
 author: 
   - "Ernest Guevarra"
-date: '2022-02-28'
+date: '2023-01-23'
 output:
   xaringan::moon_reader:
     css: xaringan-themer.css
@@ -52,176 +52,193 @@ style_mono_light(
 
 # Outline
 
-* Overview of automation
+1. What is Open Science?
 
-* Introduction to GitHub Actions
+2. What is Reproducible Research?
 
-* Demonstration of automation
+3. Why Reproducible Research?
 
+4. How to do Reproducible Research?
+
+5. Why R?
 ---
 
 background-color: #FFFFFF
 
-# Automation
-
-.center[![](images/automation.png)]
-
-### 'Automating' comes from the roots 'auto-' meaning 'self-', and 'mating', meaning 'screwing'
-
-???
-
----
-
-# What can be automated?
-
-* works best with a **project workflow** (sometimes called a **project pipeline**)
-
-    - our recommended solution for this is the `{targets}` workflow/pipeline
-
-* works best if project workflow is **portable**
-
-    - our recommended solution for this is `{renv}`
-
----
-
-# Why automate?
-
-* to reproduce previous results
-
-* to recreate results deleted by *fat fingers*
-
-* to rerun the workflow/pipeline with updated software
-
-* to run the same workflow/pipeline on a new dataset
-
----
-
-background-color: #FFFFFF
-background-image: url(https://miro.medium.com/max/2617/1*8mUtip6z_oydfLi4P86KUw.png)
-background-size: contain
-
-???
-
-* `GitHub Actions` allows **automation**, **customisation**, and **execution** of your research project workflows right in your GitHub repository.
-
-* Composed of a job or a number of jobs. The job/s are then composed of steps that control the order in which actions are run in order to complete a job/s. This workflow is scheduled or triggered by a specific event and runs on what is called a runner - a server that has the GitHub Actions runner application installed - that is either hosted by GitHub, or self-hosted on your own machines.
-
-* This whole workflow including the event trigger and the runner on which the workflow will run in are specified and detailed using a workflow `.yml` file that is saved inside a directory named `.github` within your GitHub repository in which you want to use GitHub Actions on.
-
----
-
-# Example GitHub Actions automation
+# What is Open Science?
 
 .pull-left[
-.center[![](images/automation_workflow.png)]
+.center[![](images/openscience.png)]
+  
+.footnote[based on UNESCO concept 2021]
 ]
 
 .pull-right[
-* Example automation built-in to the latest assignment on creating targets workflow
+* movement to make scientific research and dissemination accessible to anyone
 
-* Can be found at `.github/workflows/check-assignment.yml`
+* aims for greater transparency in research and removes barriers for sharing outputs, resources, methods or tools at any stage of the research process
+]
+
+???
+
+Open Science is a movement to make scientific research and dissemination accessible to anyone. As such, it aims for greater transparency in research and removes barriers for sharing outputs, resources, methods or tools at any stage of the research process.
+
+---
+
+background-color: #FFFFFF
+
+# What is Reproducible Research?
+
+.pull-left[
+.center[![](images/scientific_method.png)]
+
+.footnote[from the [Open Science Training Handbook](https://open-science-training-handbook.github.io/Open-Science-Training-Handbook_EN//02OpenScienceBasics/04ReproducibleResearchAndDataAnalysis.html)]
+]
+
+.pull-right[
+* The concept of reproducibility is directly linked to the scientific method
+  1. Formulating a hypothesis
+
+  2. Designing the study
+
+  3. Running the study and collecting the data
+
+  4. Analyzing the data
+
+  5. Reporting the study
+
+* Each of these steps should be clearly reported by providing clear and open documentation, and thus making the study transparent and reproducible.
+]
+
+???
+
+Reproducible research is directly linked to the scientific method. Each step in the scientific method should be clearly reported through clear and open documentation. This makes the research transparent and reproducible. From ths perspective, we see reproducibility as an inherent quality of good research.
+
+---
+
+background-color: #FFFFFF
+
+# What is Reproducible Research?
+
+.pull-left[
+* Research papers with accompanying software tools that allow the reader to directly reproduce the results and
+employ the methods that are presented in the research paper ([Gentleman and Lang, 2004](https://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.684.9629&rep=rep1&type=pdf))
+
+* Research data and code are made available so that others are able to reach the same results as are claimed in scientific outputs ([Open Science Training Handbook](https://open-science-training-handbook.github.io/Open-Science-Training-Handbook_EN//02OpenScienceBasics/04ReproducibleResearchAndDataAnalysis.html))
+
+* The standard of reproducibility calls for the data and the computer code used to analyze the data be made available to others ([Peng, 2012](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3383002/pdf/nihms382015.pdf))
+]
+
+.pull-right[
+.center[![](images/reproducible_research1.jpg)]
+
+.footnote[from https://www.displayr.com/what-is-reproducible-research]
+]
+
+???
+
+Reproducible research is underpinned by the open availability of the data and the code used in the study/research which, in theory, will allow others to reproduce the various steps and methods implemented in the study and its results.
+
+Whilst the use of the term `code` often refers to computer code and is commonly related to computational sciences, the concept of `code` can also be expanded to include detailed rules, protocols, process documentation, and other scientific process used in other sciences e.g., social sciences, economics, anthropology
+---
+
+background-color: #FFFFFF
+background-image: url(images/reproducible_research3.jpg)
+background-size: 55%
+
+# Differentiating Reproducible Research
+
+.footnote[This image was created by [Scriberia](https://www.scriberia.com/) for [The Turing Way](https://the-turing-way.netlify.app/welcome) community and is used under a CC-BY licence.]
+
+???
+
+Reproducibility is often conflated with other similar concepts of `replicability`, `robustness`, and `generalisability`. Here, we disambiguate these concepts to delineate what they specifically pertain to.
+
+In `reproducible` research, given the same data and the same analysis, the same results are produced.
+In `replicable` research, given different data and the same analysis, the same results are produced.
+In `robust` research, given the same data and different analysis, the same results are produced.
+In `generalisable` research, given different data and different analysis, the same results are produced. 
+
+---
+
+background-color: #FFFFFF
+background-image: url(images/nature_repro_research.jpg)
+background-size: 65%
+
+# Why Reproducible Research?
+
+.footnote[Baker, M. 1,500 scientists lift the lid on reproducibility. Nature 533, 452–454 (2016). https://doi.org/10.1038/533452a]
+
+???
+
+Most researchers believe that the majority of research that has not been published are not reproducible. More than 50% of researchers report that they have experienced not being able to reproduce other researchers' results. More interestingly, more than 40% of researchers report that they have experienced not being able to reproduce their own research's results.
+
+---
+
+background-color: #FFFFFF
+background-image: url(images/why_repro_research1.gif)
+background-size: 90%
+
+# Factors in irreproducible research
+
+---
+
+# Factors in irreproducible research
+
+* Not enough documentation on how experiment is conducted and data is generated
+
+* Data used to generate original results unavailable
+
+* Software used to generate original results unavailable
+
+* Difficult to recreate software environment (libraries, versions) used to generate original results
+
+* Difficult to rerun the computational steps
+
+---
+
+background-color: #FFFFFF
+
+# How to do Reproducible Research?
+
+.pull-left[
+### The reproducibility spectrum
+.center[![](images/reproducible_research2.png)]
+]
+
+.pull-right[
+### Steps in reproducible research
+
+* Record the project’s provenance
+
+* Data and metadata curation
+
+* Establish a testing/analysis workflow
+
+* Test, document, and publish your code
+
+* Share
 ]
 
 ---
 
-# Setting the `trigger` for the automation
+# Why R for Reproducible Research?
 
-```YAML
-name: check assignment
+.pull-left[
+* freely available
 
-on:
-  push:
-    branches: [main, master]
-  pull_request:
-    branches: [main, master]
-  workflow_dispatch:
-    branches:
-      - '*'
-```
+* huge user and developer community
 
----
+* has a robust set of user- and community-developed packages that support reproducible research 
+]
 
-# Defining `jobs` to be implemented in the workflow
-
-```YAML
-jobs:
-  check-assignment:
-    runs-on: ubuntu-latest
-    container: rocker/geospatial:4.1.2
-    steps:
-      - uses: actions/checkout@v2
-```
-      
----
-
-# Specifying `steps` in the workflow
-
-### Workflow step 1: reproduce the system environment
-
-```YAML
-      - name: Install system dependencies
-        run: |
-          apt-get update && apt-get install -y --no-install-recommends \
-          git-crypt libxt6 libglpk-dev
-```
-
-### Workflow step 2: Reproduce the R project-local environment
-
-```YAML
-      - name: Install packages from renv.lock (with cache)
-        uses: r-lib/actions/setup-renv@master
-        with:
-          cache-version: 2
-```
-
----
-   
-# Specifying `steps` in the workflow
-
-### Workflow step 3: Perform tests/checks
-
-```YAML
-      - name: Check that targets workflow has been enabled
-        run: |
-          testthat::test_that("Target script file exists",
-            testthat::expect_true(
-              list.files(pattern = "_targets.R") == "_targets.R"
-            )
-          )
-        shell: Rscript {0}
-      
-      - name: Check that renv has been enabled/initialised
-        run: |
-          testthat::test_that("renv has been enabled", {
-            testthat::expect_true(
-              list.files(pattern = "renv.lock") == "renv.lock",
-            )
-            testthat::expect_true(
-              list.files(pattern = ".Rprofile", all.files = TRUE) == ".Rprofile"
-            )
-            testthat::expect_true(
-              any(list.dirs(recursive = FALSE) == "./renv")
-            )          
-          })
-        shell: Rscript {0}
-```
+.pull-right[
+.center[![](https://upload.wikimedia.org/wikipedia/commons/thumb/1/1b/R_logo.svg/724px-R_logo.svg.png)]
+]
 
 ---
 
-# Specifying `steps` in the workflow
-
-### Workflow step 4: Run the targets workflow
-
-```YAML        
-      - name: Check that targets workflow runs without errors
-        run: |
-          targets::tar_make()
-        shell: Rscript {0}
-```
-
----
-
-class: inverse, middle, center
+class: inverse, center, middle
 
 # Questions?
 
@@ -231,8 +248,9 @@ class: inverse, center, middle
 
 # Thank you!
 
-Slides can be viewed at https://OxfordIHTM.github.io/open-reproducible-science/session6.html
+Slides can be viewed at https://oxford-ihtm.io/open-reproducible-science/session6.html
 
-PDF version of slides can be downloaded at https://OxfordIHTM.github.io/open-reproducible-science/pdf/session6-automating-r-projects.pdf
+PDF version of slides can be downloaded at https://oxford-ihtm.io/open-reproducible-science/pdf/session6-open-reproducible-science.pdf
 
 R scripts for slides available [here](https://github.com/OxfordIHTM/open-reproducible-science/blob/main/session6.Rmd)
+
