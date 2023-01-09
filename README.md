@@ -4,6 +4,9 @@
 # Open Science and Reproducible Research in R: *An Oxford International Health and Tropical Medicine Lecture Series*
 
 <!-- badges: start -->
+
+[![pages-build-deployment](https://github.com/OxfordIHTM/open-reproducible-science/actions/workflows/pages/pages-build-deployment/badge.svg)](https://github.com/OxfordIHTM/open-reproducible-science/actions/workflows/pages/pages-build-deployment)
+[![DOI](https://zenodo.org/badge/451333046.svg)](https://zenodo.org/badge/latestdoi/451333046)
 <!-- badges: end -->
 
 Open Science is the practice of science in such a way that others can
