@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="" xml:lang="">
   <head>
-    <title>R through the user interface of RStudio</title>
+    <title>R through the user interface of RStudio - performing basic operations</title>
     <meta charset="utf-8" />
     <meta name="author" content="Ernest Guevarra" />
     <meta name="date" content="2023-01-16" />
@@ -15,7 +15,7 @@
 class: center, middle, inverse, title-slide
 
 .title[
-# R through the user interface of RStudio
+# R through the user interface of RStudio - performing basic operations
 ]
 .subtitle[
 ## Learning the basics of R - Part 1
@@ -36,15 +36,26 @@ class: center, middle, inverse, title-slide
 
 # Outline
 
-1. Basic operators in R
+1. Using RStudio to access the R console
+
+2. Some basic operators in R
 
     * Arithmetic    
     * Relational    
     * Logical    
     * Assignment
+    
+3. Using RStudio to create scripts
 
-2. Basic mathematical and statistical functions in R
+---
 
+# Using RStudio to access the R console
+
+* RStudio has a specific window/pane for the R console which behaves exactly the same as the raw R console
+
+* Issue commands directly on the console to produce a desired outcome or perform a specific action
+
+* Most commands produce an output that is shown on the console
 
 ---
 
@@ -473,6 +484,47 @@ bmi_a
 ```
 ## [1] 31.25
 ```
+
+---
+
+# Using RStudio to create scripts
+
+* So far, we have tried issuing commands in R straight into the console to perform single commands at a time
+
+* In real life context, we will rarely use R for a single command. To make meaningful analysis, we will often string together a series of commands to produce an intended result/output
+
+* We will also often have to repeat the same commands with different data or parameters
+
+* As such, direct to console issuing of commands in R will be highly inefficient
+
+---
+
+# Using RStudio to create scripts
+
+.pull-left[
+RStudio, being an **integrated developoment environment (IDE)**, provides functionality and tools for 
+
+* recording multiple lines of commands which can be run/issued onto the console line by line; and,
+
+* saving the recorded multiple lines of code/commands for later use.
+
+This record of multiple lines of code/commands is often called an **R script** and is saved as plain text file with a `.R` extension.
+]
+
+.pull-right[
+
+```r
+## R script to calculate BMI of 
+## person A and person B
+weight_a &lt;- 80
+height_a &lt;- 1.6
+bmi_a &lt;- weight_a / height_a ^ 2
+
+weight_b &lt;- 12
+height_b &lt;- 2.1
+bmi_b &lt;- weight_b / height_b ^ 2
+```
+]
 
 ---
 
