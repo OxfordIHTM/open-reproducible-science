@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="" xml:lang="">
   <head>
-    <title>Reproducible scientific workflows in R</title>
+    <title>Creating your own functions</title>
     <meta charset="utf-8" />
     <meta name="author" content="Ernest Guevarra" />
-    <meta name="date" content="2022-02-14" />
+    <meta name="date" content="2022-01-18" />
     <script src="session4_files/header-attrs/header-attrs.js"></script>
     <link rel="stylesheet" href="xaringan-themer.css" type="text/css" />
   </head>
@@ -12,10 +12,18 @@
     <textarea id="source">
 class: center, middle, inverse, title-slide
 
-# Reproducible scientific workflows in R
-## Introduction to the {targets} package
+.title[
+# Creating your own functions
+]
+.subtitle[
+## Learning the basics of R - Part 3
+]
+.author[
 ### Ernest Guevarra
-### 2022-02-14
+]
+.date[
+### 2022-01-18
+]
 
 ---
 
@@ -26,185 +34,158 @@ class: center, middle, inverse, title-slide
 
 # Outline
 
-* Concepts on scientific workflows
+* Why write functions
 
-* The `{targets}` package
+* When to write functions
+
+* How to write functions
 
 * Practical session
 
 ---
 
-class: inverse, center, middle
+# Why write functions
 
-# Concepts on scientific workflows
+* Allow automation of common tasks in a more powerful and general way than *copy-and-pasting*;
 
----
+    * You can give a function an evocative name that makes your code easier to understand;
+    * As requirements change, you only need to update code in one place, instead of many.
+    * You eliminate the chance of making incidental mistakes when you copy and paste (i.e. updating a variable name in one place, but not in another).
 
-class: inverse, center, middle
+* Fewer global variables: When you run a function, the intermediate variables that it creates are not stored in your global environment. This saves memory and keeps your global environment cleaner.
 
-# Concept #1: Reproducibility, reproducibility, reproducibility!
+* Better documentation: Well documented functions help the user understand the steps of your processing.
 
----
-
-class: center, middle
-
-&lt;img src="session4_files/figure-html/tweet1-1.png" width="100%" /&gt;
-
-[Keith Baggerly](http://odin.mdacc.tmc.edu/~kabaggerly/), via [@kwbroman](https://twitter.com/kwbrowman) [tweet](https://twitter.com/kwbroman/status/667735926915731457)
+* Easier to maintain / edit: When you create a function for a repeated task, it is easy to edit that one function. Then every location in your code where that same task is performed is automatically updated.
 
 ---
 
-class: inverse, center, middle
+# When to write functions
 
-# Concept #2: Organisation
+.pull-left[
+You should consider writing a function whenever you’ve copied and pasted a block of code more than twice (i.e. you now have three copies of the same code). 
 
----
+For example, take a look at this code.
 
-class:: center, middle
+What does it do?
+]
 
-# File organization and naming are powerful weapons against chaos.
+.pull-right[
+```R
+df &lt;- data.frame(
+  a = c(1, 2, 1, 1, 1, 2, 1, 1, 2, 2),
+  b = c(2, 2, 2, 1, 1, 1, 1, 2, 1, 2),
+  c = c(1, 2, 1, 1, 2, 1, 2, 1, 2, 2)
+)
 
-[@JennyBryan](https://twitter.com/jennybryan)
-
----
-
-background-color: #FFFFFF
-background-image: url(images/file_organisation.png)
-background-size: 90%
-
----
-
-class: inverse, center, middle
-
-# Concept #3: DRY - Don't repeat yourself
-
----
-
-class:: center, middle
-
-# Don't repeat yourself. It's not only repetitive, it's redundant, and people have heard it before.
-
-Lemony Snicket
+df$a &lt;- ifelse(df$a == 2, 0, df$a)
+df$b &lt;- ifelse(df$b == 2, 0, df$b)
+df$c &lt;- ifelse(df$c == 2, 0, df$c)
+```
+]
 
 ---
 
-background-color: #FFFFFF
+# When to write functions
+
+.pull-left[
+Original data:
 
 
-```r
-# Overlay maps of Niger and Nigeria to clean-up the map 
-par(new=TRUE)
-plot(nigeria, axes = FALSE, xlim = mapXLimits, ylim = mapYLimits, border = "white", col = "white")
+```
+##    a b c
+## 1  1 2 1
+## 2  2 2 2
+## 3  1 2 1
+## 4  1 1 1
+## 5  1 1 2
+## 6  2 1 1
+## 7  1 1 2
+## 8  1 2 1
+## 9  2 1 2
+## 10 2 2 2
+```
+]
 
-par(new = TRUE)
-plot(boundaries, axes = FALSE, xlim = mapXLimits, ylim=mapYLimits, lwd = 0.5, border = "black")
+.pull-right[
+Recoded data:
 
-par(new = TRUE)
-plot(n1, axes = FALSE, xlim = mapXLimits, ylim=mapYLimits, lwd = 0.25, col = "blue")
 
-par(new = TRUE)
-plot(n4, axes = FALSE, xlim = mapXLimits, ylim=mapYLimits, lwd = 0.25, col = "blue")
+```
+##    a b c
+## 1  1 0 1
+## 2  0 0 0
+## 3  1 0 1
+## 4  1 1 1
+## 5  1 1 0
+## 6  0 1 1
+## 7  1 1 0
+## 8  1 0 1
+## 9  0 1 0
+## 10 0 0 0
+```
+]
 
-par(new = TRUE)
-plot(n5, axes = FALSE, xlim = mapXLimits, ylim=mapYLimits, lwd = 0.25, col = "blue")
+--
 
-par(new = TRUE)
-plot(n6, axes = FALSE, xlim = mapXLimits, ylim=mapYLimits, lwd = 0.25, col = "blue")
+This is a good example of when writing a function will be useful/beneficial.
 
-par(new = TRUE)
-plot(n6.27, axes = FALSE, xlim = mapXLimits, ylim=mapYLimits, lwd = 0.25, col = "blue")
+---
 
-par(new = TRUE)
-plot(n7, axes = FALSE, xlim = mapXLimits, ylim=mapYLimits, lwd = 0.25, col = "blue")
+# How to write functions
 
-par(new = TRUE)
-plot(n14, axes = FALSE, xlim = mapXLimits, ylim=mapYLimits, lwd = 0.25, col = "blue")
+.pull-left[
+We can create a function called `recode_values()`:
+
+```R
+recode_values &lt;- function(x) { 
+  ifelse(x == 2, 0, x)
+}
 ```
 
----
+And apply it to the same data as follows:
 
-# Sisyphean loop
-
-.pull-left[
-&lt;img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/58/Nekyia_Staatliche_Antikensammlungen_1494_n2.jpg/582px-Nekyia_Staatliche_Antikensammlungen_1494_n2.jpg" width="450px" style="vertical-align:middle" /&gt; 
+```R
+df$a &lt;- recode_values(df$a)
+df$b &lt;- recode_values(df$b)
+df$c &lt;- recode_values(df$c)
+```
 ]
+
+--
 
 .pull-right[
-1. Launch the code.
-2. Wait while it runs.
-3. Discover an issue.
-4. Restart from scratch.
+We get:
+
+
+```
+##    a b c
+## 1  1 0 1
+## 2  0 0 0
+## 3  1 0 1
+## 4  1 1 1
+## 5  1 1 0
+## 6  0 1 1
+## 7  1 1 0
+## 8  1 0 1
+## 9  0 1 0
+## 10 0 0 0
+```
 ]
 
 ---
 
-class: inverse, center, middle
+# How to write functions
 
-# Concept #3: Frequency reduces difficulty
+* You need to pick a name for the function. In the example I used `recode_values` because this function recodes the values based on a specified rule (i.e., value of 2 is converted to 0).
 
----
+* You list the inputs, or **arguments**, to the function inside `function`. Here we have just one argument. If we had more the call would look like `function(x, y, z)`.
 
-class: center, middle
+*  You place the code you have developed in body of the function, a `{` block that immediately follows `function(...)`.
 
-&lt;img src="session4_files/figure-html/tweet2-1.png" width="100%" /&gt;
+???
 
-[@martinfowler](https://twitter.com/martinfowler), via [@JennyBryan](https://twitter.com/JennyBryan) [tweet](https://twitter.com/JennyBryan/status/1087795259872927744)
-
----
-
-# The `{targets}` package
-
-.pull-left[
-&lt;img src="https://github.com/ropensci/targets/raw/main/man/figures/logo.png" width="400px" style="vertical-align:middle" /&gt;
-]
-
-.pull-right[
-* a pipeline toolkit for Statistics and data science in R
-* maintain a reproducible workflow without repeating yourself
-* learns how your workflow fits together
-* skips costly runtime for tasks that are already up-to-date
-* runs only the necessary computation
-* supports implicit parallel computing
-* abstracts files as R objects
-* shows tangible evidence that the results match the underlying code and data
-]
-
----
-
-# `{targets}` file organisation
-
-.pull-left[
-.center[![](images/targets_file_organisation.png)]
-]
-
-.pull-right[
-* this is a typical file structure with user-defined components of any project-oriented workflow
-* the `_targets.R` file, however, is special and specific to a `{targets}` workflow - it is the target script file
-* the target script file should be in the project's root directory
-]
-
----
-
-# `{targets}` script file
-
-.pull-left[
-.center[![](images/target_script.png)]
-]
-
-.pull-right[
-* Load the packages required (1)
-* Load custom functions (1)
-* Define individual targets - intermediate step of the workflow (2)
-* End with a list of targets objects
-]
-
----
-
-background-color: #FFFFFF
-background-image: url(images/workflow.png)
-background-size: 60%
-
-# `{targets}` workflow
+Note the overall process: I only made the function after I’d figured out how to make it work with a simple input. It’s easier to start with working code and turn it into a function; it’s harder to create a function and then try to make it work.
 
 ---
 
@@ -218,13 +199,7 @@ class: inverse, center, middle
 
 # Practical session
 
-## We will all continue to go through Exercise #1 in the [Practical R for Epidemiologists](https://practical-r.org/exercise1.html) book
-
----
-
-class: inverse, center, middle
-
-# Questions?
+We'll work through *Exercise 2 - Manipulating objects and creating new functions* in Practical R for Epidemiologists (https://practical-r.org/exercise2.html) as a GitHub Classroom assignment
 
 ---
 
@@ -232,11 +207,12 @@ class: inverse, center, middle
 
 # Thank you!
 
-Slides can be viewed at https://OxfordIHTM.github.io/open-reproducible-science/session4.html
+Slides can be viewed at https://oxford-ihtm.io/open-reproducible-science/session4.html
 
-PDF version of slides can be downloaded at https://OxfordIHTM.github.io/open-reproducible-science/pdf/session4-reproducible-scientific-workflows.pdf
+PDF version of slides can be downloaded at https://oxford-ihtm.io/open-reproducible-science/pdf/session4-r-basics-part3.pdf
 
 R scripts for slides available [here](https://github.com/OxfordIHTM/open-reproducible-science/blob/main/session4.Rmd)
+
     </textarea>
 <style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
 <script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
@@ -286,6 +262,19 @@ if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
     deleted = true;
   });
 })();
+// add `data-at-shortcutkeys` attribute to <body> to resolve conflicts with JAWS
+// screen reader (see PR #262)
+(function(d) {
+  let res = {};
+  d.querySelectorAll('.remark-help-content table tr').forEach(tr => {
+    const t = tr.querySelector('td:nth-child(2)').innerText;
+    tr.querySelectorAll('td:first-child .key').forEach(key => {
+      const k = key.innerText;
+      if (/^[a-z]$/.test(k)) res[k] = t;  // must be a single letter (key)
+    });
+  });
+  d.body.setAttribute('data-at-shortcutkeys', JSON.stringify(res));
+})(document);
 (function() {
   "use strict"
   // Replace <script> tags in slides area to make them executable

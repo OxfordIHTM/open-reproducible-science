@@ -10,7 +10,7 @@ data](https://img.shields.io/badge/license%20(for%20data)-CC0-blue.svg)](https:/
 [![License for
 code](https://img.shields.io/badge/license%20(for%20code)-GPL3.0-blue.svg)](https://opensource.org/licenses/gpl-3.0.html)
 [![License for slide
-deck](https://img.shields.io/badge/license%20(for%20slide%20decks)-CC%20BY%204.0-blue.svg))](https://creativecommons.org/licenses/by/4.0/)
+deck](https://img.shields.io/badge/license%20(for%20slide%20decks)-CC%20BY%204.0-blue.svg)](https://creativecommons.org/licenses/by/4.0/)
 [![pages-build-deployment](https://github.com/OxfordIHTM/open-reproducible-science/actions/workflows/pages/pages-build-deployment/badge.svg)](https://github.com/OxfordIHTM/open-reproducible-science/actions/workflows/pages/pages-build-deployment)
 [![DOI](https://zenodo.org/badge/451333046.svg)](https://zenodo.org/badge/latestdoi/451333046)
 <!-- badges: end -->
@@ -18,16 +18,17 @@ deck](https://img.shields.io/badge/license%20(for%20slide%20decks)-CC%20BY%204.0
 ## Part 1: All about R
 
 [R](https://r-project.org) is a language and environment for statistical
-computing and graphics. It is a GNU project which is similar to the S
-language and environment which was developed at Bell Laboratories
-(formerly AT&T, now Lucent Technologies) by John Chambers and
-colleagues. [R](https://r-project.org) can be considered as a different
-implementation of S. There are some important differences, but much code
-written for S runs unaltered under R.
+computing and graphics. It is a [GNU](https://en.wikipedia.org/wiki/GNU)
+project which is similar to the [S language and
+environment](https://en.wikipedia.org/wiki/S_(programming_language))
+which was developed at Bell Laboratories (formerly AT&T, now Lucent
+Technologies) by John Chambers and colleagues. R can be considered as a
+different implementation of S. There are some important differences, but
+much code written for S runs unaltered under R.
 
 [R](https://r-project.org) provides a wide variety of statistical
 (linear and nonlinear modelling, classical statistical tests,
-time-series analysis, classification, clustering, …) and graphical
+time-series analysis, classification, clustering, etc.) and graphical
 techniques, and is highly extensible. The S language is often the
 vehicle of choice for research in statistical methodology, and R
 provides an Open Source route to participation in that activity.
@@ -38,19 +39,18 @@ mathematical symbols and formulae where needed. Great care has been
 taken over the defaults for the minor design choices in graphics, but
 the user retains full control.
 
-[R](https://r-project.org) is available as Free Software under the terms
-of the Free Software Foundation’s GNU General Public License in source
-code form. It compiles and runs on a wide variety of UNIX platforms and
-similar systems (including FreeBSD and Linux), Windows and MacOS.
+R is available as Free Software under the terms of the Free Software
+Foundation’s GNU General Public License in source code form. It compiles
+and runs on a wide variety of UNIX platforms and similar systems
+(including FreeBSD and Linux), Windows and MacOS.
 
-[R](https://r-project.org) is unique in that it is not general-purpose.
-It does not compromise by trying to do a lot of things. It does a few
-things very well, mainly statistical analysis and data visualization.
-While you can find data analysis and machine learning libraries for
-languages like [Python](https://www.python.org/),
-[R](https://r-project.org) has many statistical functionalities built
-into its core. No third-party libraries are needed for much of the core
-data analysis you can do with the language.
+R is unique in that it is not general-purpose. It does not compromise by
+trying to do a lot of things. It does a few things very well, mainly
+statistical analysis and data visualization. While you can find data
+analysis and machine learning libraries for languages like
+[Python](https://www.python.org/), R has many statistical
+functionalities built into its core. No third-party libraries are needed
+for much of the core data analysis you can do with the language.
 
 But even with this specific use case, it is used in every industry you
 can think of because a modern business runs on data. Using past data,
@@ -58,16 +58,16 @@ data scientists and data analysts can determine the health of a business
 and give business leaders actionable insights into the future of their
 company.
 
-Just because [R](https://r-project.org) is specifically used for
-statistical analysis and data visualization doesn’t mean its use is
-limited. It’s actually quite popular, ranking 12th in the [TIOBE
+Just because R is specifically used for statistical analysis and data
+visualization doesn’t mean its use is limited. It’s actually quite
+popular, ranking 12th in the [TIOBE
 index](https://www.tiobe.com/tiobe-index/) of the most popular
 programming languages.
 
-Academics, scientists, and researchers use [R](https://r-project.org) to
-analyze the results of experiments. In addition, businesses of all sizes
-and in every industry use it to extract insights from the increasing
-amount of daily data they generate.
+Academics, scientists, and researchers use R to analyze the results of
+experiments. In addition, businesses of all sizes and in every industry
+use it to extract insights from the increasing amount of daily data they
+generate.
 
 ### Session 1: Getting the right tools for the job
 
@@ -82,18 +82,26 @@ facilitate/potentiate the benefits of using R.
 
 In this session, we will introduce a basic set of tools that maximises
 the effectiveness of R for scientific research. Students will be given a
-basic introduction to R, RStudio, and to git and GitHub. The students
-will also be guided and facilitated in installing and setting up each of
-these tools in the way that is considered best practice for scientific
-research purposes.
+basic introduction to R,
+[RStudio](https://posit.co/products/open-source/rstudio/), and to
+[git](https://git-scm.com/) and [GitHub](https://github.com). The
+students will also be guided and facilitated in installing and setting
+up each of these tools in the way that is considered best practice for
+scientific research purposes.
 
 #### Further Reading
 
-- Installing R and RStudio from Hands-on Programming with R
-  (<https://rstudio-education.github.io/hopr/starting.html>)
+- Grolemund G. (2014). Installing R and RStudio from Hands-on
+  Programming with R. In *Hands-on programming with R : write your own
+  functions and simulations*.
+  <https://rstudio-education.github.io/hopr/starting.html>
 
-- Installing git and creating a GitHub account from Happy Git with R
-  (<https://happygitwithr.com/install-intro.html>)
+- Bryan J. and Hester J. Installing git and creating a GitHub account.
+  In *Happy Git and GitHub for the useR*
+  <https://happygitwithr.com/install-intro.html>
+
+- R-Ladies Sydney. BasicBasics1: An opinionated tour of RStudio.
+  <https://rladiessydney.org/courses/ryouwithme/01-basicbasics-1/>
 
 #### Teaching Material
 
@@ -120,7 +128,12 @@ Epidemiologists](https://practical-r.org).
 
 #### Further Reading
 
-- Practical R for Epidemiologists - <https://practical-r.org>
+- Grolemund G. (2014). Loading and Saving Data in R. In *Hands-on
+  programming with R : write your own functions and simulations*.
+  <https://rstudio-education.github.io/hopr/dataio.html>
+
+- Myatt M. Exercise 1 - Getting acquainted with R. In *Practical R for
+  Epidemiologists*. <https://practical-r.org/exercise1.html>
 
 #### Teaching Material
 
@@ -135,18 +148,24 @@ R scripts for slides available
 
  
 
-### Session 3: Learning the basics of R - Part 2: Extending R using packages, creating and manipulating objects
+### Session 3: Learning the basics of R - Part 2: Creating and manipulating objects, and extending R using packages
 
-In this session, the students will be introduced to R packages and how
-they extend the functionalities of R specifically with regard to
+In this session, the students will continue to work through using R to
+work with data and will be introduced to more built-in functions in R
+for performing data analysis. They will also be introduced to R packages
+and how they extend the functionalities of R specifically with regard to
 computing and statistical analysis. Students will be taught how to
 install and load R packages and be given a background and introduction
 to object-oriented programming.
 
 #### Further Reading
 
-- Extending R with packages from Practical R for Epidemiologists
-  (<https://practical-r.org/exercise5.html>)
+- Grolemund G. (2014). R Packages. In *Hands-on programming with R :
+  write your own functions and simulations*.
+  <https://rstudio-education.github.io/hopr/packages2.html>
+
+- Myatt M. Extending R with packages. In *Practical R for
+  Epidemiologists*. <https://practical-r.org/exercise5.html>
 
 #### Teaching Material
 
@@ -171,18 +190,23 @@ they require.
 
 #### Further Reading
 
-- Functions in R for Data Science
-  (<https://r4ds.had.co.nz/functions.html>)
+- Wickham H and Grolemund G. Functions. In *R for Data Science*.
+  <https://r4ds.had.co.nz/functions.html>
+
+- Myatt M. Exercise 2 - Manipulating objects and creating new functions.
+  In *Practical R for Epidemiologists*.
+  <https://practical-r.org/exercise2.html>
 
 #### Teaching Material
 
-<!---
-Slides can be viewed at https://oxford-ihtm.io/open-reproducible-science/session4.html
+Slides can be viewed at
+<https://oxford-ihtm.io/open-reproducible-science/session4.html>
 
-PDF version of slides can be downloaded at https://oxford-ihtm.io/open-reproducible-science/pdf/session4-r-basics-part3.pdf
+PDF version of slides can be downloaded at
+<https://oxford-ihtm.io/open-reproducible-science/pdf/session4-r-basics-part3.pdf>
 
-R scripts for slides available at https://github.com/OxfordIHTM/open-reproducible-science/blob/main/session4.Rmd
---->
+R scripts for slides available at
+<https://github.com/OxfordIHTM/open-reproducible-science/blob/main/session4.Rmd>
 
  
 
@@ -197,11 +221,13 @@ content and data analysis code.
 
 #### Further Reading
 
-- Project-oriented workflow in What they forgot to teach you about R
-  (<https://rstats.wtf/project-oriented-workflow.html>)
+- Bryan J and Hester J. Project-oriented workflow. In *What they forgot
+  to teach you about R*.
+  <https://rstats.wtf/project-oriented-workflow.html>
 
-- Literate programming and RMarkdown from CS5701 Modern Data Book
-  (<https://bookdown.org/martin_shepperd/ModernDataBook/C3-Literate.html>)
+- Shepperd M. Literate programming and RMarkdown. In *CS5701 Modern Data
+  Book*.
+  <https://bookdown.org/martin_shepperd/ModernDataBook/C3-Literate.html>
 
 #### Teaching Material
 

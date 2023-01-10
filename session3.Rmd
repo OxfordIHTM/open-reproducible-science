@@ -1,5 +1,5 @@
 ---
-title: "Extending R using packages, creating and manipulating objects"
+title: "Creating and manipulating objects, and extending R using packages"
 subtitle: "Learning the basics of R - Part 2"  
 author: 
   - "Ernest Guevarra"

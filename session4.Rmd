@@ -1,0 +1,226 @@
+---
+title: "Creating your own functions"
+subtitle: "Learning the basics of R - Part 3"  
+author: 
+  - "Ernest Guevarra"
+date: '2022-01-18'
+output:
+  xaringan::moon_reader:
+    css: xaringan-themer.css
+    nature:
+      slideNumberFormat: "%current%"
+      highlightStyle: github
+      highlightLines: true
+      ratio: 16:9
+      countIncrementalSlides: true
+---
+
+```{r setup, include=FALSE}
+options(htmltools.dir.version = FALSE)
+knitr::opts_chunk$set(
+  fig.width=9, fig.height=3.5, fig.retina=3,
+  out.width = "100%",
+  cache = FALSE,
+  echo = TRUE,
+  message = FALSE, 
+  warning = FALSE,
+  hiline = TRUE
+)
+
+if (!require(remotes)) install.packages("remotes")
+if (!require(fontawesome)) remotes::install_github("rstudio/fontawesome")
+if (!require(tweetrmd)) remotes::install_github("gadenbuie/tweetrmd")
+if (!require(webshot2)) remotes::install_github("rstudio/webshot2")
+```
+
+```{r xaringan-themer, include=FALSE, warning=FALSE}
+library(xaringanthemer)
+style_mono_light(
+  base_color = "#002147",
+  title_slide_background_image = "",
+  title_slide_background_size = "cover",
+  header_font_google = google_font("Fira Sans"),
+  text_font_google   = google_font("Fira Sans Condensed"),
+  text_font_size = "1.2em",
+  link_color = "#214700",
+  header_h1_font_size = "50px",
+  header_h2_font_size = "40px",
+  header_h3_font_size = "30px",
+  code_font_google   = google_font("Fira Mono"),
+  text_slide_number_font_size = "0.5em",
+  footnote_font_size = "0.5em"
+)
+```
+
+# Outline
+
+* Why write functions
+
+* When to write functions
+
+* How to write functions
+
+* Practical session
+
+---
+
+# Why write functions
+
+* Allow automation of common tasks in a more powerful and general way than *copy-and-pasting*;
+
+    * You can give a function an evocative name that makes your code easier to understand;
+    * As requirements change, you only need to update code in one place, instead of many.
+    * You eliminate the chance of making incidental mistakes when you copy and paste (i.e. updating a variable name in one place, but not in another).
+
+* Fewer global variables: When you run a function, the intermediate variables that it creates are not stored in your global environment. This saves memory and keeps your global environment cleaner.
+
+* Better documentation: Well documented functions help the user understand the steps of your processing.
+
+* Easier to maintain / edit: When you create a function for a repeated task, it is easy to edit that one function. Then every location in your code where that same task is performed is automatically updated.
+
+---
+
+# When to write functions
+
+.pull-left[
+You should consider writing a function whenever you’ve copied and pasted a block of code more than twice (i.e. you now have three copies of the same code). 
+
+For example, take a look at this code.
+
+What does it do?
+]
+
+.pull-right[
+```R
+df <- data.frame(
+  a = c(1, 2, 1, 1, 1, 2, 1, 1, 2, 2),
+  b = c(2, 2, 2, 1, 1, 1, 1, 2, 1, 2),
+  c = c(1, 2, 1, 1, 2, 1, 2, 1, 2, 2)
+)
+
+df$a <- ifelse(df$a == 2, 0, df$a)
+df$b <- ifelse(df$b == 2, 0, df$b)
+df$c <- ifelse(df$c == 2, 0, df$c)
+```
+]
+
+---
+
+# When to write functions
+
+.pull-left[
+Original data:
+
+```{r, echo = FALSE}
+df <- data.frame(
+  a = c(1, 2, 1, 1, 1, 2, 1, 1, 2, 2),
+  b = c(2, 2, 2, 1, 1, 1, 1, 2, 1, 2),
+  c = c(1, 2, 1, 1, 2, 1, 2, 1, 2, 2)
+)
+
+df
+```
+]
+
+.pull-right[
+Recoded data:
+
+```{r, echo = FALSE}
+df$a <- ifelse(df$a == 2, 0, df$a)
+df$b <- ifelse(df$b == 2, 0, df$b)
+df$c <- ifelse(df$c == 2, 0, df$c)
+
+df
+```
+]
+
+--
+
+This is a good example of when writing a function will be useful/beneficial.
+
+---
+
+# How to write functions
+
+.pull-left[
+We can create a function called `recode_values()`:
+
+```R
+recode_values <- function(x) { 
+  ifelse(x == 2, 0, x)
+}
+```
+
+And apply it to the same data as follows:
+
+```R
+df$a <- recode_values(df$a)
+df$b <- recode_values(df$b)
+df$c <- recode_values(df$c)
+```
+]
+
+--
+
+.pull-right[
+We get:
+
+```{r, echo = FALSE}
+df <- data.frame(
+  a = c(1, 2, 1, 1, 1, 2, 1, 1, 2, 2),
+  b = c(2, 2, 2, 1, 1, 1, 1, 2, 1, 2),
+  c = c(1, 2, 1, 1, 2, 1, 2, 1, 2, 2)
+)
+
+recode_values <- function(x) { 
+  ifelse(x == 2, 0, x)
+}
+
+df$a <- recode_values(df$a)
+df$b <- recode_values(df$b)
+df$c <- recode_values(df$c)
+
+df
+```
+]
+
+---
+
+# How to write functions
+
+* You need to pick a name for the function. In the example I used `recode_values` because this function recodes the values based on a specified rule (i.e., value of 2 is converted to 0).
+
+* You list the inputs, or **arguments**, to the function inside `function`. Here we have just one argument. If we had more the call would look like `function(x, y, z)`.
+
+*  You place the code you have developed in body of the function, a `{` block that immediately follows `function(...)`.
+
+???
+
+Note the overall process: I only made the function after I’d figured out how to make it work with a simple input. It’s easier to start with working code and turn it into a function; it’s harder to create a function and then try to make it work.
+
+---
+
+class: inverse, center, middle
+
+# Questions?
+
+---
+
+class: inverse, center, middle
+
+# Practical session
+
+We'll work through *Exercise 2 - Manipulating objects and creating new functions* in Practical R for Epidemiologists (https://practical-r.org/exercise2.html) as a GitHub Classroom assignment
+
+---
+
+class: inverse, center, middle
+
+# Thank you!
+
+Slides can be viewed at https://oxford-ihtm.io/open-reproducible-science/session4.html
+
+PDF version of slides can be downloaded at https://oxford-ihtm.io/open-reproducible-science/pdf/session4-r-basics-part3.pdf
+
+R scripts for slides available [here](https://github.com/OxfordIHTM/open-reproducible-science/blob/main/session4.Rmd)
+
