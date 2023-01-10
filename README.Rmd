@@ -135,14 +135,11 @@ In this session, the students will be taught and guided through creating basic R
 
 #### Teaching Material
 
-<!---
-
 Slides can be viewed at https://oxford-ihtm.io/open-reproducible-science/session5.html
 
-PDF version of slides can be downloaded at https://oxford-ihtm.io/open-reproducible-science/pdf/session5-r-workfloww.pdf
+PDF version of slides can be downloaded at https://oxford-ihtm.io/open-reproducible-science/pdf/session5-literate-programming.pdf
 
 R scripts for slides available at https://github.com/OxfordIHTM/open-reproducible-science/blob/main/session5.Rmd
---->
 
 &nbsp;
 
