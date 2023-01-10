@@ -231,14 +231,14 @@ content and data analysis code.
 
 #### Teaching Material
 
-<!---
+Slides can be viewed at
+<https://oxford-ihtm.io/open-reproducible-science/session5.html>
 
-Slides can be viewed at https://oxford-ihtm.io/open-reproducible-science/session5.html
+PDF version of slides can be downloaded at
+<https://oxford-ihtm.io/open-reproducible-science/pdf/session5-literate-programming.pdf>
 
-PDF version of slides can be downloaded at https://oxford-ihtm.io/open-reproducible-science/pdf/session5-r-workfloww.pdf
-
-R scripts for slides available at https://github.com/OxfordIHTM/open-reproducible-science/blob/main/session5.Rmd
---->
+R scripts for slides available at
+<https://github.com/OxfordIHTM/open-reproducible-science/blob/main/session5.Rmd>
 
  
 
