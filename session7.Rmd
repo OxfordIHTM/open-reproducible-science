@@ -221,7 +221,31 @@ class: inverse, center, middle
 
 * [Personal access token for HTTPS](https://happygitwithr.com/https-pat.html)
 
-* Connect RStudio to git and GitHub - see assignment in GitHub Classroom
+* [Connect RStudio to git and GitHub](https://oxford-ihtm.io/ihtm-handbook/connect-rstudio-github.html)
+
+---
+
+# Practical topics
+
+* RStudio, git, and GitHub process for participating in an R-based scientific project/workflow
+
+* RStudio, git, and GitHub process for initiating your own R-based scientific project/workflow
+
+---
+
+background-color: #FFFFFF
+background-image: url(images/git_process1.png)
+background-size: 85%
+
+## Participating in an R-based scientific project/workflow
+
+---
+
+background-color: #FFFFFF
+background-image: url(images/git_process2.png)
+background-size: 70%
+
+## Initiating your own R-based scientific project/workflow
 
 ---
 
