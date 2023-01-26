@@ -227,9 +227,9 @@ class: inverse, center, middle
 
 # Practical topics
 
-* RStudio, git, and GitHub process for participating in an R-based scientific project/workflow
+* [RStudio, git, and GitHub process for participating in an R-based scientific project/workflow](https://oxford-ihtm.io/ihtm-handbook/participate-projects.html)
 
-* RStudio, git, and GitHub process for initiating your own R-based scientific project/workflow
+* [RStudio, git, and GitHub process for initiating your own R-based scientific project/workflow](https://oxford-ihtm.io/ihtm-handbook/initiate-projects.html)
 
 ---
 
@@ -239,6 +239,12 @@ background-size: 85%
 
 ## Participating in an R-based scientific project/workflow
 
+.footnote[see details of this process in this Chapter of the IHTM handbook - https://oxford-ihtm.io/ihtm-handbook/participate-projects.html]
+
+???
+
+* see details of this process in this Chapter of the IHTM handbook - https://oxford-ihtm.io/ihtm-handbook/participate-projects.html
+
 ---
 
 background-color: #FFFFFF
@@ -246,6 +252,12 @@ background-image: url(images/git_process2.png)
 background-size: 70%
 
 ## Initiating your own R-based scientific project/workflow
+
+.footnote[see details of this process in this Chapter of the IHTM handbook - https://oxford-ihtm.io/ihtm-handbook/initiate-projects.html]
+
+???
+
+* see details of this process in this Chapter of the IHTM handbook - https://oxford-ihtm.io/ihtm-handbook/initiate-projects.html
 
 ---
 
