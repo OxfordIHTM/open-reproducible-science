@@ -1,9 +1,9 @@
 ---
 title: "Introduction to the {targets} package"
-subtitle: "Reproducible Scientific Workflows in R - Part 1"  
+subtitle: "Reproducible Scientific Workflows in R"  
 author: 
   - "Ernest Guevarra"
-date: '2023-01-26'
+date: '2023-02-03'
 output:
   xaringan::moon_reader:
     css: xaringan-themer.css
@@ -114,7 +114,7 @@ class: inverse, center, middle
 
 ---
 
-class:: center, middle
+class: center, middle
 
 # Don't repeat yourself. It's not only repetitive, it's redundant, and people have heard it before.
 
@@ -122,37 +122,15 @@ Lemony Snicket
 
 ---
 
-background-color: #FFFFFF
+class: center, middle
 
-```{r, echo = TRUE, eval = FALSE}
-# Overlay maps of Niger and Nigeria to clean-up the map 
-par(new=TRUE)
-plot(nigeria, axes = FALSE, xlim = mapXLimits, ylim = mapYLimits, border = "white", col = "white")
+# "You should consider writing a function whenever you’ve copied and pasted a block of code more than twice (i.e. you now have three copies of the same code)"
 
-par(new = TRUE)
-plot(boundaries, axes = FALSE, xlim = mapXLimits, ylim=mapYLimits, lwd = 0.5, border = "black")
+---
 
-par(new = TRUE)
-plot(n1, axes = FALSE, xlim = mapXLimits, ylim=mapYLimits, lwd = 0.25, col = "blue")
+class: inverse, center, middle
 
-par(new = TRUE)
-plot(n4, axes = FALSE, xlim = mapXLimits, ylim=mapYLimits, lwd = 0.25, col = "blue")
-
-par(new = TRUE)
-plot(n5, axes = FALSE, xlim = mapXLimits, ylim=mapYLimits, lwd = 0.25, col = "blue")
-
-par(new = TRUE)
-plot(n6, axes = FALSE, xlim = mapXLimits, ylim=mapYLimits, lwd = 0.25, col = "blue")
-
-par(new = TRUE)
-plot(n6.27, axes = FALSE, xlim = mapXLimits, ylim=mapYLimits, lwd = 0.25, col = "blue")
-
-par(new = TRUE)
-plot(n7, axes = FALSE, xlim = mapXLimits, ylim=mapYLimits, lwd = 0.25, col = "blue")
-
-par(new = TRUE)
-plot(n14, axes = FALSE, xlim = mapXLimits, ylim=mapYLimits, lwd = 0.25, col = "blue")
-```
+# Challenges with scientific workflows
 
 ---
 
@@ -168,26 +146,6 @@ plot(n14, axes = FALSE, xlim = mapXLimits, ylim=mapYLimits, lwd = 0.25, col = "b
 3. Discover an issue.
 4. Restart from scratch.
 ]
-
----
-
-class: inverse, center, middle
-
-# Concept #3: Frequency reduces difficulty
-
----
-
-class: center, middle
-
-```{r tweet2, echo = FALSE, eval = TRUE}
-tweet_screenshot(
-  tweet_url("JennyBryan", "1087795259872927744"),
-  hide_media = TRUE,
-  theme = "dark"
-)
-```
-
-[@martinfowler](https://twitter.com/martinfowler), via [@JennyBryan](https://twitter.com/JennyBryan) [tweet](https://twitter.com/JennyBryan/status/1087795259872927744)
 
 ---
 

@@ -3,7 +3,7 @@ title: "Making your R-based research project portable"
 subtitle: "Introduction to the {renv} package"  
 author: 
   - "Ernest Guevarra"
-date: '2023-02-21'
+date: '2023-02-03'
 output:
   xaringan::moon_reader:
     css: xaringan-themer.css
