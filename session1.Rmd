@@ -74,7 +74,7 @@ style_mono_light(
 
 * `R` is a system for *data manipulation*, *calculation*, and *graphics*. It provides:
 
-    * Facilitates for data handling and storage;
+    * Facilities/functions for data handling and storage;
     
     * A large collection of tools for data analysis; and,
     
@@ -86,6 +86,12 @@ style_mono_light(
 .pull-right[
 .center[![](https://upload.wikimedia.org/wikipedia/commons/thumb/1/1b/R_logo.svg/724px-R_logo.svg.png)]
 ]
+
+???
+
+R is not a statistical package/software as such in the same way as STATA or SPSS. 
+
+R is a general programming language that has a sophisticated, well-developed, and well-maintained library of statistical tools and functions. 
 
 ---
 
