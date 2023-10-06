@@ -3,7 +3,7 @@ title: "Open Science, Reproducible Research, and R"
 subtitle: "An Overview"  
 author: 
   - "Ernest Guevarra"
-date: '2023-01-23'
+date: '2024-01-26'
 output:
   xaringan::moon_reader:
     css: xaringan-themer.css
