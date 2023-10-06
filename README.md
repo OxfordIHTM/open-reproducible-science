@@ -331,10 +331,8 @@ R scripts for slides available
 
 In this session, a discussion of best practices on reproducible
 scientific workflows and an introduction to using the `{targets}` to
-implemenet these workflows. The final part of the session will continue
-on the data exercise using R based on Exercise 1 found in the
-[**Practical R for
-Epidemiologists**](https://practical-r.org/exercise2.html) book.
+implemenet these workflows. The final part of the session will be the
+first day of **Hackathon 2024**.
 
 #### Further Reading
 
@@ -360,8 +358,7 @@ R scripts for slides available
 ### Session 9: Reproducible scientific workflows in R - Part 2: Creating targets-based scientific workflows
 
 In this session, the students will create their own targets-based
-workflows based on a data exercise taken from the the Practical R for
-Epidemiologists Links to an external site.book.
+workflows as part of the second day of **Hackathon 2024**.
 
 #### Further Reading
 
@@ -373,13 +370,14 @@ The targets R Package User Manual -
 
 #### Teaching Material
 
-<!---
-Slides can be viewed at https://oxfordihtm.github.io/open-reproducible-science/session9.html
+Slides can be viewed at
+<https://oxfordihtm.github.io/open-reproducible-science/session9.html>
 
-PDF version of slides can be downloaded at https://oxfordihtm.github.io/open-reproducible-science/pdf/session9-reproducible-scientific-workflows.pdf
+PDF version of slides can be downloaded at
+<https://oxfordihtm.github.io/open-reproducible-science/pdf/session9-reproducible-scientific-workflows.pdf>
 
-R scripts for slides available at https://github.com/OxfordIHTM/open-reproducible-science/blob/main/session9.Rmd
---->
+R scripts for slides available at
+<https://github.com/OxfordIHTM/open-reproducible-science/blob/main/session9.Rmd>
 
  
 
@@ -388,9 +386,9 @@ R scripts for slides available at https://github.com/OxfordIHTM/open-reproducibl
 In this session, a discussion of R code portability, the factors that
 impact how the R code/script we develop can be used and run successfully
 by someone else, and the currently available solutions to ensuring
-portability. The final part of the session will continue on the data
-exercise using R based on Exercise 1 found in the [**Practical R for
-Epidemiologists**](https://practical-r.org/exercise2.html) book.
+portability.
+
+The final part of the session will the third day of **Hackathon 2024**.
 
 #### Further Reading
 
@@ -408,31 +406,15 @@ PDF version of slides can be downloaded at
 R scripts for slides available at
 <https://github.com/OxfordIHTM/open-reproducible-science/blob/main/session10.Rmd>
 
- 
-
-### Session 11: Automating your R-based research project
-
-In this session, a discussion of automation, its application on R
-project workflows, and current available tools for use in automation of
-workflows. The final part of the session will continue on the data
-exercise using R based on Exercise 1 found in the [**Practical R for
-Epidemiologists**](https://practical-r.org/exercise2.html) book.
-
-#### Further Reading
-
-Understanding GitHub Actions -
-<https://docs.github.com/en/actions/learn-github-actions/understanding-github-actions>
-
-#### Teaching Material
-
-Slides can be viewed at
-<https://oxford-ihtm.io/open-reproducible-science/session11.html>
-
-PDF version of slides can be downloaded at
-<https://oxford-ihtm.io/open-reproducible-science/pdf/session11-automating-r-projects.pdf>
-
-R scripts for slides available at
-<https://github.com/OxfordIHTM/open-reproducible-science/blob/main/session11.Rmd>
+<!-- &nbsp; -->
+<!-- ### Session 11: Automating your R-based research project -->
+<!-- In this session, a discussion of automation, its application on R project workflows, and current available tools for use in automation of workflows. The final part of the session will continue on the data exercise using R based on Exercise 1 found in the [**Practical R for Epidemiologists**](https://practical-r.org/exercise2.html) book. -->
+<!-- #### Further Reading -->
+<!-- Understanding GitHub Actions - https://docs.github.com/en/actions/learn-github-actions/understanding-github-actions -->
+<!-- #### Teaching Material -->
+<!-- Slides can be viewed at https://oxford-ihtm.io/open-reproducible-science/session11.html -->
+<!-- PDF version of slides can be downloaded at https://oxford-ihtm.io/open-reproducible-science/pdf/session11-automating-r-projects.pdf -->
+<!-- R scripts for slides available at https://github.com/OxfordIHTM/open-reproducible-science/blob/main/session11.Rmd -->
 
  
 
