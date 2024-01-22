@@ -52,13 +52,12 @@ style_mono_light(
 
 class: inverse, center, middle
 
-## Go to the people. Live with them. Learn from them. Love them. 
+# Tell me, and I will forget
 
-## Start with what they know. Build with what they have. 
+# Show me, and I will remember
 
-## But with the best leaders, when the work is done, the task accomplished, the people will say "We have done it ourselves".
+# Involve me, and I will understand
 
-### Lao Tzu
 ---
 
 # Outline
@@ -253,6 +252,18 @@ background-color: #FFFFFF
 class: inverse, center, middle
 
 # Questions?
+
+---
+
+class: inverse, center, middle
+
+## Go to the people. Live with them. Learn from them. Love them. 
+
+## Start with what they know. Build with what they have. 
+
+## But with the best leaders, when the work is done, the task accomplished, the people will say "We have done it ourselves".
+
+### Lao Tzu
 
 ---
 
