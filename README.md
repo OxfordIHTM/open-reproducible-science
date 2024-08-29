@@ -6,11 +6,11 @@
 <!-- badges: start -->
 
 [![License for
-data](https://img.shields.io/badge/license%20(for%20data)-CC0-blue.svg)](https://creativecommons.org/publicdomain/zero/1.0/)
+data](https://img.shields.io/badge/license%20\(for%20data\)-CC0-blue.svg)](https://creativecommons.org/publicdomain/zero/1.0/)
 [![License for
-code](https://img.shields.io/badge/license%20(for%20code)-GPL3.0-blue.svg)](https://opensource.org/licenses/gpl-3.0.html)
+code](https://img.shields.io/badge/license%20\(for%20code\)-GPL3.0-blue.svg)](https://opensource.org/licenses/gpl-3.0.html)
 [![License for slide
-deck](https://img.shields.io/badge/license%20(for%20slide%20decks)-CC%20BY%204.0-blue.svg)](https://creativecommons.org/licenses/by/4.0/)
+deck](https://img.shields.io/badge/license%20\(for%20slide%20decks\)-CC%20BY%204.0-blue.svg)](https://creativecommons.org/licenses/by/4.0/)
 [![pages-build-deployment](https://github.com/OxfordIHTM/open-reproducible-science/actions/workflows/pages/pages-build-deployment/badge.svg)](https://github.com/OxfordIHTM/open-reproducible-science/actions/workflows/pages/pages-build-deployment)
 [![DOI](https://zenodo.org/badge/451333046.svg)](https://zenodo.org/badge/latestdoi/451333046)
 <!-- badges: end -->
@@ -20,24 +20,24 @@ deck](https://img.shields.io/badge/license%20(for%20slide%20decks)-CC%20BY%204.0
 [R](https://r-project.org) is a language and environment for statistical
 computing and graphics. It is a [GNU](https://en.wikipedia.org/wiki/GNU)
 project which is similar to the [S language and
-environment](https://en.wikipedia.org/wiki/S_(programming_language))
-which was developed at Bell Laboratories (formerly AT&T, now Lucent
+environment](https://en.wikipedia.org/wiki/S_\(programming_language\))
+which was developed at Bell Laboratories (formerly AT\&T, now Lucent
 Technologies) by John Chambers and colleagues. R can be considered as a
 different implementation of S. There are some important differences, but
 much code written for S runs unaltered under R.
 
-[R](https://r-project.org) provides a wide variety of statistical
-(linear and nonlinear modelling, classical statistical tests,
-time-series analysis, classification, clustering, etc.) and graphical
-techniques, and is highly extensible. The S language is often the
-vehicle of choice for research in statistical methodology, and R
-provides an Open Source route to participation in that activity.
+R provides a wide variety of statistical (linear and non-linear
+modelling, classical statistical tests, time-series analysis,
+classification, clustering, etc.) and graphical techniques, and is
+highly extensible. The S language is often the vehicle of choice for
+research in statistical methodology, and R provides an Open Source route
+to participation in that activity.
 
-One of [R](https://r-project.org)’s strengths is the ease with which
-well-designed publication-quality plots can be produced, including
-mathematical symbols and formulae where needed. Great care has been
-taken over the defaults for the minor design choices in graphics, but
-the user retains full control.
+One of R’s strengths is the ease with which well-designed
+publication-quality plots can be produced, including mathematical
+symbols and formulae where needed. Great care has been taken over the
+defaults for the minor design choices in graphics, but the user retains
+full control.
 
 R is available as Free Software under the terms of the Free Software
 Foundation’s GNU General Public License in source code form. It compiles
@@ -64,7 +64,7 @@ popular, ranking 12th in the [TIOBE
 index](https://www.tiobe.com/tiobe-index/) of the most popular
 programming languages.
 
-Academics, scientists, and researchers use R to analyze the results of
+Academics, scientists, and researchers use R to analyse the results of
 experiments. In addition, businesses of all sizes and in every industry
 use it to extract insights from the increasing amount of daily data they
 generate.
@@ -91,30 +91,28 @@ scientific research purposes.
 
 #### Further Reading
 
-- Grolemund G. (2014). Installing R and RStudio from Hands-on
-  Programming with R. In *Hands-on programming with R : write your own
-  functions and simulations*.
-  <https://rstudio-education.github.io/hopr/starting.html>
+  - Grolemund G. (2014). Installing R and RStudio from Hands-on
+    Programming with R. In *Hands-on programming with R : write your own
+    functions and simulations*.
+    <https://rstudio-education.github.io/hopr/starting.html>
 
-- Bryan J. and Hester J. Installing git and creating a GitHub account.
-  In *Happy Git and GitHub for the useR*
-  <https://happygitwithr.com/install-intro.html>
+  - Bryan J. and Hester J. Installing git and creating a GitHub account.
+    In *Happy Git and GitHub for the useR*
+    <https://happygitwithr.com/install-intro.html>
 
-- R-Ladies Sydney. BasicBasics1: An opinionated tour of RStudio.
-  <https://rladiessydney.org/courses/ryouwithme/01-basicbasics-1/>
+  - R-Ladies Sydney. BasicBasics1: An opinionated tour of RStudio.
+    <https://rladiessydney.org/courses/ryouwithme/01-basicbasics-1/>
 
 #### Teaching Material
 
-Slides can be viewed at
-<https://oxford-ihtm.io/open-reproducible-science/session1.html>
+Slides can be viewed
+[here](https://oxford-ihtm.io/open-reproducible-science/session1.html).
 
-PDF version of slides can be downloaded at
-<https://oxford-ihtm.io/open-reproducible-science/pdf/session1-getting-the-right-tools.pdf>
+PDF version of slides can be downloaded
+[here](https://oxford-ihtm.io/open-reproducible-science/pdf/session1-getting-the-right-tools.pdf).
 
 R scripts for slides available
-[here](https://github.com/OxfordIHTM/open-reproducible-science/blob/main/session1.Rmd)
-
- 
+[here](https://github.com/OxfordIHTM/open-reproducible-science/blob/main/session1.Rmd).
 
 ### Session 2: Learning the basics of R - Part 1: R through the user interface of RStudio
 
@@ -128,25 +126,23 @@ Epidemiologists](https://practical-r.org).
 
 #### Further Reading
 
-- Grolemund G. (2014). Loading and Saving Data in R. In *Hands-on
-  programming with R : write your own functions and simulations*.
-  <https://rstudio-education.github.io/hopr/dataio.html>
+  - Grolemund G. (2014). Loading and Saving Data in R. In *Hands-on
+    programming with R : write your own functions and simulations*.
+    <https://rstudio-education.github.io/hopr/dataio.html>
 
-- Myatt M. Exercise 1 - Getting acquainted with R. In *Practical R for
-  Epidemiologists*. <https://practical-r.org/exercise1.html>
+  - Myatt M. Exercise 1 - Getting acquainted with R. In *Practical R for
+    Epidemiologists*. <https://practical-r.org/exercise1.html>
 
 #### Teaching Material
 
-Slides can be viewed at
-<https://oxford-ihtm.io/open-reproducible-science/session2.html>
+Slides can be viewed
+[here](https://oxford-ihtm.io/open-reproducible-science/session2.html).
 
-PDF version of slides can be downloaded at
-<https://oxford-ihtm.io/open-reproducible-science/pdf/session2-r-basics-part1.pdf>
+PDF version of slides can be downloaded
+[here](https://oxford-ihtm.io/open-reproducible-science/pdf/session2-r-basics-part1.pdf).
 
 R scripts for slides available
-[here](https://github.com/OxfordIHTM/open-reproducible-science/blob/main/session2.Rmd)
-
- 
+[here](https://github.com/OxfordIHTM/open-reproducible-science/blob/main/session2.Rmd).
 
 ### Session 3: Learning the basics of R - Part 2: Creating and manipulating objects, and extending R using packages
 
@@ -160,25 +156,23 @@ to object-oriented programming.
 
 #### Further Reading
 
-- Grolemund G. (2014). R Packages. In *Hands-on programming with R :
-  write your own functions and simulations*.
-  <https://rstudio-education.github.io/hopr/packages2.html>
+  - Grolemund G. (2014). R Packages. In *Hands-on programming with R :
+    write your own functions and simulations*.
+    <https://rstudio-education.github.io/hopr/packages2.html>
 
-- Myatt M. Extending R with packages. In *Practical R for
-  Epidemiologists*. <https://practical-r.org/exercise5.html>
+  - Myatt M. Extending R with packages. In *Practical R for
+    Epidemiologists*. <https://practical-r.org/exercise5.html>
 
 #### Teaching Material
 
-Slides can be viewed at
-<https://oxford-ihtm.io/open-reproducible-science/session3.html>
+Slides can be viewed
+[here](https://oxford-ihtm.io/open-reproducible-science/session3.html).
 
-PDF version of slides can be downloaded at
-<https://oxford-ihtm.io/open-reproducible-science/pdf/session3-r-basics-part2.pdf>
+PDF version of slides can be downloaded
+[here](https://oxford-ihtm.io/open-reproducible-science/pdf/session3-r-basics-part2.pdf).
 
 R scripts for slides available
-[here](https://github.com/OxfordIHTM/open-reproducible-science/blob/main/session3.Rmd)
-
- 
+[here](https://github.com/OxfordIHTM/open-reproducible-science/blob/main/session3.Rmd).
 
 ### Session 4: Learning the basics of R - Part 3: Creating your own functions
 
@@ -190,25 +184,23 @@ they require.
 
 #### Further Reading
 
-- Wickham H and Grolemund G. Functions. In *R for Data Science*.
-  <https://r4ds.had.co.nz/functions.html>
+  - Wickham H and Grolemund G. Functions. In *R for Data Science*.
+    <https://r4ds.had.co.nz/functions.html>
 
-- Myatt M. Exercise 2 - Manipulating objects and creating new functions.
-  In *Practical R for Epidemiologists*.
-  <https://practical-r.org/exercise2.html>
+  - Myatt M. Exercise 2 - Manipulating objects and creating new
+    functions. In *Practical R for Epidemiologists*.
+    <https://practical-r.org/exercise2.html>
 
 #### Teaching Material
 
-Slides can be viewed at
-<https://oxford-ihtm.io/open-reproducible-science/session4.html>
+Slides can be viewed
+[here](https://oxford-ihtm.io/open-reproducible-science/session4.html).
 
-PDF version of slides can be downloaded at
-<https://oxford-ihtm.io/open-reproducible-science/pdf/session4-r-basics-part3.pdf>
+PDF version of slides can be downloaded
+[here](https://oxford-ihtm.io/open-reproducible-science/pdf/session4-r-basics-part3.pdf).
 
-R scripts for slides available at
-<https://github.com/OxfordIHTM/open-reproducible-science/blob/main/session4.Rmd>
-
- 
+R scripts for slides available
+[here](https://github.com/OxfordIHTM/open-reproducible-science/blob/main/session4.Rmd).
 
 ### Session 5: Creating basic R workflows and literate programming
 
@@ -221,26 +213,24 @@ content and data analysis code.
 
 #### Further Reading
 
-- Bryan J and Hester J. Project-oriented workflow. In *What they forgot
-  to teach you about R*.
-  <https://rstats.wtf/project-oriented-workflow.html>
+  - Bryan J and Hester J. Project-oriented workflow. In *What they
+    forgot to teach you about R*.
+    <https://rstats.wtf/project-oriented-workflow.html>
 
-- Shepperd M. Literate programming and RMarkdown. In *CS5701 Modern Data
-  Book*.
-  <https://bookdown.org/martin_shepperd/ModernDataBook/C3-Literate.html>
+  - Shepperd M. Literate programming and RMarkdown. In *CS5701 Modern
+    Data Book*.
+    <https://bookdown.org/martin_shepperd/ModernDataBook/C3-Literate.html>
 
 #### Teaching Material
 
-Slides can be viewed at
-<https://oxford-ihtm.io/open-reproducible-science/session5.html>
+Slides can be viewed
+[here](https://oxford-ihtm.io/open-reproducible-science/session5.html).
 
-PDF version of slides can be downloaded at
-<https://oxford-ihtm.io/open-reproducible-science/pdf/session5-literate-programming.pdf>
+PDF version of slides can be downloaded
+[here](https://oxford-ihtm.io/open-reproducible-science/pdf/session5-literate-programming.pdf).
 
-R scripts for slides available at
-<https://github.com/OxfordIHTM/open-reproducible-science/blob/main/session5.Rmd>
-
- 
+R scripts for slides available
+[here](https://github.com/OxfordIHTM/open-reproducible-science/blob/main/session5.Rmd).
 
 ## Part 2: Open and Reproducible Science
 
@@ -263,8 +253,6 @@ learning, practical examples and exercises will be discussed and walked
 through using the R language for statistical computing as a way to
 practically demonstrate these concepts.
 
- 
-
 ### Session 6: Open Science and Reproducible Research in R: An Overview
 
 In this session, an overview of the what, why, and how of Open Science
@@ -280,52 +268,48 @@ reproducible research in ecology, evolution, and conservation.
 
 #### Teaching Material
 
-Slides can be viewed at
-<https://oxford-ihtm.io/open-reproducible-science/session6.html>
+Slides can be viewed
+[here](https://oxford-ihtm.io/open-reproducible-science/session6.html).
 
-PDF version of slides can be downloaded at
-<https://oxford-ihtm.io/open-reproducible-science/pdf/session6-open-reproducible-science.pdf>
+PDF version of slides can be downloaded
+[here](https://oxford-ihtm.io/open-reproducible-science/pdf/session6-open-reproducible-science.pdf).
 
 R scripts for slides available
-[here](https://github.com/OxfordIHTM/open-reproducible-science/blob/main/session6.Rmd)
-
- 
+[here](https://github.com/OxfordIHTM/open-reproducible-science/blob/main/session6.Rmd).
 
 ### Session 7: Git and GitHub for use with R: tools for versioning and sharing research
 
 In this session, an overview of git and GitHub will be discussed along
-with their integration with R using RStudio. This wil then be followed
+with their integration with R using RStudio. This will then be followed
 by a practical session to guide learners on setting up git and GitHub
 onto their personal machines culminating in the learners accessing their
 first assignment in GitHub Classroom.
 
 #### Further Reading
 
-Happy Git and GitHub for the useR - <https://happygitwithr.com/>
+  - Happy Git and GitHub for the useR - <https://happygitwithr.com/>
 
-Perez-Riverol, Y., Gatto, L., Wang, R., Sachsenberg, T., Uszkoreit, J.,
-Leprevost, F., Fufezan, C., Ternent, T., Eglen, S. J., Katz, D. S.,
-Pollard, T. J., Konovalov, A., Flight, R. M., Blin, K., & Vizcaíno, J.
-A. (2016). Ten Simple Rules for Taking Advantage of Git and GitHub. PLoS
-computational biology, 12(7), e1004947.
-<https://doi.org/10.1371/journal.pcbi.1004947>
+  - Perez-Riverol, Y., Gatto, L., Wang, R., Sachsenberg, T., Uszkoreit,
+    J., Leprevost, F., Fufezan, C., Ternent, T., Eglen, S. J., Katz, D.
+    S., Pollard, T. J., Konovalov, A., Flight, R. M., Blin, K., &
+    Vizcaíno, J. A. (2016). Ten Simple Rules for Taking Advantage of
+    Git and GitHub. PLoS computational biology, 12(7), e1004947.
+    <https://doi.org/10.1371/journal.pcbi.1004947>
 
-Blischak JD, Davenport ER, Wilson G (2016) A Quick Introduction to
-Version Control with Git and GitHub. PLOS Computational Biology 12(1):
-e1004668. <https://doi.org/10.1371/journal.pcbi.1004668>
+  - Blischak JD, Davenport ER, Wilson G (2016) A Quick Introduction to
+    Version Control with Git and GitHub. PLOS Computational Biology
+    12(1): e1004668. <https://doi.org/10.1371/journal.pcbi.1004668>
 
 #### Teaching Material
 
-Slides can be viewed at
-<https://oxford-ihtm.io/open-reproducible-science/session7.html>
+Slides can be viewed
+[here](https://oxford-ihtm.io/open-reproducible-science/session7.html).
 
-PDF version of slides can be downloaded at
-<https://oxford-ihtm.io/open-reproducible-science/pdf/session7-git-and-github-with-r.pdf>
+PDF version of slides can be downloaded
+[here](https://oxford-ihtm.io/open-reproducible-science/pdf/session7-git-and-github-with-r.pdf).
 
 R scripts for slides available
-[here](https://github.com/OxfordIHTM/open-reproducible-science/blob/main/session7.Rmd)
-
- 
+[here](https://github.com/OxfordIHTM/open-reproducible-science/blob/main/session7.Rmd).
 
 ### Session 8: Reproducible scientific workflows in R - Part 1: Introduction to the {targets} package
 
@@ -336,24 +320,22 @@ first day of **Hackathon 2024**.
 
 #### Further Reading
 
-Dynamic Function-Oriented Make-Like Declarative Workflows -
-<https://docs.ropensci.org/targets/>
+  - Dynamic Function-Oriented Make-Like Declarative Workflows -
+    <https://docs.ropensci.org/targets/>
 
-The targets R Package User Manual -
-<https://books.ropensci.org/targets/>
+  - The targets R Package User Manual -
+    <https://books.ropensci.org/targets/>
 
 #### Teaching Material
 
-Slides can be viewed at
-<https://oxford-ihtm.io/open-reproducible-science/session8.html>
+Slides can be viewed
+[here](https://oxford-ihtm.io/open-reproducible-science/session8.html).
 
-PDF version of slides can be downloaded at
-<https://oxford-ihtm.io/open-reproducible-science/pdf/session8-reproducible-scientific-workflows.pdf>
+PDF version of slides can be downloaded
+[here](https://oxford-ihtm.io/open-reproducible-science/pdf/session8-reproducible-scientific-workflows.pdf).
 
 R scripts for slides available
-[here](https://github.com/OxfordIHTM/open-reproducible-science/blob/main/session8.Rmd)
-
- 
+[here](https://github.com/OxfordIHTM/open-reproducible-science/blob/main/session8.Rmd).
 
 ### Session 9: Reproducible scientific workflows in R - Part 2: Creating targets-based scientific workflows
 
@@ -362,24 +344,22 @@ workflows as part of the second day of **Hackathon 2024**.
 
 #### Further Reading
 
-Dynamic Function-Oriented Make-Like Declarative Workflows -
-<https://docs.ropensci.org/targets/>
+  - Dynamic Function-Oriented Make-Like Declarative Workflows -
+    <https://docs.ropensci.org/targets/>
 
-The targets R Package User Manual -
-<https://books.ropensci.org/targets/>
+  - The targets R Package User Manual -
+    <https://books.ropensci.org/targets/>
 
 #### Teaching Material
 
-Slides can be viewed at
-<https://oxfordihtm.github.io/open-reproducible-science/session9.html>
+Slides can be viewed
+[here](https://oxfordihtm.github.io/open-reproducible-science/session9.html).
 
-PDF version of slides can be downloaded at
-<https://oxfordihtm.github.io/open-reproducible-science/pdf/session9-reproducible-scientific-workflows.pdf>
+PDF version of slides can be downloaded
+[here](https://oxfordihtm.github.io/open-reproducible-science/pdf/session9-reproducible-scientific-workflows.pdf).
 
-R scripts for slides available at
-<https://github.com/OxfordIHTM/open-reproducible-science/blob/main/session9.Rmd>
-
- 
+R scripts for slides available
+[here](https://github.com/OxfordIHTM/open-reproducible-science/blob/main/session9.Rmd).
 
 ### Session 10: Making your R-based research project portable
 
@@ -392,28 +372,36 @@ The final part of the session will the third day of **Hackathon 2024**.
 
 #### Further Reading
 
-Introduction to renv -
-<https://rstudio.github.io/renv/articles/renv.html>
+  - Introduction to renv -
+    <https://rstudio.github.io/renv/articles/renv.html>
 
 #### Teaching Material
 
-Slides can be viewed at
-<https://oxford-ihtm.io/open-reproducible-science/session10.html>
+Slides can be viewed
+[here](https://oxford-ihtm.io/open-reproducible-science/session10.html).
 
-PDF version of slides can be downloaded at
-<https://oxford-ihtm.io/open-reproducible-science/pdf/session10-portable-r-projects.pdf>
+PDF version of slides can be downloaded
+[here](https://oxford-ihtm.io/open-reproducible-science/pdf/session10-portable-r-projects.pdf).
 
-R scripts for slides available at
-<https://github.com/OxfordIHTM/open-reproducible-science/blob/main/session10.Rmd>
+R scripts for slides available
+[here](https://github.com/OxfordIHTM/open-reproducible-science/blob/main/session10.Rmd)
 
 <!-- &nbsp; -->
+
 <!-- ### Session 11: Automating your R-based research project -->
+
 <!-- In this session, a discussion of automation, its application on R project workflows, and current available tools for use in automation of workflows. The final part of the session will continue on the data exercise using R based on Exercise 1 found in the [**Practical R for Epidemiologists**](https://practical-r.org/exercise2.html) book. -->
+
 <!-- #### Further Reading -->
+
 <!-- Understanding GitHub Actions - https://docs.github.com/en/actions/learn-github-actions/understanding-github-actions -->
+
 <!-- #### Teaching Material -->
+
 <!-- Slides can be viewed at https://oxford-ihtm.io/open-reproducible-science/session11.html -->
+
 <!-- PDF version of slides can be downloaded at https://oxford-ihtm.io/open-reproducible-science/pdf/session11-automating-r-projects.pdf -->
+
 <!-- R scripts for slides available at https://github.com/OxfordIHTM/open-reproducible-science/blob/main/session11.Rmd -->
 
  
@@ -434,8 +422,8 @@ All code in this repository are licensed under a [GNU General Public
 License 3 (GPL-3)](https://opensource.org/licenses/gpl-3.0.html)
 license.
 
-All slide decks in this repository are licensed under a [CC BY
-4.0](https://creativecommons.org/licenses/by/4.0/) license.
+All slide decks in this repository are licensed under a [CC
+BY 4.0](https://creativecommons.org/licenses/by/4.0/) license.
 
  
 
