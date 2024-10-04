@@ -66,5 +66,5 @@ Map(
   input = html_files,
   output = pdf_files,
   browser = "chromium",
-  extra_args = rep(list(c("--headless", "--no-sandbox"), length(html_files))
+  extra_args = rep(list(c("--headless", "--no-sandbox")), length(html_files))
 )
