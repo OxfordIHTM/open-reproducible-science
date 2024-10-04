@@ -103,13 +103,15 @@ class: inverse, center, middle
 
 class: center, middle
 
-```{r tweet1, echo = FALSE, eval = TRUE}
+```{r tweet1, echo = FALSE, eval = FALSE}
 tweetrmd::tweet_screenshot(
   tweet_url("kwbroman", "667735926915731457"),
   hide_media = TRUE,
   theme = "dark"
 )
 ```
+
+# Most important tool for Reproducible Research is the mindset, when starting, taht the end product will be reproducible.
 
 [Keith Baggerly](http://odin.mdacc.tmc.edu/~kabaggerly/), via [@kwbroman](https://twitter.com/kwbrowman) [tweet](https://twitter.com/kwbroman/status/667735926915731457)
 
