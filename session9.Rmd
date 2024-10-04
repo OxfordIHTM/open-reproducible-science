@@ -181,13 +181,15 @@ class: inverse, center, middle
 
 class: center, middle
 
-```{r tweet2, echo = FALSE, eval = TRUE}
+```{r tweet2, echo = FALSE, eval = FALSE}
 tweet_screenshot(
   tweet_url("JennyBryan", "1087795259872927744"),
   hide_media = TRUE,
   theme = "dark"
 )
 ```
+
+# If it hurts, do it more often.
 
 [@martinfowler](https://twitter.com/martinfowler), via [@JennyBryan](https://twitter.com/JennyBryan) [tweet](https://twitter.com/JennyBryan/status/1087795259872927744)
 
