@@ -16,10 +16,14 @@ jobs:
       - name: Check out repository
         uses: actions/checkout@v4
 
-      - name: Install system dependencies
+      - name: Install snapd
         run: |
           sudo apt-get update && sudo apt-get install -y --no-install-recommends \
-          chromium-browser
+          snapd
+          
+      - name: Install chromium
+        run: |
+          sudo apt-get install chromium-browser
                   
       - name: Install R Dependencies
         uses: r-lib/actions/setup-renv@v2
