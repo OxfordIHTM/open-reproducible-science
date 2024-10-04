@@ -104,7 +104,7 @@ class: inverse, center, middle
 class: center, middle
 
 ```{r tweet1, echo = FALSE, eval = TRUE}
-tweet_screenshot(
+tweetrmd::tweet_screenshot(
   tweet_url("kwbroman", "667735926915731457"),
   hide_media = TRUE,
   theme = "dark"
