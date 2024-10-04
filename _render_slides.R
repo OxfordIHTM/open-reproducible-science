@@ -64,5 +64,6 @@ pdf_files <- file.path(
 Map(
   f = pagedown::chrome_print,
   input = html_files,
-  output = pdf_files
+  output = pdf_files,
+  extra_args = "--no-sandbox"
 )
