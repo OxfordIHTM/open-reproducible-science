@@ -65,5 +65,5 @@ Map(
   f = pagedown::chrome_print,
   input = html_files,
   output = pdf_files,
-  extra_args = "--no-sandbox"
+  extra_args = c("--no-sandbox")
 )
