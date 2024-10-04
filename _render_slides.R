@@ -61,15 +61,10 @@ pdf_files <- file.path(
     )
 )
 
-# pagedown::chrome_print(
-#   input = html_files[1], output = pdf_files[1],
-#   browser = "chromium-browser", extra_args = "--no-sandbox"
-# )
-
 Map(
   f = pagedown::chrome_print,
   input = html_files,
   output = pdf_files,
-  browser = "chromium-browser",
+  browser = "/usr/bin/chromium-browser",
   extra_args = c("--no-sandbox")
 )
