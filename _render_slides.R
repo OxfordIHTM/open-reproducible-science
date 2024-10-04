@@ -65,6 +65,6 @@ Map(
   f = pagedown::chrome_print,
   input = html_files,
   output = pdf_files,
-  browser = "chromium",
+  browser = "chromium-browser",
   extra_args = rep(list(c("--headless", "--no-sandbox")), length(html_files))
 )
