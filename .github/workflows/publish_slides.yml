@@ -22,7 +22,7 @@ jobs:
       - name: Install system dependencies
         run: |
           sudo apt-get update && sudo apt-get install -y --no-install-recommends \
-          chromium-browser
+          snapd chromium-browser
                   
       - name: Install R Dependencies
         uses: r-lib/actions/setup-renv@v2
