@@ -3,7 +3,7 @@ title: "R through the user interface of RStudio - performing basic operations"
 subtitle: "Learning the basics of R - Part 1"  
 author: 
   - "Ernest Guevarra"
-date: '2023-11-01'
+date: '23 October 2024'
 output:
   xaringan::moon_reader:
     css: xaringan-themer.css

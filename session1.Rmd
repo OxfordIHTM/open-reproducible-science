@@ -3,7 +3,7 @@ title: "Getting the right tools for the job"
 subtitle: "R, RStudio, git, and GitHub"  
 author: 
   - "Ernest Guevarra"
-date: '2023-10-06'
+date: '11 October 2024'
 output:
   xaringan::moon_reader:
     css: xaringan-themer.css
@@ -80,7 +80,7 @@ style_mono_light(
     
     * Graphical facilities for data analysis and display.
 
-* `R` is not strictly a statistics system but a system that provides many classical and modern statistical procedures as part of a broader data analysis tool.
+* `R` is a programming language that provides statistical functions as part of a broader data analysis tool.
 ]
 
 .pull-right[
@@ -254,17 +254,11 @@ class: inverse, center, middle
 
 ---
 
+class: inverse, center, middle
+
 # Practical session
 
-* Installing R
-
-* Installing RStudio
-
-* Installing git
-
-* Creating a GitHub account
-
-* Basic git operations with RStudio for retrieving and submitting assignments via GitHub Classroom
+## Basic git operations with RStudio for retrieving and submitting assignments via GitHub Classroom
 
 ---
 
