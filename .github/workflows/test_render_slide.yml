@@ -1,16 +1,14 @@
 on:
   workflow_dispatch:
-  push:
+  pull_request:
     branches: main
 
-name: Publish slides
+name: Test render slides
 
 jobs:
   build-deploy:
     runs-on: ubuntu-latest
     container: rocker/tidyverse:4.4.1
-    permissions:
-      contents: write
     env:
       GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
     steps:
@@ -36,7 +34,4 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           path: docs
-        
-      - name: Deploy to gh-pages
-        uses: actions/deploy-pages@v4
         
