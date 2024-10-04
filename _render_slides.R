@@ -1,5 +1,8 @@
 # Setup HTML slides deployment -------------------------------------------------
 
+## Load packages ----
+library(xaringan)
+
 
 ## Create directory for slide outputs ----
 
@@ -37,7 +40,9 @@ lapply(
 
 ## Render slides to PDF ----
 
-html_files <- list.files(pattern = "session[0-9]{1,2}.html")
+html_files <- list.files(
+  path = output_dir, pattern = "session[0-9]{1,2}.html", full.names = TRUE
+)
 
 pdf_files <- file.path(
   output_dir, "pdf",
