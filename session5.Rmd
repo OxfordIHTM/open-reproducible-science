@@ -3,7 +3,7 @@ title: "Creating basic R workflows and literate programming"
 subtitle: ""  
 author: 
   - "Ernest Guevarra"
-date: '2023-11-30'
+date: '26 November 2024'
 output:
   xaringan::moon_reader:
     css: xaringan-themer.css

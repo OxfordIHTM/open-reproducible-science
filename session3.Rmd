@@ -3,7 +3,7 @@ title: "Creating and manipulating objects, and extending R using packages"
 subtitle: "Learning the basics of R - Part 2"  
 author: 
   - "Ernest Guevarra"
-date: '2023-11-06'
+date: '25 October 2024'
 output:
   xaringan::moon_reader:
     css: xaringan-themer.css
