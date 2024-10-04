@@ -11,6 +11,7 @@ jobs:
     container: rocker/tidyverse:4.4.1
     permissions:
       contents: write
+      id-token: write
     env:
       GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
     steps:
