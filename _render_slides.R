@@ -2,6 +2,8 @@
 
 ## Load packages ----
 library(xaringan)
+library(pagedown)
+library(bookdown)
 
 
 ## Create directory for slide outputs ----
