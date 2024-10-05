@@ -22,7 +22,7 @@ jobs:
       - name: Install system dependencies
         run: |
           sudo apt-get update && sudo apt-get install -y --no-install-recommends \
-          curl rysnc
+          curl rsync
 
       - name: Install chrome
         run: |
@@ -39,14 +39,6 @@ jobs:
         run: |
           source("_render_slides.R")
         shell: Rscript {0}
-        
-      # - name: Upload artifacts
-      #   uses: actions/upload-pages-artifact@v3
-      #   with:
-      #     path: docs
-      #   
-      # - name: Deploy to gh-pages
-      #   uses: actions/deploy-pages@v4
         
       - name: Deploy 🚀
         uses: JamesIves/github-pages-deploy-action@v4
