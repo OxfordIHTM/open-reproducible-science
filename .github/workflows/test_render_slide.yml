@@ -1,12 +1,11 @@
 on:
-  workflow_dispatch:
   pull_request:
     branches: main
 
 name: Test render slides
 
 jobs:
-  build-deploy:
+  test-render-slides:
     runs-on: ubuntu-latest
     container: rocker/tidyverse:4.4.1
     env:
@@ -37,7 +36,7 @@ jobs:
           source("_render_slides.R")
         shell: Rscript {0}
         
-      - name: Upload artifacts
+      - name: Upload render outputs
         uses: actions/upload-artifact@v4
         with:
           path: docs
