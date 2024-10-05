@@ -676,9 +676,9 @@
     },
     "servr": {
       "Package": "servr",
-      "Version": "0.31",
+      "Version": "0.32",
       "Source": "Repository",
-      "Repository": "RSPM",
+      "Repository": "CRAN",
       "Requirements": [
         "R",
         "httpuv",
@@ -686,7 +686,7 @@
         "mime",
         "xfun"
       ],
-      "Hash": "114c0484a22b8d3faa9bb2f1a7a71850"
+      "Hash": "63e4ea2379e79cf18813dd0d8146d27c"
     },
     "stringi": {
       "Package": "stringi",
