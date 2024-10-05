@@ -1,0 +1,692 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+  <head>
+    <title>R through the user interface of RStudio - performing basic operations</title>
+    <meta charset="utf-8" />
+    <meta name="author" content="Ernest Guevarra" />
+    <meta name="date" content="2024-10-23" />
+    <script src="session2_files/header-attrs/header-attrs.js"></script>
+    <script src="session2_files/kePrint/kePrint.js"></script>
+    <link href="session2_files/lightable/lightable.css" rel="stylesheet" />
+    <link rel="stylesheet" href="xaringan-themer.css" type="text/css" />
+  </head>
+  <body>
+    <textarea id="source">
+class: center, middle, inverse, title-slide
+
+.title[
+# R through the user interface of RStudio - performing basic operations
+]
+.subtitle[
+## Learning the basics of R - Part 1
+]
+.author[
+### Ernest Guevarra
+]
+.date[
+### 23 October 2024
+]
+
+---
+
+
+
+
+
+
+# Outline
+
+1. Using RStudio to access the R console
+
+2. Some basic operators in R
+
+    * Arithmetic    
+    * Relational    
+    * Logical    
+    * Assignment
+    
+3. Using RStudio to create scripts
+
+---
+
+# Using RStudio to access the R console
+
+* RStudio has a specific window/pane for the R console which behaves exactly the same as the raw R console
+
+* Issue commands directly on the console to produce a desired outcome or perform a specific action
+
+* Most commands produce an output that is shown on the console
+
+---
+
+class: inverse, center, middle
+
+# Basic operators in R
+
+---
+
+# Arithmetic operators
+
+These operators are used to carry out mathematical operations like addition and multiplication. Here is a list of arithmetic operators available in R.
+
+&lt;table class="table table-striped" style="width: auto !important; margin-left: auto; margin-right: auto;"&gt;
+ &lt;thead&gt;
+  &lt;tr&gt;
+   &lt;th style="text-align:left;"&gt; Operator &lt;/th&gt;
+   &lt;th style="text-align:left;"&gt; Description &lt;/th&gt;
+  &lt;/tr&gt;
+ &lt;/thead&gt;
+&lt;tbody&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; + &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; Addition &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; - &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; Subtraction &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; * &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; Multiplication &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; / &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; Division &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; ^ &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; Exponent &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; %% &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; Modulus &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; %/% &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; Integer Division &lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+
+---
+
+# Arithmetic operators - application
+
+Let us try R's arithmetic operations to calculate BMI:
+
+$$ \text{BMI} ~ = ~ \frac{kgs}{m  ^ 2} $$
+
+using the following values:
+
+$$ \text{weight} ~ = ~ 80 ~ \text{kgs} $$
+
+$$ \text{height} ~ = ~ 1.6 ~ \text{metres} $$
+---
+
+# Arithmetic operators - application
+
+
+``` r
+80 / 1.6 ^ 2
+```
+
+```
+## [1] 31.25
+```
+
+---
+
+# Relational operators
+
+Relational operators are used to compare between values. Here is a list of relational operators available in R.
+
+&lt;table class="table table-striped" style="width: auto !important; margin-left: auto; margin-right: auto;"&gt;
+ &lt;thead&gt;
+  &lt;tr&gt;
+   &lt;th style="text-align:left;"&gt; Operator &lt;/th&gt;
+   &lt;th style="text-align:left;"&gt; Description &lt;/th&gt;
+  &lt;/tr&gt;
+ &lt;/thead&gt;
+&lt;tbody&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; &amp;lt; &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; Less than &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; &amp;gt; &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; Greater than &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; &amp;lt;= &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; Less than or equal to &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; &amp;gt;= &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; Greater than or equal to &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; == &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; Equal to &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; != &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; Not equal to &lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+
+---
+
+# Relational operators - application
+
+Let us apply the relational operators using again BMI as an example.
+
+Say we have **Person A** with a weight of *80 kilograms* and a *height of 1.6 metres* and **Person B** with a weight of *120 kilograms* and a height of *210 centimetres*.
+
+In R, try to answer the following questions:
+
+1. Is **Person A** heavier in weight compared to **Person B**?
+
+2. Is **Person A** taller in height compared to **Person B**?
+
+3. Whose BMI is greater, **Person A** or **Person B**?
+
+---
+
+# Relational operators - application
+
+### 1. Is **Person A** heavier in weight compared to **Person B**?
+
+
+``` r
+80 &gt; 120     ## Is Person A's weight greater than Person B's weight
+```
+
+```
+## [1] FALSE
+```
+
+``` r
+80 &lt; 120     ## Is Person A's weight lesser than Person B's weight
+```
+
+```
+## [1] TRUE
+```
+
+``` r
+80 == 120    ## Is Person A's weight the same as Person B's weight
+```
+
+```
+## [1] FALSE
+```
+
+---
+
+# Relational operators - application
+
+### 2. Is **Person A** taller in height compared to **Person B**?
+
+
+``` r
+1.6 &gt; 210 / 100    ## Is Person A's height greater than Person B's height
+```
+
+```
+## [1] FALSE
+```
+
+``` r
+1.6 &lt; 210 / 100    ## Is Person A's height lesser than Person B's height
+```
+
+```
+## [1] TRUE
+```
+
+``` r
+1.6 == 210 / 100   ## Is Person A's height the same as Person B's height
+```
+
+```
+## [1] FALSE
+```
+
+---
+
+# Relational operators - application
+
+### 3. Whose BMI is greater, **Person A** or **Person B**?
+
+
+``` r
+80 / 1.6 ^ 2 &gt; 120 / (210 / 100) ^ 2    ## Is Person A's BMI greater than Person B's BMI
+```
+
+```
+## [1] TRUE
+```
+
+``` r
+80 / 1.6 ^ 2 &lt; 120 / (210 / 100) ^ 2    ## Is Person A's BMI lesser than Person B's BMI
+```
+
+```
+## [1] FALSE
+```
+
+``` r
+80 / 1.6 ^ 2 == 120 / (210 / 100) ^ 2   ## Is Person A's BMI the same as Person B's BMI
+```
+
+```
+## [1] FALSE
+```
+
+---
+
+# Logical operators
+
+Logical operators are used to carry out Boolean operations like AND, OR etc.
+
+&lt;table class="table table-striped" style="width: auto !important; margin-left: auto; margin-right: auto;"&gt;
+ &lt;thead&gt;
+  &lt;tr&gt;
+   &lt;th style="text-align:left;"&gt; Operator &lt;/th&gt;
+   &lt;th style="text-align:left;"&gt; Description &lt;/th&gt;
+  &lt;/tr&gt;
+ &lt;/thead&gt;
+&lt;tbody&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; ! &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; Logical NOT &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; &amp;amp; &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; Element-wise logical AND &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; &amp;amp;&amp;amp; &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; Logical AND &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; &amp;amp;#124; &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; Element-wise logical OR &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; &amp;amp;#124;&amp;amp;#124; &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; Logical OR &lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+
+---
+
+# Logical operators - application
+
+Let us apply the logical operators again using the example of BMI for Person A and Person B in the previous exercise.
+
+In R, answer the following questions using logical operators:
+
+1. Is the weight of **Person A** AND the weight of **Person B** both equal to 80 kilograms?
+
+2. Is the weight of **Person A** OR the weight of **Person B** less than 100 kilograms?
+
+3. Is the weight of **Person A** greater than the weight of **Person B** AND the height of **Person A** greater than the height of **Person B**?
+
+4. Is the weight of **Person A** greater than the weight of **Person B** OR the height of **Person A** greater than the height of **Person B**?
+
+---
+
+# Logical operators - application
+
+### 1. Is the weight of **Person A** AND the weight of **Person B** both equal to 80 kilograms?
+
+
+``` r
+80 == 80 &amp; 120 == 80
+```
+
+```
+## [1] FALSE
+```
+
+### 2. Is the weight of **Person A** OR the weight of **Person B** less than 100 kilograms?
+
+
+``` r
+80 &lt; 100 | 120 &lt; 100
+```
+
+```
+## [1] TRUE
+```
+
+---
+
+# Logical operators - application
+
+### 3. Is the weight of **Person A** greater than the weight of **Person B** AND the height of **Person A** greater than the height of **Person B**?
+
+
+``` r
+80 &gt; 120 &amp; 1.6 &gt; 2.1
+```
+
+```
+## [1] FALSE
+```
+
+### 4. Is the weight of **Person A** greater than the weight of **Person B** OR the height of **Person A** greater than the height of **Person B**?
+
+
+``` r
+80 &gt; 120 | 1.6 &gt; 2.1
+```
+
+```
+## [1] FALSE
+```
+
+---
+
+# Assignment operators
+
+These operators are used to assign values to objects.
+
+&lt;table class="table table-striped" style="width: auto !important; margin-left: auto; margin-right: auto;"&gt;
+ &lt;thead&gt;
+  &lt;tr&gt;
+   &lt;th style="text-align:left;"&gt; Operator &lt;/th&gt;
+   &lt;th style="text-align:left;"&gt; Description &lt;/th&gt;
+  &lt;/tr&gt;
+ &lt;/thead&gt;
+&lt;tbody&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; &amp;lt;- &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; Leftwards assignment &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; &amp;lt;&amp;lt;- &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; Leftwards assignment &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; = &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; Leftwards assignment &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; -&amp;gt; &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; Rightwards assignment &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; -&amp;gt;&amp;gt; &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; Rightwards assignment &lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+
+---
+
+# Assignment operators - application
+
+Let us again use the BMI example to apply the assignment operators:
+
+1. Assign the weight of person A to an object named `weight_a`
+
+2. Assign the height of person A to an object named `height_a`
+
+3. Calculate BMI for person A using objects `weight_a` and `height_a`. Assign the value of BMI to an object named `bmi_a`.
+
+---
+
+# Assignment operators - application
+
+### 1. Assign the weight of person A to an object named `weight_a`
+
+
+``` r
+weight_a &lt;- 80
+
+weight_a
+```
+
+```
+## [1] 80
+```
+
+### 2. Assign the height of person A to an object named `height_a`
+
+
+``` r
+height_a &lt;- 1.6
+
+height_a
+```
+
+```
+## [1] 1.6
+```
+
+---
+
+# Assignment operators - application
+
+### 3. Calculate BMI for person A using objects `weight_a` and `height_a`. Assign the value of BMI to an object named `bmi_a`.
+
+
+``` r
+bmi_a &lt;- weight_a / height_a ^ 2
+
+bmi_a
+```
+
+```
+## [1] 31.25
+```
+
+---
+
+# Using RStudio to create scripts
+
+* So far, we have tried issuing commands in R straight into the console to perform single commands at a time
+
+* In real life context, we will rarely use R for a single command. To make meaningful analysis, we will often string together a series of commands to produce an intended result/output
+
+* We will also often have to repeat the same commands with different data or parameters
+
+* As such, direct to console issuing of commands in R will be highly inefficient
+
+---
+
+# Using RStudio to create scripts
+
+.pull-left[
+RStudio, being an **integrated developoment environment (IDE)**, provides functionality and tools for 
+
+* recording multiple lines of commands which can be run/issued onto the console line by line; and,
+
+* saving the recorded multiple lines of code/commands for later use.
+
+This record of multiple lines of code/commands is often called an **R script** and is saved as plain text file with a `.R` extension.
+]
+
+.pull-right[
+
+``` r
+## R script to calculate BMI of 
+## person A and person B
+weight_a &lt;- 80
+height_a &lt;- 1.6
+bmi_a &lt;- weight_a / height_a ^ 2
+
+weight_b &lt;- 12
+height_b &lt;- 2.1
+bmi_b &lt;- weight_b / height_b ^ 2
+```
+]
+
+---
+
+class: inverse, center, middle
+
+# Questions?
+
+---
+
+class: inverse, center, middle
+
+# Practical session
+
+We'll work through *Exercise 1 - Getting acquainted with R* in Practical R for Epidemiologists (https://practical-r.org/exercise1.html) as a GitHub Classroom assignment
+
+---
+
+class: inverse, center, middle
+
+# Thank you!
+
+Slides can be viewed at https://oxford-ihtm.io/open-reproducible-science/session2.html
+
+PDF version of slides can be downloaded at https://oxford-ihtm.io/open-reproducible-science/pdf/session2-r-basics-part1.pdf
+
+R scripts for slides available [here](https://github.com/OxfordIHTM/open-reproducible-science/blob/main/session2.Rmd)
+
+    </textarea>
+<style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
+<script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
+<script>var slideshow = remark.create({
+"slideNumberFormat": "%current%",
+"highlightStyle": "github",
+"highlightLines": true,
+"ratio": "16:9",
+"countIncrementalSlides": true
+});
+if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
+  window.dispatchEvent(new Event('resize'));
+});
+(function(d) {
+  var s = d.createElement("style"), r = d.querySelector(".remark-slide-scaler");
+  if (!r) return;
+  s.type = "text/css"; s.innerHTML = "@page {size: " + r.style.width + " " + r.style.height +"; }";
+  d.head.appendChild(s);
+})(document);
+
+(function(d) {
+  var el = d.getElementsByClassName("remark-slides-area");
+  if (!el) return;
+  var slide, slides = slideshow.getSlides(), els = el[0].children;
+  for (var i = 1; i < slides.length; i++) {
+    slide = slides[i];
+    if (slide.properties.continued === "true" || slide.properties.count === "false") {
+      els[i - 1].className += ' has-continuation';
+    }
+  }
+  var s = d.createElement("style");
+  s.type = "text/css"; s.innerHTML = "@media print { .has-continuation { display: none; } }";
+  d.head.appendChild(s);
+})(document);
+// delete the temporary CSS (for displaying all slides initially) when the user
+// starts to view slides
+(function() {
+  var deleted = false;
+  slideshow.on('beforeShowSlide', function(slide) {
+    if (deleted) return;
+    var sheets = document.styleSheets, node;
+    for (var i = 0; i < sheets.length; i++) {
+      node = sheets[i].ownerNode;
+      if (node.dataset["target"] !== "print-only") continue;
+      node.parentNode.removeChild(node);
+    }
+    deleted = true;
+  });
+})();
+// add `data-at-shortcutkeys` attribute to <body> to resolve conflicts with JAWS
+// screen reader (see PR #262)
+(function(d) {
+  let res = {};
+  d.querySelectorAll('.remark-help-content table tr').forEach(tr => {
+    const t = tr.querySelector('td:nth-child(2)').innerText;
+    tr.querySelectorAll('td:first-child .key').forEach(key => {
+      const k = key.innerText;
+      if (/^[a-z]$/.test(k)) res[k] = t;  // must be a single letter (key)
+    });
+  });
+  d.body.setAttribute('data-at-shortcutkeys', JSON.stringify(res));
+})(document);
+(function() {
+  "use strict"
+  // Replace <script> tags in slides area to make them executable
+  var scripts = document.querySelectorAll(
+    '.remark-slides-area .remark-slide-container script'
+  );
+  if (!scripts.length) return;
+  for (var i = 0; i < scripts.length; i++) {
+    var s = document.createElement('script');
+    var code = document.createTextNode(scripts[i].textContent);
+    s.appendChild(code);
+    var scriptAttrs = scripts[i].attributes;
+    for (var j = 0; j < scriptAttrs.length; j++) {
+      s.setAttribute(scriptAttrs[j].name, scriptAttrs[j].value);
+    }
+    scripts[i].parentElement.replaceChild(s, scripts[i]);
+  }
+})();
+(function() {
+  var links = document.getElementsByTagName('a');
+  for (var i = 0; i < links.length; i++) {
+    if (/^(https?:)?\/\//.test(links[i].getAttribute('href'))) {
+      links[i].target = '_blank';
+    }
+  }
+})();
+// adds .remark-code-has-line-highlighted class to <pre> parent elements
+// of code chunks containing highlighted lines with class .remark-code-line-highlighted
+(function(d) {
+  const hlines = d.querySelectorAll('.remark-code-line-highlighted');
+  const preParents = [];
+  const findPreParent = function(line, p = 0) {
+    if (p > 1) return null; // traverse up no further than grandparent
+    const el = line.parentElement;
+    return el.tagName === "PRE" ? el : findPreParent(el, ++p);
+  };
+
+  for (let line of hlines) {
+    let pre = findPreParent(line);
+    if (pre && !preParents.includes(pre)) preParents.push(pre);
+  }
+  preParents.forEach(p => p.classList.add("remark-code-has-line-highlighted"));
+})(document);</script>
+
+<script>
+slideshow._releaseMath = function(el) {
+  var i, text, code, codes = el.getElementsByTagName('code');
+  for (i = 0; i < codes.length;) {
+    code = codes[i];
+    if (code.parentNode.tagName !== 'PRE' && code.childElementCount === 0) {
+      text = code.textContent;
+      if (/^\\\((.|\s)+\\\)$/.test(text) || /^\\\[(.|\s)+\\\]$/.test(text) ||
+          /^\$\$(.|\s)+\$\$$/.test(text) ||
+          /^\\begin\{([^}]+)\}(.|\s)+\\end\{[^}]+\}$/.test(text)) {
+        code.outerHTML = code.innerHTML;  // remove <code></code>
+        continue;
+      }
+    }
+    i++;
+  }
+};
+slideshow._releaseMath(document);
+</script>
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+(function () {
+  var script = document.createElement('script');
+  script.type = 'text/javascript';
+  script.src  = 'https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML';
+  if (location.protocol !== 'file:' && /^https?:/.test(script.src))
+    script.src  = script.src.replace(/^https?:/, '');
+  document.getElementsByTagName('head')[0].appendChild(script);
+})();
+</script>
+  </body>
+</html>

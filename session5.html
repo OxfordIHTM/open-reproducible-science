@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+  <head>
+    <title>Creating basic R workflows and literate programming</title>
+    <meta charset="utf-8" />
+    <meta name="author" content="Ernest Guevarra" />
+    <meta name="date" content="2024-11-26" />
+    <script src="session5_files/header-attrs/header-attrs.js"></script>
+    <link rel="stylesheet" href="xaringan-themer.css" type="text/css" />
+  </head>
+  <body>
+    <textarea id="source">
+class: center, middle, inverse, title-slide
+
+.title[
+# Creating basic R workflows and literate programming
+]
+.author[
+### Ernest Guevarra
+]
+.date[
+### 26 November 2024
+]
+
+---
+
+
+
+
+
+
+# Outline
+
+* Project-oriented workflows in R
+
+    * Why organise workflows into projects
+    * How to organise workflows into projects
+
+* Literate programming
+
+    * Why use literate programming
+    * RMarkdown for literate programming
+
+* Practical session
+
+---
+
+class: inverse, center, middle
+
+# Project-orientd workflows in R
+
+---
+
+# Why organise workflows into projects
+
+* key word is *"organise"*;
+
+* organisation ensures *coherence* and *order* which is helpful to the user whenever he/she goes back to the same work again later;
+
+* organisation supports good documentation; and,
+
+* organisation allows for collaboration.
+
+---
+
+# How to organise workflows into projects
+
+* a unique piece of *"work"* should be its own *project*;
+
+* all resources and tools needed for a *project* should be within the same directory; and,
+
+* group resources and tools within appropriately into their own directories with the project directory.
+
+.pull-left[
+.center[![](images/project_example1.png)]
+
+]
+
+.pull-right[
+.center[![](images/project_example2.png)]
+]
+
+---
+
+class: inverse, center, middle
+
+# Literate programming
+
+---
+
+# Why use literate programming
+
+* write code that satisfies both the machine/computer and the human reader/user;
+
+* highlight and give as much importance to the documentation of the processes and the outputs that your code represents;
+
+* focus on communication and understanding of the process and the output; and,
+
+* single document that integrates both code and textual documentation.
+
+---
+
+# R Markdown for literate programming
+
+
+* R Markdown provides an authoring framework for literate programming;
+
+* A single R Markdown file is used to both save and execute code, and generate high quality reports that can be shared with an audience; and,
+
+* R Markdown documents are fully reproducible and support dozens of static and dynamic output formats.
+
+---
+
+# R Markdown example - PDF report
+
+.pull-left[
+.center[![](images/rmd_code_example1.png)]
+]
+
+.pull-right[
+&lt;img src="images/rmd_output_example1.png" height="500px" &gt;
+]
+
+---
+
+# R Markdown example - HTML report
+
+.pull-left[
+.center[![](images/rmd_code_example2.png)]
+]
+
+.pull-right[
+.center[![](images/rmd_output_example2.png)]
+]
+
+---
+
+# R Markdown example - Website
+
+.pull-left[
+.center[![](images/rmd_code_example3.png)]
+]
+
+.pull-right[
+.center[![](images/rmd_output_example3.png)]
+]
+
+---
+
+# R Markdown example - slide deck
+
+.pull-left[
+.center[![](images/rmd_code_example4.png)]
+]
+
+.pull-right[
+.center[![](images/rmd_output_example4.png)]
+]
+
+---
+
+# Basics of R Markdown
+
+* An R Markdown document is written in markdown (an easy-to-write plain text format) and contains chunks of embedded R code, like the document below.
+
+.center[![](images/rmd_doc.png)]
+
+---
+
+# Basic Markdown syntax
+
+.pull-left[
+
+### Markdown syntax
+
+* ```*italics*``` or ```_italics_```
+
+* ```**bold**``` or ```__bold__```
+
+* ```&gt; block quote```
+
+* ```# Header 1```
+
+* ```## Header 2```
+
+* ```### Header 3```
+
+* ```#### Header 4```
+
+]
+
+
+.pull-right[
+
+### Resulting output
+
+* *italics*
+
+* **bold**
+
+* &gt; block quote
+
+* # Header 1
+
+* ## Header 2
+
+* ### Header 3
+
+* #### Header 4
+
+]
+
+---
+
+# Basic Markdown syntax
+
+.pull-left[
+
+### Markdown syntax
+
+* ```[link to Open Reproducible Science website](https://oxford-ihtm.io/open-reproducible-science/)```
+
+* adding an image: ```![](path/to/Tux.svg)```
+
+]
+
+
+.pull-right[
+
+### Resulting output
+
+* [link to Open Reproducible Science website](https://oxford-ihtm.io/open-reproducible-science/)
+
+* adding an image: ![](images/Tux.svg)
+
+]
+
+---
+
+class: inverse, center, middle
+
+# Questions?
+
+---
+
+class: inverse, center, middle
+
+# Practical session
+
+We'll work through *Exercise 5 - Extending R with packages* in Practical R for Epidemiologists (https://practical-r.org/exercise5.html) as a GitHub Classroom assignment
+
+---
+
+class: inverse, center, middle
+
+# Thank you!
+
+Slides can be viewed at https://oxford-ihtm.io/open-reproducible-science/session5.html
+
+PDF version of slides can be downloaded at https://oxford-ihtm.io/open-reproducible-science/pdf/session5-literate-programming.pdf
+
+R scripts for slides available [here](https://github.com/OxfordIHTM/open-reproducible-science/blob/main/session5.Rmd)
+
+    </textarea>
+<style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
+<script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
+<script>var slideshow = remark.create({
+"slideNumberFormat": "%current%",
+"highlightStyle": "github",
+"highlightLines": true,
+"ratio": "16:9",
+"countIncrementalSlides": true
+});
+if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
+  window.dispatchEvent(new Event('resize'));
+});
+(function(d) {
+  var s = d.createElement("style"), r = d.querySelector(".remark-slide-scaler");
+  if (!r) return;
+  s.type = "text/css"; s.innerHTML = "@page {size: " + r.style.width + " " + r.style.height +"; }";
+  d.head.appendChild(s);
+})(document);
+
+(function(d) {
+  var el = d.getElementsByClassName("remark-slides-area");
+  if (!el) return;
+  var slide, slides = slideshow.getSlides(), els = el[0].children;
+  for (var i = 1; i < slides.length; i++) {
+    slide = slides[i];
+    if (slide.properties.continued === "true" || slide.properties.count === "false") {
+      els[i - 1].className += ' has-continuation';
+    }
+  }
+  var s = d.createElement("style");
+  s.type = "text/css"; s.innerHTML = "@media print { .has-continuation { display: none; } }";
+  d.head.appendChild(s);
+})(document);
+// delete the temporary CSS (for displaying all slides initially) when the user
+// starts to view slides
+(function() {
+  var deleted = false;
+  slideshow.on('beforeShowSlide', function(slide) {
+    if (deleted) return;
+    var sheets = document.styleSheets, node;
+    for (var i = 0; i < sheets.length; i++) {
+      node = sheets[i].ownerNode;
+      if (node.dataset["target"] !== "print-only") continue;
+      node.parentNode.removeChild(node);
+    }
+    deleted = true;
+  });
+})();
+// add `data-at-shortcutkeys` attribute to <body> to resolve conflicts with JAWS
+// screen reader (see PR #262)
+(function(d) {
+  let res = {};
+  d.querySelectorAll('.remark-help-content table tr').forEach(tr => {
+    const t = tr.querySelector('td:nth-child(2)').innerText;
+    tr.querySelectorAll('td:first-child .key').forEach(key => {
+      const k = key.innerText;
+      if (/^[a-z]$/.test(k)) res[k] = t;  // must be a single letter (key)
+    });
+  });
+  d.body.setAttribute('data-at-shortcutkeys', JSON.stringify(res));
+})(document);
+(function() {
+  "use strict"
+  // Replace <script> tags in slides area to make them executable
+  var scripts = document.querySelectorAll(
+    '.remark-slides-area .remark-slide-container script'
+  );
+  if (!scripts.length) return;
+  for (var i = 0; i < scripts.length; i++) {
+    var s = document.createElement('script');
+    var code = document.createTextNode(scripts[i].textContent);
+    s.appendChild(code);
+    var scriptAttrs = scripts[i].attributes;
+    for (var j = 0; j < scriptAttrs.length; j++) {
+      s.setAttribute(scriptAttrs[j].name, scriptAttrs[j].value);
+    }
+    scripts[i].parentElement.replaceChild(s, scripts[i]);
+  }
+})();
+(function() {
+  var links = document.getElementsByTagName('a');
+  for (var i = 0; i < links.length; i++) {
+    if (/^(https?:)?\/\//.test(links[i].getAttribute('href'))) {
+      links[i].target = '_blank';
+    }
+  }
+})();
+// adds .remark-code-has-line-highlighted class to <pre> parent elements
+// of code chunks containing highlighted lines with class .remark-code-line-highlighted
+(function(d) {
+  const hlines = d.querySelectorAll('.remark-code-line-highlighted');
+  const preParents = [];
+  const findPreParent = function(line, p = 0) {
+    if (p > 1) return null; // traverse up no further than grandparent
+    const el = line.parentElement;
+    return el.tagName === "PRE" ? el : findPreParent(el, ++p);
+  };
+
+  for (let line of hlines) {
+    let pre = findPreParent(line);
+    if (pre && !preParents.includes(pre)) preParents.push(pre);
+  }
+  preParents.forEach(p => p.classList.add("remark-code-has-line-highlighted"));
+})(document);</script>
+
+<script>
+slideshow._releaseMath = function(el) {
+  var i, text, code, codes = el.getElementsByTagName('code');
+  for (i = 0; i < codes.length;) {
+    code = codes[i];
+    if (code.parentNode.tagName !== 'PRE' && code.childElementCount === 0) {
+      text = code.textContent;
+      if (/^\\\((.|\s)+\\\)$/.test(text) || /^\\\[(.|\s)+\\\]$/.test(text) ||
+          /^\$\$(.|\s)+\$\$$/.test(text) ||
+          /^\\begin\{([^}]+)\}(.|\s)+\\end\{[^}]+\}$/.test(text)) {
+        code.outerHTML = code.innerHTML;  // remove <code></code>
+        continue;
+      }
+    }
+    i++;
+  }
+};
+slideshow._releaseMath(document);
+</script>
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+(function () {
+  var script = document.createElement('script');
+  script.type = 'text/javascript';
+  script.src  = 'https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML';
+  if (location.protocol !== 'file:' && /^https?:/.test(script.src))
+    script.src  = script.src.replace(/^https?:/, '');
+  document.getElementsByTagName('head')[0].appendChild(script);
+})();
+</script>
+  </body>
+</html>
