@@ -67,5 +67,7 @@ Map(
   output = pdf_files,
   wait = 100,
   timeout = 300,
-  extra_args = "--no-sandbox"
+  extra_args = rep(
+    list(c("--no-sandbox", "--disable-dev-shm-usage")), length(html_files)
+  )
 )
