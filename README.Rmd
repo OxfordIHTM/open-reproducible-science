@@ -11,12 +11,14 @@ knitr::opts_chunk$set(
 )
 ```
 
-# Open Science and Reproducible Research in R: *An Oxford International Health and Tropical Medicine Lecture Series* <img src="images/ihtm_small.png" align="right" width="200px" />
+# Open Science and Reproducible Research in R: *An Oxford International Health and Tropical Medicine Lecture Series* <img src="images/ihealth_base_pos.png" align="right" height="300px" />
 
 <!-- badges: start -->
 [![License for data](https://img.shields.io/badge/license (for data)-CC0-blue.svg)](https://creativecommons.org/publicdomain/zero/1.0/)
-[![License for code](https://img.shields.io/badge/license (for code)-GPL3.0-blue.svg)](https://opensource.org/licenses/gpl-3.0.html)
-[![License for slide deck](https://img.shields.io/badge/license (for slide decks)-CC BY 4.0-blue.svg)](https://creativecommons.org/licenses/by/4.0/)
+[![License for code](https://img.shields.io/badge/license (for code)-GPL3.0-blue)](https://opensource.org/licenses/gpl-3.0.html)
+[![License for slide deck](https://img.shields.io/badge/license (for slide decks)-CC BY 4.0-blue)](https://creativecommons.org/licenses/by/4.0/)
+[![Test render slides](https://github.com/OxfordIHTM/open-reproducible-science/actions/workflows/test_render_slide.yml/badge.svg)](https://github.com/OxfordIHTM/open-reproducible-science/actions/workflows/test_render_slide.yml)
+[![Publish slides](https://github.com/OxfordIHTM/open-reproducible-science/actions/workflows/publish_slides.yml/badge.svg)](https://github.com/OxfordIHTM/open-reproducible-science/actions/workflows/publish_slides.yml)
 [![pages-build-deployment](https://github.com/OxfordIHTM/open-reproducible-science/actions/workflows/pages/pages-build-deployment/badge.svg)](https://github.com/OxfordIHTM/open-reproducible-science/actions/workflows/pages/pages-build-deployment)
 [![DOI](https://zenodo.org/badge/451333046.svg)](https://zenodo.org/badge/latestdoi/451333046)
 <!-- badges: end -->
