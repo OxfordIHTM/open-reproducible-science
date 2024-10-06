@@ -1,3 +1,8 @@
+---
+layout: page
+permalink: "."
+---
+
 # Contributor Covenant Code of Conduct
 
 ## Our Pledge
