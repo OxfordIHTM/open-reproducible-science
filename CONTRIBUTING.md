@@ -1,8 +1,3 @@
----
-layout: page
-permalink: "."
----
-
 # Contributing
 
 ## Bugs
