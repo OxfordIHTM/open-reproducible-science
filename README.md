@@ -438,10 +438,10 @@ Feedback, bug reports and feature requests are welcome; file issues
 or seek support [here](https://github.com/orgs/OxfordIHTM/discussions).
 If you would like to contribute to these teaching materials, please see
 our [contributing
-guidelines](https://github.com/OxfordIHTM/open-reproducible-science/CONTRIBUTING.html).
+guidelines](https://github.com/OxfordIHTM/open-reproducible-science/blob/main/CONTRIBUTING.md).
 
 Please note that the [Open and Reproducible
 Science](https://oxford-ihtm.io/open-reproducible-science) project is
 released with a [Contributor Code of
-Conduct](https://github.com/OxfordIHTM/open-reproducible-science/CODE_OF_CONDUCT.html).
+Conduct](https://github.com/OxfordIHTM/open-reproducible-science/blob/main/CODE_OF_CONDUCT.md).
 By contributing to this project, you agree to abide by its terms.
