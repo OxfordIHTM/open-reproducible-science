@@ -1,7 +1,9 @@
 # Setup HTML slides deployment -------------------------------------------------
 
 ## Load packages ----
+
 library(xaringan)
+library(markdown)
 
 
 ## Create directory for slide outputs ----
@@ -12,17 +14,19 @@ dir.create(output_dir, showWarnings = FALSE)
 
 ## Copy needed directories and files to output directory ----
 
-from <- c(
-  "_config.yml", "CODE_OF_CONDUCT.md", "CONTRIBUTING.md",
-  "data", "images", "README.md", "xaringan-themer.css"
-)
+from <- c("_config.yml", "data", "images", "README.md", "xaringan-themer.css")
+file.copy(from = from, to = output_dir, recursive = TRUE)
 
-file.copy(
-  from = from,
-  to = output_dir,
-  recursive = TRUE
-)
 
+## Render md files ----
+
+knitr::knit2html(input = "CONTRIBUTING.md", output = "docs/CONTRIBUTING.html")
+file.remove("CONTRIBUTING.txt")
+
+knitr::knit2html(
+  input = "CODE_OF_CONDUCT.md", output = "docs/CODE_OF_CONDUCT.html"
+)
+file.remove("CODE_OF_CONDUCT.txt")
 
 ## List slide Rmds ----
 
@@ -31,11 +35,7 @@ rmd_files <- list.files(pattern = "session[0-9]{1,2}.Rmd")
 
 ## Render slides to HTML ----
 
-lapply(
-  X = rmd_files,
-  FUN = rmarkdown::render,
-  output_dir = output_dir
-)
+lapply(X = rmd_files, FUN = rmarkdown::render, output_dir = output_dir)
 
 
 ## Render slides to PDF ----
