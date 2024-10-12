@@ -208,8 +208,8 @@ In R, try to answer the following questions:
 
 Logical operators are used to carry out Boolean operations like AND, OR etc.
 
-```{r, echo = FALSE}
-operator <- c("!", "&", "&&", "\\|", "\\|\\|")
+```{r, echo = FALSE, eval = FALSE}
+operator <- c("!", "&", "&&", "|", "||")
 description <- c("Logical NOT", "Element-wise logical AND", "Logical AND", "Element-wise logical OR", "Logical OR")
 
 data.frame(operator, description) |>
@@ -223,6 +223,14 @@ data.frame(operator, description) |>
     position = "center"
   )
 ```
+
+Operator         | Description
+:---             | :---
+!                | Logical NOT
+&                | Element-wise logical AND
+&&               | Logical AND
+&#124;         | Element-wise logical OR
+&#124;&#124; | Logical OR 
 
 ---
 
