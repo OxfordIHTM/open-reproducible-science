@@ -10,3 +10,5 @@
 /session*_files/
 
 README.html
+
+/.quarto/
