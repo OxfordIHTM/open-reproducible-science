@@ -209,7 +209,7 @@ In R, try to answer the following questions:
 Logical operators are used to carry out Boolean operations like AND, OR etc.
 
 ```{r, echo = FALSE}
-operator <- c("!", "&", "&&", "|", "||")
+operator <- c("!", "&", "&&", "\\|", "\\|\\|")
 description <- c("Logical NOT", "Element-wise logical AND", "Logical AND", "Element-wise logical OR", "Logical OR")
 
 data.frame(operator, description) |>
