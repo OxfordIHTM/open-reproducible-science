@@ -348,6 +348,20 @@ bmi_a
 
 ---
 
+class: inverse, center, middle
+
+# Questions?
+
+---
+
+class: inverse, center, middle
+
+# Practical session
+
+Using what we have learned in the first half of the session, we'll learn about how to write R scripts.
+
+---
+
 # Using RStudio to create scripts
 
 * So far, we have tried issuing commands in R straight into the console to perform single commands at a time
@@ -391,14 +405,6 @@ bmi_b <- weight_b / height_b ^ 2
 class: inverse, center, middle
 
 # Questions?
-
----
-
-class: inverse, center, middle
-
-# Practical session
-
-We'll work through *Exercise 1 - Getting acquainted with R* in Practical R for Epidemiologists (https://practical-r.org/exercise1.html) as a GitHub Classroom assignment
 
 ---
 
