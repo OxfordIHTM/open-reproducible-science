@@ -566,7 +566,7 @@ median(women$weight)
 
 # Extending R using packages
 
-* Using base functions in R to read a `text` type of data file such as `CSV`
+* Using `read.table()` base function in R to read a `text` type of data file such as a *comma-separated value* or `CSV` file:
 
 .pull-left[
 
@@ -604,7 +604,7 @@ read.table(
 
 # Extending R using packages
 
-* Using base functions in R to read a `text` type of data file such as `CSV`
+* Using `read.csv()` base function in R to read a `text` type of data file such as a *comma-separated value* or `CSV` file:
 
 .pull-left[
 
@@ -674,7 +674,7 @@ women_csv &lt;- read.csv("data/women.csv")
 
 # Extending R using packages
 
-* Using the R package **`openxlsx`** to read `.XLSX` type of data file
+* Using the R package `openxlsx` to read a Microsoft Excel or `.XLSX` type of data file
 
 * We first need to install the `openxlsx` package
 
@@ -696,7 +696,7 @@ library("openxlsx")
 
 # Extending R using packages
 
-* Using the R package **`openxlsx`** to read `.XLSX` type of data file
+* Using the R package `openxlsx` to read a Microsoft Exel or `.XLSX` type of data file
 
 * We are now ready to use the function `read.xlsx()` from the `openxlsx` package to read the `women.xlsx` file:
 
@@ -776,22 +776,11 @@ women_xlsx
 
 ---
 
+class: inverse, center, middle
+
 # Coding challenge
 
-### Given what you have learned so far, I would like you to write an R script (add this to your script in `bmi.R`) that would: 
-
-* Calculate the BMI of each of the 15 records in the `women` dataset. For this, remember that the units of the weight in the `women` dataset is in lbs and the units of the height is in inches. So you need to do conversions. You can use the following:
-    
-    1 inch = 0.0254 metres    
-    1 lb   = 0.453592 kgs
-    
-Compared to our exercise earlier, we are now working on 15 records. Think very well how you would apply the calculations!
-
-* Determine which record has the highest BMI and which record has the lowest BMI using R code
-
-* Determine how many records have a BMI higher than 23.
-
-* Calculate the mean and median BMI of the 15 records
+Check your email and look for the message from GitHub Classroom with a link to your next coding exercise.
 
 ---
 
@@ -810,9 +799,6 @@ Slides can be viewed at https://oxford-ihtm.io/open-reproducible-science/session
 PDF version of slides can be downloaded at https://oxford-ihtm.io/open-reproducible-science/pdf/session3-r-basics-part2.pdf
 
 R scripts for slides available [here](https://github.com/OxfordIHTM/open-reproducible-science/blob/main/session3.Rmd)
-
-
-
     </textarea>
 <style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
 <script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>

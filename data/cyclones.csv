@@ -1,0 +1,102 @@
+"year","category_code","category_name","name","rsmc_name","start","end","pressure","speed"
+"2017","TD","Tropical Depression","Auring",NA,2017-01-07 08:00:00,2017-01-09 08:00:00,1000,55
+"2017","TD","Tropical Depression","Bising",NA,2017-02-03 14:00:00,2017-02-06 14:00:00,1004,45
+"2017","TD","Tropical Depression","Crising",NA,2017-04-14 14:00:00,2017-04-15 20:00:00,1004,45
+"2017","TS","Tropical Storm","Dante","Muifa",2017-04-26 08:00:00,2017-04-27 20:00:00,998,65
+"2017","STS","Severe Tropical Storm","Emong","Nanmadol",2017-07-02 02:00:00,2017-07-03 02:00:00,987,95
+"2017","TD","Tropical Depression","Fabian","Roke",2017-07-22 02:00:00,2017-07-22 14:00:00,1000,55
+"2017","TY","Typhoon","Gorio","Nesat",2017-07-25 14:00:00,2017-07-30 02:00:00,957,145
+"2017","TS","Tropical Storm","Huaning","Haitang",2017-07-30 02:00:00,2017-07-31 05:00:00,990,85
+"2017","STS","Severe Tropical Storm","Isang","Hato",2017-08-20 08:00:00,2017-08-22 14:00:00,977,110
+"2017","TS","Tropical Storm","Jolina","Pakhar",2017-08-24 14:00:00,2017-08-26 14:00:00,993,80
+"2017","TS","Tropical Storm","Kiko","Guchol",2017-09-04 14:00:00,2017-09-06 20:00:00,998,65
+"2017","TY","Typhoon","Lannie","Talim",2017-09-11 14:00:00,2017-09-13 14:00:00,965,130
+"2017","TS","Tropical Storm","Maring","Doksuri",2017-09-11 14:00:00,2017-09-13 14:00:00,990,85
+"2017","TD","Tropical Depression","Nando",NA,2017-09-23 14:00:00,2017-09-23 20:00:00,1004,45
+"2017","STS","Severe Tropical Storm","Odette","Khanun",2017-10-11 20:00:00,2017-10-14 20:00:00,977,110
+"2017","TY","Typhoon","Paolo","Lan",2017-10-16 08:00:00,2017-10-22 02:00:00,926,185
+"2017","STS","Severe Tropical Storm","Quedan","Saola",2017-10-25 08:00:00,2017-10-28 08:00:00,981,105
+"2017","STS","Severe Tropical Storm","Ramil","Damrey",2017-11-01 02:00:00,2017-11-03 02:00:00,987,90
+"2017","TS","Tropical Storm","Salome","Haikui",2017-11-09 05:00:00,2017-11-11 02:00:00,995,75
+"2017","TS","Tropical Storm","Tino","Kirogi",2017-11-17 08:00:00,2017-11-18 08:00:00,998,65
+"2017","TS","Tropical Storm","Urduja","Kai-Tak",2017-12-12 14:00:00,2017-12-19 08:00:00,993,80
+"2017","TS","Tropical Storm","Vinta","Tembin",2017-12-20 14:00:00,2017-12-24 08:00:00,973,120
+"2018","TS","Tropical Storm","Agaton","Bolaven",2018-01-01,2018-01-03 06:00:00,1002,35
+"2018","TS","Tropical Storm","Basyang","Sanba",2018-02-11 11:00:00,2018-02-16,1000,35
+"2018","TS","Tropical Storm","Caloy","Jelawat",2018-03-27,2018-03-28 01:00:00,920,105
+"2018","STS","Severe Tropical Storm","Domeng","Maliksi",2018-06-05,2018-06-10 01:00:00,970,60
+"2018","TS","Tropical Storm","Ester","Gaemi",2018-06-14 16:00:00,2018-06-15 15:00:00,990,40
+"2018","STS","Severe Tropical Storm","Florita","Prapiroon",2018-06-28,2018-07-01 11:00:00,965,65
+"2018","TY","Typhoon","Gardo","Maria",2018-07-08 19:00:00,2018-07-10 11:00:00,915,105
+"2018","TS","Tropical Storm","Henry","Son-tihn",2018-07-15 12:00:00,2018-07-17,990,40
+"2018","STS","Severe Tropical Storm","Inday","Ampil",2018-07-17 12:00:00,2018-07-20 16:00:00,985,50
+"2018","TD","Tropical Depression","Josie",NA,2018-07-20 19:00:00,2018-07-22 20:00:00,994,30
+"2018","TS","Tropical Storm","Karding","Yagi",2018-08-06,2018-08-11 01:00:00,990,40
+"2018","TD","Tropical Depression","Luis",NA,2018-08-22 18:00:00,2018-08-24 13:00:00,994,30
+"2018","TY","Typhoon","Maymay","Jebi",2018-09-02 06:00:00,2018-09-02 16:00:00,910,110
+"2018","TD","Tropical Depression","Neneng","Barijat",2018-09-08 06:00:00,2018-09-10 14:00:00,998,40
+"2018","TY","Typhoon","Ompong","Mangkhut",2018-09-12 07:00:00,2018-09-15 12:00:00,905,110
+"2018","TY","Typhoon","Paeng","Trami",2018-09-23 01:00:00,2018-09-28 22:00:00,915,105
+"2018","TY","Typhoon","Queenie","Kong-rey",2018-10-01 08:00:00,2018-10-04 10:00:00,900,115
+"2018","TY","Typhoon","Rosita","Yutu",2018-10-27,2018-10-31 08:00:00,900,115
+"2018","TS","Tropical Storm","Samuel","Usagi",2018-11-18 03:00:00,2018-11-22 10:00:00,985,60
+"2018","STS","Severe Tropical Storm","Tomas","Man-yi",2018-11-25 12:00:00,2018-11-27 18:00:00,960,80
+"2018","TD","Tropical Depression","Usman",NA,2018-12-25 10:00:00,2018-12-30 12:00:00,998,30
+"2019","TD","Tropical Depression","Amang",NA,2019-01-19 06:00:00,2019-01-22,1004,30
+"2019","TD","Tropical Depression","Betty","Wutip",2019-02-28 12:00:00,2019-03-02 06:00:00,925,105
+"2019","TD","Tropical Depression","Chedeng",NA,2019-03-17,2019-03-19 06:00:00,1004,30
+"2019","TD","Tropical Depression","Dodong","Sepat",2019-06-25 06:00:00,2019-06-26 14:00:00,994,40
+"2019","TD","Tropical Depression","Egay",NA,2019-06-28,2019-07-02,1002,25
+"2019","TS","Tropical Storm","Falcon","Danas",2019-07-14 08:00:00,2019-07-18 04:00:00,985,45
+"2019","TD","Tropical Depression","Goring",NA,2019-07-17 06:00:00,2019-07-19 12:00:00,994,30
+"2019","TY","Typhoon","Hanna","Lekima",2019-08-03 06:00:00,2019-08-08 16:00:00,925,105
+"2019","STS","Severe Tropical Storm","Ineng","Bailu",2019-08-19 18:00:00,2019-08-24 10:00:00,980,55
+"2019","TS","Tropical Storm","Jenny","Podul",2019-08-25 14:00:00,2019-08-28 06:00:00,992,40
+"2019","TD","Tropical Depression","Kabayan","Kajiki",2019-08-31 06:00:00,2019-08-31 19:00:00,996,35
+"2019","TY","Typhoon","Liwayway","Lingling",2019-09-01,2019-09-05 08:00:00,940,95
+"2019","TD","Tropical Depression","Marilyn",NA,2019-09-11 17:00:00,2019-09-14 12:00:00,994,25
+"2019","STS","Severe Tropical Storm","Nimfa","Tapah",2019-09-17,2019-09-20 18:00:00,970,65
+"2019","TY","Typhoon","Onyok","Mitag",2019-09-27 16:00:00,2019-09-30 14:00:00,965,75
+"2019","TY","Typhoon","Perla","Neoguri",2019-10-15 18:00:00,2019-10-20 10:00:00,970,75
+"2019","TY","Typhoon","Quiel","Nakri",2019-11-05 03:00:00,2019-11-09 02:00:00,975,65
+"2019","TY","Typhoon","Ramon","Kalmaegi",2019-11-11 18:00:00,2019-11-21 12:00:00,975,70
+"2019","STS","Severe Tropical Storm","Sarah","Fung-wong",2019-11-19,2019-11-22 18:00:00,990,55
+"2019","TY","Typhoon","Tisoy","Kammuri",2019-11-30 05:00:00,2019-12-04 20:00:00,945,95
+"2019","TY","Typhoon","Ursula","Phanfone",2019-12-22 18:00:00,2019-12-28 01:00:00,970,80
+"2020","TY","Typhoon","Ambo","Vongfong",2020-05-09 18:00:00,2020-05-18,960,85
+"2020","TS","Tropical Storm","Butchoy","Nuri",2020-06-11,2020-06-12 17:00:00,996,40
+"2020","TD","Tropical Depression","Carina",NA,2020-07-12 06:00:00,2020-07-14 12:00:00,1004,25
+"2020","STS","Severe Tropical Storm","Dindo","Hagupit",2020-07-31,2020-08-03 01:00:00,975,70
+"2020","TS","Tropical Storm","Enteng","Jangmi",2020-08-07 18:00:00,2020-08-09 06:00:00,994,45
+"2020","TS","Tropical Storm","Ferdie","Mekkhala",2020-08-09,2020-08-10 02:00:00,975,65
+"2020","TD","Tropical Depression","Gener",NA,2020-08-12 14:00:00,2020-08-13,1012,30
+"2020","TD","Tropical Depression","Helen","Higos",2020-08-17,2020-08-17 15:00:00,980,65
+"2020","TS","Tropical Storm","Igme","Bavi",2020-08-21,2020-08-22 11:00:00,945,85
+"2020","TY","Typhoon","Julian","Maysak",2020-08-27 06:00:00,2020-08-31 13:00:00,935,95
+"2020","STY","Super Typhoon","Kristine","Haishen",2020-09-04 01:00:00,2020-09-05 10:00:00,910,105
+"2020","TS","Tropical Storm","Leon","Noul",2020-09-15,2020-09-16 20:00:00,992,45
+"2020","TS","Tropical Storm","Marce","Dolphin",2020-09-19 12:00:00,2020-09-21 03:00:00,980,55
+"2020","TD","Tropical Depression","Nika","Nangka",2020-10-11 06:00:00,2020-10-12 01:00:00,990,45
+"2020","TD","Tropical Depression","Ofel",NA,2020-10-13,2020-10-15 13:00:00,1002,25
+"2020","STS","Severe Tropical Storm","Pepito","Saudel",2020-10-18 18:00:00,2020-10-22 02:00:00,975,65
+"2020","TY","Typhoon","Quinta","Molave",2020-10-23,2020-10-26 23:00:00,945,90
+"2020","STY","Super Typhoon","Rolly","Goni",2020-10-29 10:00:00,2020-11-03 12:00:00,905,120
+"2020","STS","Severe Tropical Storm","Siony","Atsani",2020-10-31 22:00:00,2020-11-06 16:00:00,992,50
+"2020","TS","Tropical Storm","Tonyo","Etau",2020-11-06 12:00:00,2020-11-08 19:00:00,992,45
+"2020","TY","Typhoon","Ulysses","Vamco",2020-11-08 01:00:00,2020-11-13 02:00:00,955,85
+"2020","TD","Tropical Depression","Vicky","Krovanh",2020-12-18,2020-12-20 05:00:00,1002,30
+"2021","TS","Tropical Storm","Auring","Dujuan",2021-02-16 19:00:00,2021-02-22,994,45
+"2021","STY","Super Typhoon","Bising","Surigae",2021-04-15 21:00:00,2021-04-24 21:00:00,895,120
+"2021","TS","Tropical Storm","Crising",NA,2021-05-12,2021-05-14,1002,35
+"2021","TS","Tropical Storm","Dante","Choi-Wan",2021-05-29 15:00:00,2021-06-05 01:00:00,996,40
+"2021","TD","Tropical Depression","Emong",NA,2021-07-03 18:00:00,2021-07-06 01:00:00,1002,30
+"2021","TY","Typhoon","Fabian","In-Fa",2021-07-15 18:00:00,2021-07-23 14:00:00,955,80
+"2021","TD","Tropical Depression","Gorio","Mirinae",2021-08-03 18:00:00,2021-08-04 06:00:00,980,50
+"2021","TS","Tropical Storm","Huaning","Lupit",2021-08-06 21:00:00,2021-08-07 03:00:00,985,45
+"2021","STS","Severe Tropical Storm","Isang","Omais",2021-08-19 01:00:00,2021-08-22 06:00:00,992,55
+"2021","TY","Typhoon","Jolina","Conson",2021-09-05 06:00:00,2021-09-09 13:00:00,985,65
+"2021","STY","Super Typhoon","Kiko","Chanthu",2021-09-07 10:00:00,2021-09-12 06:00:00,910,115
+"2021","TD","Tropical Depression","Lannie","Lionrock",2021-10-03 12:00:00,2021-10-05 21:00:00,992,35
+"2021","STS","Severe Tropical Storm","Maring","Kompasu",2021-10-07 06:00:00,2021-10-12 04:00:00,975,55
+"2021","TD","Tropical Depression","Nando",NA,2021-10-08 11:00:00,2021-10-09 12:00:00,996,30
+"2021","STY","Super Typhoon","Odette","Rai",2021-12-14 10:00:00,2021-12-18 05:00:00,915,105
