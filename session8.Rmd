@@ -3,7 +3,7 @@ title: "Introduction to the {targets} package"
 subtitle: "Reproducible Scientific Workflows in R"  
 author: 
   - "Ernest Guevarra"
-date: '2024-02-05'
+date: '2024-02-17'
 output:
   xaringan::moon_reader:
     css: xaringan-themer.css
