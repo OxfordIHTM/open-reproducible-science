@@ -3,7 +3,7 @@ title: "git and GitHub for use with R"
 subtitle: "Tools for versioning and sharing research"  
 author: 
   - "Ernest Guevarra"
-date: '2024-01-29'
+date: '2025-02-10'
 output:
   xaringan::moon_reader:
     css: xaringan-themer.css
