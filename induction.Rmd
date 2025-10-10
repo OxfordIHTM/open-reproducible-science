@@ -1,0 +1,125 @@
+---
+title: "Open and Reproducible Science in R Module"
+subtitle: "Induction Session"  
+author: 
+  - "Ernest Guevarra"
+date: '10 October 2025'
+output:
+  xaringan::moon_reader:
+    css: xaringan-themer.css
+    nature:
+      slideNumberFormat: "%current%"
+      highlightStyle: github
+      highlightLines: true
+      ratio: 16:9
+      countIncrementalSlides: true
+---
+
+```{r setup, include=FALSE}
+options(htmltools.dir.version = FALSE)
+knitr::opts_chunk$set(
+  fig.width=9, fig.height=3.5, fig.retina=3,
+  out.width = "100%",
+  cache = FALSE,
+  echo = TRUE,
+  message = FALSE, 
+  warning = FALSE,
+  hiline = TRUE
+)
+
+if (!require(remotes)) install.packages("remotes")
+if (!require(fontawesome)) remotes::install_github("rstudio/fontawesome")
+```
+
+```{r xaringan-themer, include=FALSE, warning=FALSE}
+library(xaringanthemer)
+style_mono_light(
+  base_color = "#002147",
+  title_slide_background_image = "",
+  title_slide_background_size = "cover",
+  header_font_google = google_font("Fira Sans"),
+  text_font_google   = google_font("Fira Sans Condensed"),
+  text_font_size = "1.2em",
+  link_color = "#214700",
+  header_h1_font_size = "50px",
+  header_h2_font_size = "40px",
+  header_h3_font_size = "30px",
+  code_font_google   = google_font("Fira Mono"),
+  text_slide_number_font_size = "0.5em",
+  footnote_font_size = "0.5em"
+)
+```
+
+# Outline
+
+## Housekeeping
+
+* What to expect from this module
+
+* What is expected of you in this module
+
+* Learning resources
+
+## Practicals
+
+* RStudio basics
+
+* Some git and GitHub basics
+
+---
+
+class: inverse, center, middle
+
+# What to expect from this module
+
+---
+
+# Module organisation
+
+* The module is organised in two parts. 
+
+* The first part focuses on teaching the basics of using R and RStudio. These topics are covered in the first 5 sessions of the module during Michaelmas term. 
+
+* The second part, discussed in the last 5 sessions of the module during Hilary Term, focuses on giving on overview of open and reproducible science.
+
+---
+
+# Session organisation
+
+* Each session is organised in two parts.
+
+* The first part is theory - discussion on topic with slides.
+
+* The second part is practical - coding exercises relevant to the topic 
+
+---
+
+# What is expected of you in this module
+
+* Come to class on time.
+
+* Participate in class particularly the exercises provided.
+
+* Ask for help and be willing to help. 
+
+---
+
+# Learning resources
+
+* Oxford iHealth Website - https://oxford-ihtm.io
+
+* Oxford iHealth Handbook - https://oxford-ihtm.io/ihtm-handbook
+
+* Module website - https://oxford-ihtm.io/open-reproducible-science
+
+---
+
+class: inverse, center, middle
+
+# Thank you!
+
+Slides can be viewed at https://oxford-ihtm.io/open-reproducible-science/session1.html
+
+PDF version of slides can be downloaded at https://oxford-ihtm.io/open-reproducible-science/pdf/session1-getting-the-right-tools.pdf
+
+R scripts for slides available [here](https://github.com/OxfordIHTM/open-reproducible-science/blob/main/session1.Rmd)
