@@ -26,7 +26,7 @@ file.copy(
 
 ## List slide Rmds ----
 
-rmd_files <- list.files(pattern = "session[0-9]{1,2}.Rmd")
+rmd_files <- list.files(pattern = "induction|session[0-9]{1,2}.Rmd")
 
 
 ## Render slides to HTML ----
