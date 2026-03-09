@@ -3,7 +3,7 @@ title: "Open Science, Reproducible Research, and R"
 subtitle: "An Overview"  
 author: 
   - "Ernest Guevarra"
-date: '2024-02-03'
+date: '2026-03-10'
 output:
   xaringan::moon_reader:
     css: xaringan-themer.css
@@ -114,7 +114,7 @@ background-color: #FFFFFF
 
   3. Running the study and collecting the data
 
-  4. Analyzing the data
+  4. Analysing the data
 
   5. Reporting the study
 
