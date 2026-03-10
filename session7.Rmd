@@ -3,7 +3,7 @@ title: "git and GitHub for use with R"
 subtitle: "Tools for versioning and sharing research"  
 author: 
   - "Ernest Guevarra"
-date: '2025-02-10'
+date: '2026-03-10'
 output:
   xaringan::moon_reader:
     css: xaringan-themer.css
@@ -68,7 +68,7 @@ class: inverse, center, middle
 
 3. git integration with RStudio
 
-4. Practial session
+4. Practical session
 
 ---
 
