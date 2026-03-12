@@ -3,7 +3,7 @@ title: "Making your R-based research project portable"
 subtitle: "Introduction to the {renv} package"  
 author: 
   - "Ernest Guevarra"
-date: '2024-03-06'
+date: '2026-03-12'
 output:
   xaringan::moon_reader:
     css: xaringan-themer.css
@@ -80,7 +80,7 @@ class: inverse, middle, center
 
 ## Bruce Perens
 
-#### created the defintion of Open Source and wrote the first manifesto of Open Source
+#### created the definition of Open Source and wrote the first manifesto of Open Source
 
 ---
 

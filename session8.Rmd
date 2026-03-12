@@ -3,7 +3,7 @@ title: "Introduction to the {targets} package"
 subtitle: "Reproducible Scientific Workflows in R"  
 author: 
   - "Ernest Guevarra"
-date: '2024-02-17'
+date: '2026-03-12'
 output:
   xaringan::moon_reader:
     css: xaringan-themer.css
@@ -244,7 +244,7 @@ class: inverse, center, middle
 
 # Practical session
 
-## We will all continue to go through Exercise #1 in the [Practical R for Epidemiologists](https://practical-r.org/exercise1.html) book
+## Let us try to reproduce the project in the following repository - https://github.com/OxfordIHTM/Awareness-Driven-Behaviour
 
 ---
 
